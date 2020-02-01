@@ -9,7 +9,7 @@ $text: #3d3d3d;
 $footerText: #8e3e3e;
 
 // SECONDARY
-$titleSectionHeroAndJacquemus: #562a01;
+$titleHeroAndJacquemus: #562a01;
 $jacquemus: rgb(205, 153, 153, 0.45);
 $textSectionJacquemus: #80596c;
 $titleSectionCollection: #3d3d3d;
@@ -67,7 +67,6 @@ $desktop-down: 1199px;
 */
 $headerHeight: 40px;
 
-
 @mixin link {
   text-decoration: none;
   color: $black;
@@ -77,13 +76,11 @@ $headerHeight: 40px;
   border: 1px solid $black;
 }
 
-
 /************ DISPLAY ************/
 
-@mixin flexbox ($direction: row, $justify: space-between, $align: center) {
+@mixin flexbox($direction: row, $justify: space-between, $align: center) {
   display: flex;
   justify-content: $justify;
   flex-direction: $direction;
   align-items: $align;
 }
-
