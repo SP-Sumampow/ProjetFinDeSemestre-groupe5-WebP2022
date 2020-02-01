@@ -16,11 +16,14 @@
         }
     
         .footer--thirdPart{
-            @include flexbox(column, space-around);
+            @include flexbox(column, space-around, stretch);
             height: 40vh;
             color: $footerText;
 
             .footer--thirdPart__button{
-                @include flexbox;
+            @include flexbox(space-between);
             }
         }
+
+
+        
