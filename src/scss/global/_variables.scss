@@ -4,32 +4,30 @@
 
 // PRIMARY :
 $black: #222222;
-$white: #FFFFFF;
-// $purple: #6B75CA;
-// $lightPurple: #B6BCF2;
-// $ultraLightPurple: #F0F3F8;
+$white: #ffffff;
+$text: #3d3d3d;
+$footerText: #8e3e3e;
 
 // SECONDARY
-// $brown: #D29B85;
-// $turquoise: #64E0B9;
-// $blue: #95E1EC;
-// $darkBlue: #219AAA;
-// $yellow: #F4C61E;
-// $lightPink: #F3A2A2;
-// $marine: #2C3950;
-// $pink: #E972DD;
-// $orange: #FD8F51;
-// $green: #06FB85;
+$titleSectionHeroAndJacquemus: #562a01;
+$jacquemus: rgb(205, 153, 153, 0.45);
+$textSectionJacquemus: #80596c;
+$titleSectionCollection: #3d3d3d;
+$subtitleCollectionAndSelection: #c58fa1;
 
+// COLOR BACKGROUND
+$jacquemusWalletBackground: rgb (123, 6, 0, 0.21);
+$walletBackground: rgb (207, 177, 189, 0.21);
+$footerBackgroundTitle: #634b57;
+$footerBackgroudAndLine: #f4eef1;
 
 // GRADIENTS :
-$gradient: linear-gradient(90deg, #6B75CA 0%, rgba(240, 243, 248, 0) 100%);
+$gradient: linear-gradient(90deg, #6b75ca 0%, rgba(240, 243, 248, 0) 100%);
 
 /**
 * FONTS
 */
-$font: 'Sofia Pro',
-sans-serif;
+$font: "Sofia Pro", sans-serif;
 
 /**
 * BREAKPOINTS
