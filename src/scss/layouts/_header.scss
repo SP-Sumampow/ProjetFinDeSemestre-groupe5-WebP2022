@@ -1,0 +1,97 @@
+
+@mixin flexbox ($direction: row, $justify: space-between, $align: center) {
+    display: flex;
+    justify-content: $justify;
+    flex-direction: $direction;
+    align-items: $align;
+}
+
+@mixin link {
+    text-decoration: none;
+    color: $black;
+}
+
+@mixin border {
+    border: 1px solid $black;
+}
+
+.header {
+    height: 10vh;
+    @include flexbox(row);
+    background-color: $white;
+    opacity: 0.5;
+    @include border;
+
+    *{
+        box-sizing: border-box;
+    }
+
+    .menu {
+        display: none;
+        list-style-type: none;
+        
+        ul {
+            @include border;
+        }
+        a {
+            @include link;
+        }
+
+    }
+
+
+    &.header-is-open{
+        height: 100vh;
+        @include flexbox(column);
+
+        .is-open-menu {
+            @include flexbox( column, space-around);
+            background-color: $white;
+            color: $black;
+            @include border;
+            text-align: center;
+            font-style: bold;
+            font-weight: 500;
+            height: 90vh;
+            width: 100vw;
+
+    }
+}
+     
+}
+
+.container {
+    display: inline-block;
+    cursor: pointer;
+}
+  
+.bar {
+    width: 35px;
+    height: 5px;
+    background-color: $black;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.is-click .bar:nth-child(1){
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+  
+.is-click .bar:nth-child(2) {
+    opacity: 0;
+}
+.is-click .bar:nth-child(3){
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}
+  
+.is-open-menu {
+    @include flexbox( column, space-around, center);
+    background-color: $white;
+    color: $black;
+    @include border;
+    text-align: center;
+    font-style: bold;
+    font-weight: 500;
+}
