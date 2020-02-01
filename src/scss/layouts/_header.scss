@@ -16,7 +16,7 @@
 }
 
 .header {
-    height: 10vh;
+    position: relative;
     @include flexbox;
     background-color: $white;
     opacity: 0.5;
@@ -29,7 +29,29 @@
     .menu {
         display: none;
         list-style-type: none;
-        
+        padding-top: 65px;
+
+        li {
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+
+        li:first-child{
+            background-color: pink;
+        }
+
+        li:nth-child(2){
+            background-color: yellow;
+        }
+
+        li:nth-child(3){
+            background-color: blueviolet;
+        }
       
         a {
             @include link;
@@ -51,14 +73,14 @@
         
 
     .is-open-menu {
-        @include flexbox( column, space-around);
-        background-color: $white;
+        @include flexbox( column, space-around, stretch);
+        background-color: blue;
         color: $black;
         text-align: center;
         font-style: bold;
         font-weight: 500;
-        height: 90vh;
         width: 100vw;
+        height: 100vh;
 
     }
 }
@@ -66,7 +88,10 @@
 
 .container {
     display: inline-block;
+    position: absolute;
     cursor: pointer;
+    top: 10px;
+    left: 10px;
 
 }
   
@@ -79,8 +104,8 @@
 }
 
 .is-click .bar:nth-child(1){
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-    transform: rotate(-45deg) translate(-9px, 6px) ;
+    -webkit-transform: rotate(-45deg) translate(-8px, 8px) ;
+    transform: rotate(-45deg) translate(-8px, 8px) ;
 }
   
 .is-click .bar:nth-child(2) {
