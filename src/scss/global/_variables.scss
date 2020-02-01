@@ -27,9 +27,23 @@ $gradient: linear-gradient(90deg, #6b75ca 0%, rgba(240, 243, 248, 0) 100%);
 /**
 * FONTS
 */
-$font: "Sofia Pro", sans-serif;
+$fontMonserrat: "Montserrat", sans-serif;
+$fontPlayfair: "Playfair Display", sans-serif;
+$fontRoboto: "robotoregular", sans-serif;
+
+$fontSizeTitleHero: 24px;
+$fontSizeTitleJaquemus: 18px;
+$fontSizeTitleSections: 14px;
+
+$fontSizeText: 11px;
+$fontSizeTextHero: 18px;
+$fontSizeTextJacquemus: 13px;
+
+$fontSizeBtn: 9px;
 
 /**
+
+
 * BREAKPOINTS
 */
 $tablet-up: 768px;
