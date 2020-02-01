@@ -1,5 +1,5 @@
 
-.header {
+.main-header {
     position: relative;
     @include flexbox;
     background-color: $white;
@@ -82,7 +82,7 @@
 .bar {
     width: 35px;
     height: 3px;
-    background-color: $font;
+    background-color: $text;
     margin: 6px 0;
     transition: 0.4s;
 }
