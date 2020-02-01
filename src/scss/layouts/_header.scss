@@ -17,10 +17,10 @@
 
 .header {
     height: 10vh;
-    @include flexbox(row);
+    @include flexbox;
     background-color: $white;
     opacity: 0.5;
-    @include border;
+    
 
     *{
         box-sizing: border-box;
@@ -30,9 +30,7 @@
         display: none;
         list-style-type: none;
         
-        ul {
-            @include border;
-        }
+      
         a {
             @include link;
         }
@@ -42,27 +40,34 @@
 
     &.header-is-open{
         height: 100vh;
-        @include flexbox(column);
+        display: flex(column);
+        flex-direction: columns;
 
-        .is-open-menu {
-            @include flexbox( column, space-around);
-            background-color: $white;
-            color: $black;
-            @include border;
-            text-align: center;
-            font-style: bold;
-            font-weight: 500;
-            height: 90vh;
-            width: 100vw;
+        .container{
+            align-self: flex-start;
+        }
+
+    }
+        
+
+    .is-open-menu {
+        @include flexbox( column, space-around);
+        background-color: $white;
+        color: $black;
+        text-align: center;
+        font-style: bold;
+        font-weight: 500;
+        height: 90vh;
+        width: 100vw;
 
     }
 }
      
-}
 
 .container {
     display: inline-block;
     cursor: pointer;
+
 }
   
 .bar {
@@ -84,14 +89,4 @@
 .is-click .bar:nth-child(3){
     -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
     transform: rotate(45deg) translate(-8px, -8px) ;
-}
-  
-.is-open-menu {
-    @include flexbox( column, space-around, center);
-    background-color: $white;
-    color: $black;
-    @include border;
-    text-align: center;
-    font-style: bold;
-    font-weight: 500;
 }
