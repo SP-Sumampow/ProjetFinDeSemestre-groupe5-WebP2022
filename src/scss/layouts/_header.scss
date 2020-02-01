@@ -1,20 +1,4 @@
 
-@mixin flexbox ($direction: row, $justify: space-between, $align: center) {
-    display: flex;
-    justify-content: $justify;
-    flex-direction: $direction;
-    align-items: $align;
-}
-
-@mixin link {
-    text-decoration: none;
-    color: $black;
-}
-
-@mixin border {
-    border: 1px solid $black;
-}
-
 .header {
     position: relative;
     @include flexbox;
