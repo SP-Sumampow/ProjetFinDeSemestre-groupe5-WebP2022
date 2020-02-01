@@ -76,6 +76,11 @@ $headerHeight: 40px;
   border: 1px solid $black;
 }
 
+@mixin format {
+  height: 100vh;
+  width: 100vw;
+}
+
 /************ DISPLAY ************/
 
 @mixin flexbox($direction: row, $justify: space-between, $align: center) {

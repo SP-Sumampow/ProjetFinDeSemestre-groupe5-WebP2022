@@ -27,4 +27,12 @@
 
 body {
   background-color: $white;
+
+  .main{
+    @include format;
+  }
+
+  .footer{
+    @include format;
+  }
 }
