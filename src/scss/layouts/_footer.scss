@@ -5,12 +5,14 @@
             text-align: center;
             height: 50vh;
             color: $footerText;
+            background-color: $footerBackgroudAndLine;
         }
     
         .footer--secondPart{
             @include flexbox(column, space-around);
             height: 10vh;
-            color: $text;
+            color: $white;
+            background-color: $footerBackgroundTitle;
         }
     
         .footer--thirdPart{
