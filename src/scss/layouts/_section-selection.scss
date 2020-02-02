@@ -1,0 +1,37 @@
+.selection {
+  h2 {
+    text-transform: uppercase;
+    color: $titleSectionCollection;
+    font-family: $fontMonserrat;
+    font-size: $fontSizeTitleSections;
+  }
+
+  h3 {
+    color: $subtitleCollectionAndSelection;
+    font-family: $fontNothingCould;
+    font-size: $fontSizeTitleSections;
+  }
+
+  h4 {
+    font-family: $fontNothingCould;
+    color: $titleSectionCollection;
+    font-size: $fontSizeTitleSections;
+  }
+
+  p {
+    font-family: $fontMonserrat;
+    font-size: $fontSizeText;
+    color: $text;
+  }
+}
+
+.selections__btnaAddWallet {
+  font-size: $fontSizeBtn;
+  text-transform: uppercase;
+  border: 1px solid rgba(0, 0, 0, 0.65);
+  padding: 12px 24px;
+  width: 93px;
+  height: 35px;
+  border: $btnBorder;
+  box-shadow: $btnShadow;
+}

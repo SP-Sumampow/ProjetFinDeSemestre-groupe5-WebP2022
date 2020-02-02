@@ -1,55 +1,52 @@
 //ICI DÉCLARATIONS DES @font-face...
 
-
-
-
 //MONTSERRAT//
 
 @font-face {
-  font-family: 'Montserrat';
-  src: url('/fonts/Montserrat-Regular.woff2') format('woff2'),
-    url('/fonts/Montserrat-Regular.woff') format('woff');
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-Regular.woff2") format("woff2"),
+    url("/fonts/Montserrat-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Montserrat';
-  src: url('/fonts/Montserrat-ExtraBold.woff2') format('woff2'),
-    url('/fonts/Montserrat-ExtraBold.woff') format('woff');
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-ExtraBold.woff2") format("woff2"),
+    url("/fonts/Montserrat-ExtraBold.woff") format("woff");
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Montserrat';
-  src: url('/fonts/Montserrat-SemiBold.woff2') format('woff2'),
-    url('/fonts/Montserrat-SemiBold.woff') format('woff');
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-SemiBold.woff2") format("woff2"),
+    url("/fonts/Montserrat-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Montserrat';
-  src: url('/fonts/Montserrat-Light.woff2') format('woff2'),
-    url('/fonts/Montserrat-Light.woff') format('woff');
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-Light.woff2") format("woff2"),
+    url("/fonts/Montserrat-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Montserrat';
-  src: url('/fonts/Montserrat-Medium.woff2') format('woff2'),
-    url('/fonts/Montserrat-Medium.woff') format('woff');
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-Medium.woff2") format("woff2"),
+    url("/fonts/Montserrat-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
 }
 
 //ROBOTO//
 @font-face {
-  font-family: 'robotoregular';
-  src: url('/fonts/Roboto-Regular-webfont.woff') format('woff'),
-    url('/fonts/Roboto-Regular-webfont.ttf') format('truetype');
+  font-family: "robotoregular";
+  src: url("/fonts/Roboto-Regular-webfont.woff") format("woff"),
+    url("/fonts/Roboto-Regular-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -57,11 +54,20 @@
 //PLAYFAIR DISPLAY//
 
 @font-face {
-  font-family: 'Playfair Display';
+  font-family: "Playfair Display";
   font-style: normal;
   font-weight: 400;
-  src: url('/fonts/PlayfairDisplay-VariableFont.ttf');
-  src:
-    url('/fonts/PlayfairDisplay-VariableFont.woff2') format('woff2'),
-    url('/fonts/PlayfairDisplay-VariableFont.woff') format('woff'),
+  src: url("/fonts/PlayfairDisplay-VariableFont.ttf");
+  src: url("/fonts/PlayfairDisplay-VariableFont.woff2") format("woff2"),
+    url("/fonts/PlayfairDisplay-VariableFont.woff") format("woff");
+}
+
+//NOTHING YOU COULD DO//
+
+@font-face {
+  font-family: "Nothing You Could Do";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/fonts/NothingYouCouldDo.ttf"),
+    url("/fonts/NothingYouCouldDo.ttf") format("truetype");
 }

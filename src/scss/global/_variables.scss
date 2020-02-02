@@ -21,7 +21,12 @@ $walletBackground: rgb (207, 177, 189, 0.21);
 $footerBackgroundTitle: #634b57;
 $footerBackgroudAndLine: #f4eef1;
 
+// COLOR BUTTON
+$btnBorder: 1px solid rgba(0, 0, 0, 0.65);
+$btnShadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+
 // GRADIENTS :
+
 $gradient: linear-gradient(90deg, #6b75ca 0%, rgba(240, 243, 248, 0) 100%);
 
 /**
@@ -30,6 +35,7 @@ $gradient: linear-gradient(90deg, #6b75ca 0%, rgba(240, 243, 248, 0) 100%);
 $fontMonserrat: "Montserrat", sans-serif;
 $fontPlayfair: "Playfair Display", sans-serif;
 $fontRoboto: "robotoregular", sans-serif;
+$fontNothingCould: "Nothing You Could Do", sans-serif;
 
 $fontSizeTitleHero: 24px;
 $fontSizeTitleJaquemus: 18px;
