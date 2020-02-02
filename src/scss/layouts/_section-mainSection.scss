@@ -2,6 +2,8 @@
     background-color: pink;
     height: 100vh;
     @include flexbox(column);
+    text-align: left;
+    
 
 
     .main__product {
@@ -10,5 +12,19 @@
     
     .main__text {
         height: 40vh;
+        color: $titleHeroAndJacquemus;
+        margin-left: 8vw;
+        
+
+        .main__text__title {
+            font-size: 24px;
+            font-family: Playfair Display;
+        }
+
+        .main__text__description {
+            font-size: 18px;
+            font-family: robotoregular;
+            line-height: 27px;
+        }
     }
 }
