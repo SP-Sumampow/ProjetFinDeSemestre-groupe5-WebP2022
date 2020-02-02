@@ -1,4 +1,7 @@
 
+    .footer{
+
+        font-family: $fontMonserrat;
 
         .footer--firstPart{
             @include flexbox(column, space-around);
@@ -10,20 +13,23 @@
     
         .footer--secondPart{
             @include flexbox(column, space-around);
-            height: 10vh;
+            height: 6vh;
             color: $white;
             background-color: $footerBackgroundTitle;
         }
     
         .footer--thirdPart{
             @include flexbox(column, space-around, stretch);
-            height: 40vh;
+            height: 44vh;
             color: $footerText;
 
             .footer--thirdPart__button{
             @include flexbox(space-between);
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: auto;
+            @include border;
             }
         }
-
-
+    }
         
