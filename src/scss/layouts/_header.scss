@@ -1,9 +1,10 @@
 
 .header {
-    position: sticky;
+    position: fixed;
+    top: 0;
+    left: 0;
     @include flexbox;
     background-color: $white;
-    opacity: 0.5;
     height: 8vh;
     
 
@@ -82,7 +83,7 @@
   
 .bar {
     width: 35px;
-    height: 3px;
+    height: 5px;
     background-color: $text;
     margin: 6px 0;
     transition: 0.4s;
