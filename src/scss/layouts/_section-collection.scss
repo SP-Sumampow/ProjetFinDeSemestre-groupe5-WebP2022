@@ -1,4 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+
 .collection {
+  line-height: 19px;
+
   h2 {
     text-transform: uppercase;
     color: $titleSectionCollection;
@@ -19,7 +25,15 @@
   }
 }
 
+.frameWallet {
+  display: flex;
+  width: 295px;
+  height: 261px;
+  background-color: $FrameWalletBackground;
+}
+
 .collection__btnWallet {
+  background-color: $white;
   font-size: $fontSizeBtn;
   text-transform: uppercase;
   padding: 12px 24px;

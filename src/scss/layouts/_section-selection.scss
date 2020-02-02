@@ -1,4 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+
 .selection {
+  line-height: 19px;
+
   h2 {
     text-transform: uppercase;
     color: $titleSectionCollection;
@@ -26,6 +32,7 @@
 }
 
 .selections__btnaAddWallet {
+  background-color: $white;
   font-size: $fontSizeBtn;
   text-transform: uppercase;
   border: 1px solid rgba(0, 0, 0, 0.65);
