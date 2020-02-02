@@ -1,9 +1,10 @@
 
-.main-header {
-    position: relative;
+.header {
+    position: sticky;
     @include flexbox;
     background-color: $white;
     opacity: 0.5;
+    height: 8vh;
     
 
     *{

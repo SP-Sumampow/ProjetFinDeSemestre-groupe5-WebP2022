@@ -1,0 +1,14 @@
+.main {
+    background-color: pink;
+    height: 100vh;
+    @include flexbox(column);
+
+
+    .main__product {
+        height: 60vh;
+    }
+    
+    .main__text {
+        height: 40vh;
+    }
+}
