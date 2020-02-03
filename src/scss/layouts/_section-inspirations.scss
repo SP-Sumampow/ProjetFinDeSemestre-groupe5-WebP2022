@@ -1,6 +1,5 @@
 .section-inspirations {
-  margin: 10%;
-  font-family: Montserrat;
+  font-family: $fontMonserrat;
   @include flexbox(column, center);
   line-height: rem(19px);
 
@@ -73,7 +72,7 @@
   }
 
   &__title {
-    font-family: Montserrat;
+    font-family: $fontMonserrat;
     text-transform: uppercase;
     font-weight: 600;
     font-size: rem(16px);
@@ -82,7 +81,7 @@
     margin: auto;
 
     &::after {
-      content: '\002015';
+      content: "\002015";
       @include flexbox(column, center);
       height: rem(5px);
       margin-bottom: rem(30px);
@@ -107,7 +106,7 @@
   }
 
   &__subtitle {
-    font-family: Playfair Display;
+    font-family: $fontPlayfair;
     font-size: rem(20px);
     line-height: rem(24px);
     display: flex;
@@ -128,7 +127,7 @@
   }
 
   &__paragraph {
-    font-family: Montserrat;
+    font-family: $fontMonserrat;
     font-size: rem(15px);
     line-height: rem(19px);
     color: $textSectionJacquemus;
