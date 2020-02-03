@@ -3,8 +3,7 @@
 }
 
 .collection {
-  height: 145vh;
-  margin-top: rem(100px);
+  margin-top: rem(90px);
   line-height: rem(19px);
 
   h2 {
@@ -18,7 +17,7 @@
     margin-top: rem(5px);
     color: $subtitleCollectionAndSelection;
     font-family: $fontNothingCould;
-    font-size: rem(11px);
+    font-size: $fontSizeSubtitle;
   }
 
   p {
@@ -27,21 +26,26 @@
     font-size: rem(16px);
     color: $text;
   }
-
-  @include desktop-up {
-    @include flexbox(row, space-between);
-  }
 }
 
 .frameWallet {
+  display: flex;
   margin-top: rem(75px);
   width: rem(295px);
   height: rem(261px);
   background-color: $FrameWalletBackground;
+  position: relative;
+  z-index: -2;
+
+  &--firstWalletSections {
+    margin-top: rem(20px);
+  }
 }
 
-.frameWallet--firstWalletSections {
-  margin-top: rem(20px);
+.likes {
+  position: absolute;
+  transform: translateY(-270px) translateX(270px);
+  z-index: -1;
 }
 
 .collection__btnWallet {

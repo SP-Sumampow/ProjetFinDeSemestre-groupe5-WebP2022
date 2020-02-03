@@ -22,7 +22,7 @@
 @import "layouts/_section-collection.scss";
 @import "layouts/_section-selection.scss";
 @import "layouts/_section-article.scss";
-@import "layouts/section-evenement.scss";
+@import "layouts/_section-event.scss";
 
 // PAGES
 // ici importations des pages du site : homepage, contact, panier, articles, FAQ...
@@ -36,5 +36,4 @@ body {
 main {
   margin-right: 10%;
   margin-left: 10%;
-  @include flexbox(column, center);
 }
