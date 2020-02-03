@@ -1,13 +1,27 @@
+.footer {
 
-    .footer{
+    font-family: $fontMonserrat;
+    @include format;
 
-        font-family: $fontMonserrat;
-        @include format;
+    @include tablet-up {
+        height: 80vh;
+    }
+
+
+    .footer__firstPart {
+        @include flexbox(column, space-around);
+        text-align: center;
+        height: 50vh;
+        color: $footerText;
+        background-color: $footerBackgroudAndLine;
 
         @include tablet-up {
-            height: 80vh;
+            height: 20vh;
+            @include flexbox(row, space-around);
         }
+    }
 
+<<<<<<< Updated upstream
        
         .footer--advantage{
             @include flexbox(column, space-around);
@@ -37,30 +51,49 @@
             @include tablet-up {
                 display: none;
             }
+=======
+    .footer--secondPart {
+        @include flexbox(column, space-around);
+        height: 6vh;
+        color: $white;
+        background-color: $footerBackgroundTitle;
+
+        @include tablet-up {
+            display: none;
+>>>>>>> Stashed changes
         }
-    
-        .footer--thirdPart{
-            @include flexbox(column, space-around, stretch);
-            height: 44vh;
-            color: $footerText;
-            margin: 0 5vh;
+    }
 
-            @include tablet-up{
-                @include flexbox(row, space-around, center);
-            }
+    .footer--thirdPart {
+        @include flexbox(column, space-around, stretch);
+        height: 44vh;
+        color: $footerText;
+        margin: 0 5vh;
+
+        @include tablet-up {
+            @include flexbox(row, space-around, center);
+        }
 
 
+<<<<<<< Updated upstream
             &__menuHide{
                 display: none;
             }
 
             &__button{
             @include flexbox(row,space-between);
+=======
+        .footer__thirdPart--menuHide {
+            display: none;
+        }
+
+        .footer--thirdPart__button {
+            @include flexbox(column, space-between);
+>>>>>>> Stashed changes
             flex-grow: 1;
             flex-shrink: 1;
             flex-basis: auto;
             border-bottom: 0.5px solid $footerBackgroudAndLine;
-            }
         }
     }
-        
+}

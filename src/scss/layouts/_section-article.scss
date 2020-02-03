@@ -9,13 +9,28 @@
   margin-top: 100px;
   margin-bottom: 100px;
   color: $white;
-  @include format;
-
-
 
   @include tablet-up {
-    height: rem(1024px);
-    width: rem(768px);
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  @include desktop-up {
+    @include flexbox(row, center, center);
+    margin: 100px 0;
+
+
+    &__visual:nth-child(1) {
+      order: 2;
+      width: rem(665px);
+      height: rem(420px);
+    }
+
+    &__text:nth-child(2) {
+      order: 1;
+      width: rem(520px);
+      height: rem(420px);
+    }
   }
 
 
@@ -26,7 +41,12 @@
 
     @include tablet-up {
       width: rem(500px);
-      height: rem(500px);
+      height: rem(400px);
+    }
+
+    @include desktop-up {
+      width: rem(520px);
+      height: rem(420px);
     }
   }
 
@@ -38,27 +58,12 @@
       width: rem(500px);
       height: rem(500px);
     }
-  }
 
-  @include desktop-up {
-    @include flexbox(row, space-between);
-
-    &__visual:nth-child(1) {
-      order: 2;
-      flex-grow: 1;
-      flex-shrink: 1;
-      margin: rem(0 100px 0 50px);
-      position: relative;
-    }
-
-    &__text:nth-child(2) {
-      order: 1;
-      flex-grow: 1;
-      flex-shrink: 1;
-      margin-right: rem(130px);
+    @include desktop-up {
+      width: rem(665px);
+      height: rem(420px);
     }
   }
-
 
   &__img {
     width: rem(300px);
@@ -84,11 +89,8 @@
     }
 
     @include desktop-up {
-      width: rem(325px);
-      height: rem(440px);
-      position: relative;
-      top: rem(80px);
-      left: rem(-125px);
+      width: rem(665px);
+      height: rem(420px);
     }
   }
 
@@ -103,12 +105,12 @@
 
     @include tablet-up {
       font-size: rem(25px);
-      margin: 30px 30px;
+      margin: 25px 25px;
     }
 
     @include desktop-up {
-      font-size: rem(30px);
-      width: rem(700px);
+      font-size: rem(28px);
+      margin: 30px 30px;
     }
   }
 
@@ -120,16 +122,12 @@
     margin: 15px 20px;
 
     @include tablet-up {
-      font-size: rem(25px);
-      line-height: 1.5;
-      margin: 15px 30px;
-
+      font-size: rem(20px);
+      margin: 30px 30px;
     }
 
     @include desktop-up {
-      font-size: rem(18px);
-      line-height: 1.5;
-      width: rem(700px);
+      font-size: rem(22px);
     }
   }
 
@@ -145,19 +143,14 @@
     border: $btnBorder;
     box-shadow: $btnShadow;
     cursor: pointer;
-  }
 
-  @include tablet-up {
-    font-size: rem(35px);
-    line-height: 1.5;
-    margin: 15px 30px;
-    width: 202px;
-    height: 66px;
-  }
-
-  @include desktop-up {
-    font-size: rem(18px);
-    line-height: 1.5;
-    width: rem(700px);
+    @include tablet-up {
+      margin: 30px 100px 30px 20px;
+      text-transform: uppercase;
+      padding: 12px 24px;
+      font-size: rem(15px);
+      width: 230px;
+      height: 50px;
+    }
   }
 }

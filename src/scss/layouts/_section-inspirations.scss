@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .section-inspirations {
   font-family: $fontMonserrat;
   @include flexbox(column, center);
@@ -26,8 +30,7 @@
     }
   }
 
-  @media (max-width: 1500px) {
-  }
+  @media (max-width: 1500px) {}
 
   &__backsquare {
     width: rem(214px);
