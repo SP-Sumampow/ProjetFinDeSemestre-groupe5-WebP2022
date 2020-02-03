@@ -6,7 +6,11 @@
     @include flexbox;
     background-color: $white;
     height: 8vh;
-    
+    width: 100vw;
+
+    @include tablet-up {
+        height: 15vh;
+    }
 
     *{
         box-sizing: border-box;
@@ -16,6 +20,13 @@
         display: none;
         list-style-type: none;
         padding-top: 65px;
+
+        @include tablet-up{
+            @include flexbox(space-around);
+            padding-top: 4px;
+            width: 100vw;
+            text-align: center;
+        }
 
         li {
             flex-grow: 1;
@@ -79,6 +90,9 @@
     top: 10px;
     left: 10px;
 
+    @include tablet-up {
+        display: none;
+    }
 }
   
 .bar {
