@@ -1,0 +1,24 @@
+.sectionEvenement {
+  height: 220vh;
+  line-height: rem(19px);
+
+  h2 {
+    text-transform: uppercase;
+    color: $titleSectionCollection;
+    font-family: $fontMonserrat;
+    font-size: $fontSizeTitleSections;
+  }
+  @include desktop-up {
+    @include flexbox(row, space-between);
+  }
+}
+
+.ba {
+  display: flex;
+  width: 295px;
+  height: 438px;
+}
+
+.contain {
+  object-fit: fill;
+}
