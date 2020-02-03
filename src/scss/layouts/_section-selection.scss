@@ -3,7 +3,7 @@
 }
 
 .selection {
-  @include flexbox(column, center, center);
+  @include flexbox(column, flex-start, left);
   margin-top: rem(90px);
   line-height: rem(19px);
 

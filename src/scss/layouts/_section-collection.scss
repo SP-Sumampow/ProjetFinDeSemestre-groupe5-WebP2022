@@ -5,13 +5,14 @@
 .collection {
   margin-top: rem(90px);
   line-height: rem(19px);
-  @include flexbox(column, center, center);
+  @include flexbox(column, flex-start, left);
 
   h2 {
     text-transform: uppercase;
     color: $titleSectionCollection;
     font-family: $fontMonserrat;
     font-size: $fontSizeTitleSections;
+    text-align: left;
   }
 
   h3 {
@@ -19,6 +20,7 @@
     color: $subtitleCollectionAndSelection;
     font-family: $fontNothingCould;
     font-size: $fontSizeSubtitle;
+    text-align: left;
   }
 
   p {
