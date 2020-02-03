@@ -1,19 +1,21 @@
 .introduction {
-    @include format;
-    @include flexbox(column, center, center);
-
+    margin:10vh 0;
+    @include flexbox(column, flex-start, center);
 
     img {
-        max-width: 600px;
-        max-height: 500px;
         width: 80vw;
-        height: 30vh;
+        height: 25vh;
+        max-width: rem(900px);
+        height: auto;
     }
+
     .introduction__text { 
         position: relative;
         background-color: $black;
         width: 80vw;
-        max-width: 600px;
+        max-width: rem(900px);
+        padding: 0 15px ;
+        
         p {
             color: $white;
             font-size: $fontSizeText;
@@ -23,20 +25,67 @@
         }
     }
 }
-.collaboration {
+@include tablet-up {
+    .introduction {
+        margin: 0;
+        @include format;
+        @include flexbox(column, center, center);
+    }
     
-    .collaborationFirstPart {
+}
+@include desktop-up {
+    .introduction {
         
         @include format;
-        height: 90vh;
+        @include flexbox(row-reverse,flex-end, center);
+        width: 70vw;
+        span {
+            font-size:24px;
+        }
+        img {
+            
+            left: rem(400px);
+            top:rem(-50px);
+            width:50vw;
+            height: rem(500px);
+            position: relative;
+            z-index: -1;
+            box-shadow: 5px 5px 5px 0px black;
+        }
+    
+        .introduction__text { 
+            position: absolute;
+            z-index:-2;
+            background-color: $black;
+            width: rem(900px);
+            height: rem(700px);
+            box-shadow: 5px 5px 5px 0px black;
+            
+            p {
+                color: $white;
+                font-size: $fontSizeTextDesktop;
+                font-family: $fontMonserrat;
+                line-height: 1.5;
+                margin: rem(50px);
+                width:rem(275px);
+            }
+        }
+    }
+}
+/*--------------------------------------------------------------*/
+
+.collaboration {
+
+    .collaborationFirstPart {
         @include flexbox( column, space-around, center);
         img, h1, h2, .collaborationFirstPart__text {
             width: 80vw;
-            max-width: 600px;
-            max-height: 550px;
+            max-width:rem(600px);
         }
+        
         h1 {
             font-family: $fontPlayfair;
+            font-size:rem(52px)
         }
         h2 {
             
@@ -45,10 +94,13 @@
             font-family: $fontMonserrat;
             font-weight: 600;
             font-size: $fontSizeTextJacquemus;
+            padding: 10px 0 ;
+
         }
         .collaborationFirstPart__text {
             position: relative;
             margin-bottom: 10vh;
+            padding: 10vh 0;
             p {
                 color: #000000;
                 font-size: $fontSizeText;
@@ -59,9 +111,10 @@
     }
     .collaborationSecondPart {
         @include flexbox( column, space-around, center);
-        img, figure, .collaborationSecondPart__text {
+        img, .collaborationSecondPart__text {
             width: 80vw;
-            max-width: 450px;
+            max-width: 500px;
+            height: auto;
         }
         .collaborationSecondPart__text {
             margin: 50px 0;
@@ -75,3 +128,97 @@
         }
     }
 }
+
+@include desktop-up {
+    .collaboration {
+
+        .collaborationFirstPart {
+            @include format;
+            padding: 0 15vw;
+            display:grid;
+            grid-template-rows:repeat(3, 1fr);
+            grid-template-columns:repeat(2, 1fr);
+            grid-template-areas:
+            "title ."
+            "logo texts";
+            img {
+                grid-area:logo;
+            }
+            img, h1, h2, .collaborationFirstPart__text {
+                width: 500px;
+                max-width:rem(900px);
+            }
+            
+            .title{
+
+                width:300px;
+                align-self:center;
+                
+                h1 {
+                    font-family: $fontPlayfair;
+                    font-size:rem(52px);
+                    grid-area:title;
+                    
+                }
+                h2 {
+                    margin-left:30%;
+                    color: $jacquemus;
+                    text-transform: uppercase;
+                    font-family: $fontMonserrat;
+                    font-weight: 600;
+                    font-size: $fontSizeTextJacquemus;
+                    padding: 10px 0 ;
+                      
+                }
+            }
+            .collaborationFirstPart__text {
+                position: relative;
+                padding: 10vh 10px;
+                grid-area:texts;
+                justify-self:start;
+                
+                p {
+                
+                    color: #000000;
+                    font-size: $fontSizeTextDesktop;
+                    font-family: $fontMonserrat;
+                    line-height: 1.5;
+                    max-height:400px;
+                    
+                }
+            }
+        }
+        .collaborationSecondPart {
+            @include format;
+            padding: 0 15vw;
+
+            display:grid;
+            grid-template-rows:repeat(3, 1fr);
+            grid-template-columns:repeat(2, 1fr);
+            grid-template-areas:
+            "texts photo"
+            "logo photo";
+            img:first-child {
+                grid-area:photo;
+                align-self:end;
+
+            }
+            img, .collaborationSecondPart__text {
+                width: 80vw;
+                max-width: 500px;
+                height: auto;
+            }
+            .collaborationSecondPart__text {
+                margin: 50px 0;
+                grid-area:texts;
+                p {
+                    color: #000000;
+                    font-size: $fontSizeTextDesktop;
+                    font-family: $fontMonserrat;
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+}
+
