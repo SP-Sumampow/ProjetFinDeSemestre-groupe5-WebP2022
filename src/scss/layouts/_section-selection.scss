@@ -3,6 +3,7 @@
 }
 
 .selection {
+  @include flexbox(column, center, center);
   margin-top: rem(90px);
   line-height: rem(19px);
 
@@ -48,5 +49,20 @@
 
   &:hover {
     cursor: pointer;
+  }
+}
+
+.frameWallet {
+  display: flex;
+  justify-content: space-around;
+  margin-top: rem(75px);
+  width: rem(295px);
+  height: rem(261px);
+  background-color: $FrameWalletBackground;
+  position: relative;
+  z-index: -2;
+
+  &--firstWalletSections {
+    margin-top: rem(20px);
   }
 }

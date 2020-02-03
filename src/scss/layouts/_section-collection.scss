@@ -5,6 +5,7 @@
 .collection {
   margin-top: rem(90px);
   line-height: rem(19px);
+  @include flexbox(column, center, center);
 
   h2 {
     text-transform: uppercase;
@@ -30,6 +31,7 @@
 
 .frameWallet {
   display: flex;
+  justify-content: space-around;
   margin-top: rem(75px);
   width: rem(295px);
   height: rem(261px);
