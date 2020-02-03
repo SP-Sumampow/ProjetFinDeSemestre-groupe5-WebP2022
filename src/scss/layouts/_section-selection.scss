@@ -3,6 +3,7 @@
 }
 
 .selection {
+  margin-top: 100px;
   line-height: 19px;
 
   h2 {
@@ -13,12 +14,15 @@
   }
 
   h3 {
+    margin-top: 5px;
     color: $subtitleCollectionAndSelection;
     font-family: $fontNothingCould;
-    font-size: $fontSizeTitleSections;
+    font-size: 11px;
   }
 
   h4 {
+    margin-top: 14px;
+    margin-bottom: 13px;
     font-family: $fontNothingCould;
     color: $titleSectionCollection;
     font-size: $fontSizeTitleSections;
@@ -32,6 +36,7 @@
 }
 
 .selections__btnaAddWallet {
+  margin-top: 13px;
   background-color: $white;
   font-size: $fontSizeBtn;
   text-transform: uppercase;
