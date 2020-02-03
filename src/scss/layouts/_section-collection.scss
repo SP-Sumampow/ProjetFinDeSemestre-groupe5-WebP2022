@@ -3,6 +3,7 @@
 }
 
 .collection {
+  margin-top: 100px;
   line-height: 19px;
 
   h2 {
@@ -13,33 +14,34 @@
   }
 
   h3 {
+    margin-top: 5px;
     color: $subtitleCollectionAndSelection;
     font-family: $fontNothingCould;
-    font-size: $fontSizeTitleSections;
+    font-size: 11px;
   }
 
   p {
+    margin-top: 15px;
     font-family: $fontMonserrat;
-    font-size: $fontSizeText;
+    font-size: 13px;
     color: $text;
   }
 }
 
 .frameWallet {
-  display: flex;
+  margin-top: 20px;
   width: 295px;
   height: 261px;
   background-color: $FrameWalletBackground;
 }
 
 .collection__btnWallet {
+  margin-top: 12px;
   background-color: $white;
   font-size: $fontSizeBtn;
   text-transform: uppercase;
-  padding: 12px 24px;
   width: 189px;
   height: 35px;
-  left: 42px;
   border: $btnBorder;
   box-shadow: $btnShadow;
 }
