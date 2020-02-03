@@ -1,25 +1,12 @@
-.footer {
 
-    font-family: $fontMonserrat;
-    @include format;
+    .footer{
 
-    @include tablet-up {
-        height: 80vh;
-    }
-
-
-    .footer__firstPart {
-        @include flexbox(column, space-around);
-        text-align: center;
-        height: 50vh;
-        color: $footerText;
-        background-color: $footerBackgroudAndLine;
+        font-family: $fontMonserrat;
+        @include format;
 
         @include tablet-up {
-            height: 20vh;
-            @include flexbox(row, space-around);
+            height: 80vh;
         }
-    }
 
        
         .footer--advantage{
@@ -51,17 +38,16 @@
                 display: none;
             }
         }
-    }
+    
+        .footer--thirdPart{
+            @include flexbox(column, space-around, stretch);
+            height: 44vh;
+            color: $footerText;
+            margin: 0 5vh;
 
-    .footer--thirdPart {
-        @include flexbox(column, space-around, stretch);
-        height: 44vh;
-        color: $footerText;
-        margin: 0 5vh;
-
-        @include tablet-up {
-            @include flexbox(row, space-around, center);
-        }
+            @include tablet-up{
+                @include flexbox(row, space-around, center);
+            }
 
 
             &__menuHide{
@@ -74,5 +60,7 @@
             flex-shrink: 1;
             flex-basis: auto;
             border-bottom: 0.5px solid $footerBackgroudAndLine;
+            }
         }
     }
+        
