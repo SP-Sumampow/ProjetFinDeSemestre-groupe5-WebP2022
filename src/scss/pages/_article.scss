@@ -1,0 +1,77 @@
+.introduction {
+    @include format;
+    @include flexbox(column, center, center);
+
+
+    img {
+        max-width: 600px;
+        max-height: 500px;
+        width: 80vw;
+        height: 30vh;
+    }
+    .introduction__text { 
+        position: relative;
+        background-color: $black;
+        width: 80vw;
+        max-width: 600px;
+        p {
+            color: $white;
+            font-size: $fontSizeText;
+            font-family: $fontMonserrat;
+            line-height: 1.5;
+            margin: 1vh;
+        }
+    }
+}
+.collaboration {
+    
+    .collaborationFirstPart {
+        
+        @include format;
+        height: 90vh;
+        @include flexbox( column, space-around, center);
+        img, h1, h2, .collaborationFirstPart__text {
+            width: 80vw;
+            max-width: 600px;
+            max-height: 550px;
+        }
+        h1 {
+            font-family: $fontPlayfair;
+        }
+        h2 {
+            
+            color: $jacquemus;
+            text-transform: uppercase;
+            font-family: $fontMonserrat;
+            font-weight: 600;
+            font-size: $fontSizeTextJacquemus;
+        }
+        .collaborationFirstPart__text {
+            position: relative;
+            margin-bottom: 10vh;
+            p {
+                color: #000000;
+                font-size: $fontSizeText;
+                font-family: $fontMonserrat;
+                line-height: 1.5;
+            }
+        }
+    }
+    .collaborationSecondPart {
+        @include flexbox( column, space-around, center);
+        img, figure, .collaborationSecondPart__text {
+            width: 80vw;
+            max-width: 450px;
+        }
+        .collaborationSecondPart__text {
+            margin: 50px 0;
+
+            p {
+                color: #000000;
+                font-size: $fontSizeText;
+                font-family: $fontMonserrat;
+                line-height: 1.5;
+            }
+        }
+    }
+}
