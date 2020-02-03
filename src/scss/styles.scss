@@ -25,6 +25,7 @@
 // PAGES
 // ici importations des pages du site : homepage, contact, panier, articles, FAQ...
 @import "pages/_homepage.scss";
+@import "pages/_article.scss";
 
 body {
   background-color: $white;
