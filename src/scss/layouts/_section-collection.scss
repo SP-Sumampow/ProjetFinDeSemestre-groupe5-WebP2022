@@ -3,8 +3,9 @@
 }
 
 .collection {
-  margin-top: 100px;
-  line-height: 19px;
+  margin-top: rem(90px);
+  line-height: rem(19px);
+  @include flexbox(column, center, center);
 
   h2 {
     text-transform: uppercase;
@@ -14,34 +15,52 @@
   }
 
   h3 {
-    margin-top: 5px;
+    margin-top: rem(5px);
     color: $subtitleCollectionAndSelection;
     font-family: $fontNothingCould;
-    font-size: 11px;
+    font-size: $fontSizeSubtitle;
   }
 
   p {
-    margin-top: 15px;
+    margin-top: rem(10px);
     font-family: $fontMonserrat;
-    font-size: 13px;
+    font-size: rem(16px);
     color: $text;
   }
 }
 
 .frameWallet {
-  margin-top: 20px;
-  width: 295px;
-  height: 261px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: rem(75px);
+  width: rem(295px);
+  height: rem(261px);
   background-color: $FrameWalletBackground;
+  position: relative;
+  z-index: -2;
+
+  &--firstWalletSections {
+    margin-top: rem(20px);
+  }
+}
+
+.likes {
+  position: absolute;
+  transform: translateY(-270px) translateX(270px);
+  z-index: -1;
 }
 
 .collection__btnWallet {
-  margin-top: 12px;
+  margin-top: rem(12px);
   background-color: $white;
   font-size: $fontSizeBtn;
   text-transform: uppercase;
-  width: 189px;
-  height: 35px;
+  width: rem(189px);
+  height: rem(35px);
   border: $btnBorder;
   box-shadow: $btnShadow;
+
+  &:hover {
+    cursor: pointer;
+  }
 }

@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+}
+
+.section-article {
+  font-family: $fontMonserrat;
+  @include flexbox(column, center);
+  line-height: 1.5;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  color: $white;
+
+  @include tablet-up {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  @include desktop-up {
+    @include flexbox(row, center, center);
+    margin: 100px 0;
+
+
+    &__visual:nth-child(1) {
+      order: 2;
+      width: rem(665px);
+      height: rem(420px);
+    }
+
+    &__text:nth-child(2) {
+      order: 1;
+      width: rem(520px);
+      height: rem(420px);
+    }
+  }
+
+
+  &__text {
+    background-color: black;
+    width: rem(300px);
+    height: rem(300px);
+
+    @include tablet-up {
+      width: rem(500px);
+      height: rem(400px);
+    }
+
+    @include desktop-up {
+      width: rem(520px);
+      height: rem(420px);
+    }
+  }
+
+  &__visual {
+    width: rem(300px);
+    height: rem(300px);
+
+    @include tablet-up {
+      width: rem(500px);
+      height: rem(500px);
+    }
+
+    @include desktop-up {
+      width: rem(665px);
+      height: rem(420px);
+    }
+  }
+
+  &__img {
+    width: rem(300px);
+    height: rem(300px);
+
+    @supports (object-fit: cover) {
+      width: 100%;
+      height: rem(300px);
+      object-fit: cover;
+    }
+
+    @include tablet-up {
+      width: rem(325px);
+      height: rem(440px);
+      top: rem(110px);
+      left: rem(130px);
+
+      @supports (object-fit: cover) {
+        width: 100%;
+        height: rem(500px);
+        object-fit: cover;
+      }
+    }
+
+    @include desktop-up {
+      width: rem(665px);
+      height: rem(420px);
+    }
+  }
+
+  &__title {
+    font-family: $fontMonserrat;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: rem(18px);
+    line-height: 1.5;
+    text-align: left;
+    margin: 20px 20px;
+
+    @include tablet-up {
+      font-size: rem(25px);
+      margin: 25px 25px;
+    }
+
+    @include desktop-up {
+      font-size: rem(28px);
+      margin: 30px 30px;
+    }
+  }
+
+  &__paragraph {
+    font-family: $fontMonserrat;
+    font-size: rem(16px);
+    line-height: 1.5;
+    color: $white;
+    margin: 15px 20px;
+
+    @include tablet-up {
+      font-size: rem(20px);
+      margin: 30px 30px;
+    }
+
+    @include desktop-up {
+      font-size: rem(22px);
+    }
+  }
+
+  &__button {
+    margin: 20px 100px 20px 20px;
+    background-color: $white;
+    font-size: $fontSizeBtn;
+    text-transform: uppercase;
+    border: 1px solid rgba(0, 0, 0, 0.65);
+    padding: 12px 24px;
+    width: 172px;
+    height: 36px;
+    border: $btnBorder;
+    box-shadow: $btnShadow;
+    cursor: pointer;
+
+    @include tablet-up {
+      margin: 30px 100px 30px 20px;
+      text-transform: uppercase;
+      padding: 12px 24px;
+      font-size: rem(15px);
+      width: 230px;
+      height: 50px;
+    }
+  }
+}

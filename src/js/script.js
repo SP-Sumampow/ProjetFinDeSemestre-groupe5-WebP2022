@@ -10,3 +10,9 @@ burger.addEventListener('click', function () {
     menu.classList.toggle('is-open-menu')
     header.classList.toggle('header-is-open')
 });
+
+/************ FOOTER ON TABLET VERSION ************/
+
+var buttonPlus = document.querySelector(".footer--thirdPart__button__plus");
+var hidenInformation = document.querySelector(".footer__thirdPart--menuHide");
+

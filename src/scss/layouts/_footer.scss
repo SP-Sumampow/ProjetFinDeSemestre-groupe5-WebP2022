@@ -2,33 +2,64 @@
     .footer{
 
         font-family: $fontMonserrat;
+        @include format;
 
-        .footer--firstPart{
+        @include tablet-up {
+            height: 80vh;
+        }
+
+       
+        .footer--advantage{
             @include flexbox(column, space-around);
             text-align: center;
             height: 50vh;
             color: $footerText;
             background-color: $footerBackgroudAndLine;
+
+            @include tablet-up {
+                height: 20vh;
+                @include flexbox(row, space-around);
+            }
+
+            
         }
     
-        .footer--secondPart{
+        .footer__backToTop{
             @include flexbox(column, space-around);
             height: 6vh;
-            color: $white;
             background-color: $footerBackgroundTitle;
+
+            a {
+                @include link;
+                color: $white;
+            }
+
+            @include tablet-up {
+                display: none;
+            }
         }
     
         .footer--thirdPart{
             @include flexbox(column, space-around, stretch);
             height: 44vh;
             color: $footerText;
+            margin: 0 5vh;
 
-            .footer--thirdPart__button{
-            @include flexbox(space-between);
+            @include tablet-up{
+                @include flexbox(row, space-around, center);
+            }
+
+
+            &__menuHide{
+                display: none;
+            }
+
+            &__button{
+            @include flexbox(row,space-between);
             flex-grow: 1;
             flex-shrink: 1;
             flex-basis: auto;
-            @include border;
+            border-bottom: 0.5px solid $footerBackgroudAndLine;
             }
         }
     }

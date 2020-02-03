@@ -1,0 +1,29 @@
+.sectionEvent {
+  margin-top: rem(90px);
+  line-height: rem(19px);
+  @include flexbox(column, center, center);
+
+  &__event {
+    @include flexbox(column, center, center);
+    margin-top: rem(20px);
+  }
+
+  h2 {
+    text-transform: uppercase;
+    color: $titleSectionCollection;
+    font-family: $fontMonserrat;
+    font-size: $fontSizeTitleSections;
+  }
+}
+
+.imgEvent {
+  @include flexbox(column, center, center);
+  width: 295px;
+  height: 438px;
+  margin-bottom: 7px;
+}
+
+// img.imgEvent.imgEvent--second {
+//   // margin-left: 3px;
+//   width: 18.1rem;
+// }

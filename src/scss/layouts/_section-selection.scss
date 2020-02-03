@@ -3,8 +3,9 @@
 }
 
 .selection {
-  margin-top: 100px;
-  line-height: 19px;
+  @include flexbox(column, center, center);
+  margin-top: rem(90px);
+  line-height: rem(19px);
 
   h2 {
     text-transform: uppercase;
@@ -14,17 +15,17 @@
   }
 
   h3 {
-    margin-top: 5px;
+    margin-top: rem(5px);
     color: $subtitleCollectionAndSelection;
     font-family: $fontNothingCould;
-    font-size: 11px;
+    font-size: $fontSizeSubtitle;
   }
 
   h4 {
-    margin-top: 14px;
-    margin-bottom: 13px;
+    margin-top: rem(14px);
+    margin-bottom: rem(13px);
     font-family: $fontNothingCould;
-    color: $titleSectionCollection;
+    color: $subtitleCollectionAndSelection;
     font-size: $fontSizeTitleSections;
   }
 
@@ -36,14 +37,32 @@
 }
 
 .selections__btnaAddWallet {
-  margin-top: 13px;
+  margin-top: REM(13px);
   background-color: $white;
   font-size: $fontSizeBtn;
   text-transform: uppercase;
-  border: 1px solid rgba(0, 0, 0, 0.65);
-  padding: 12px 24px;
-  width: 93px;
-  height: 35px;
+  border: rem(1px) solid rgba(0, 0, 0, 0.65);
+  width: rem(93px);
+  height: rem(35px);
   border: $btnBorder;
   box-shadow: $btnShadow;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.frameWallet {
+  display: flex;
+  justify-content: space-around;
+  margin-top: rem(75px);
+  width: rem(295px);
+  height: rem(261px);
+  background-color: $FrameWalletBackground;
+  position: relative;
+  z-index: -2;
+
+  &--firstWalletSections {
+    margin-top: rem(20px);
+  }
 }
