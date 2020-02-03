@@ -2,13 +2,24 @@
     .footer{
 
         font-family: $fontMonserrat;
+        @include format;
 
+        @include tablet-up {
+            height: 80vh;
+        }
+
+       
         .footer--firstPart{
             @include flexbox(column, space-around);
             text-align: center;
             height: 50vh;
             color: $footerText;
             background-color: $footerBackgroudAndLine;
+
+            @include tablet-up {
+                height: 20vh;
+                @include flexbox(row, space-around);
+            }
         }
     
         .footer--secondPart{
@@ -16,6 +27,10 @@
             height: 6vh;
             color: $white;
             background-color: $footerBackgroundTitle;
+
+            @include tablet-up {
+                display: none;
+            }
         }
     
         .footer--thirdPart{
@@ -24,8 +39,17 @@
             color: $footerText;
             margin: 0 5vh;
 
+            @include tablet-up{
+                @include flexbox(row, space-around, center);
+            }
+
+
+            .footer__thirdPart--menuHide{
+                display: none;
+            }
+
             .footer--thirdPart__button{
-            @include flexbox(space-between);
+            @include flexbox(column,space-between);
             flex-grow: 1;
             flex-shrink: 1;
             flex-basis: auto;
