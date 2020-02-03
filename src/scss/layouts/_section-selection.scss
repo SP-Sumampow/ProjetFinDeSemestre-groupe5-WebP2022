@@ -3,7 +3,7 @@
 }
 
 .selection {
-  height: 245vh;
+  margin-top: rem(90px);
   line-height: rem(19px);
 
   h2 {
@@ -17,14 +17,14 @@
     margin-top: rem(5px);
     color: $subtitleCollectionAndSelection;
     font-family: $fontNothingCould;
-    font-size: rem(11px);
+    font-size: $fontSizeSubtitle;
   }
 
   h4 {
     margin-top: rem(14px);
     margin-bottom: rem(13px);
     font-family: $fontNothingCould;
-    color: $titleSectionCollection;
+    color: $subtitleCollectionAndSelection;
     font-size: $fontSizeTitleSections;
   }
 

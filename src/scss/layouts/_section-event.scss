@@ -1,6 +1,10 @@
-.sectionEvenement {
-  height: 220vh;
+.sectionEvent {
+  margin-top: rem(90px);
   line-height: rem(19px);
+
+  &__event {
+    margin-top: rem(20px);
+  }
 
   h2 {
     text-transform: uppercase;
@@ -8,17 +12,16 @@
     font-family: $fontMonserrat;
     font-size: $fontSizeTitleSections;
   }
-  @include desktop-up {
-    @include flexbox(row, space-between);
-  }
 }
 
-.ba {
+.imgEvent {
   display: flex;
   width: 295px;
   height: 438px;
+  margin-bottom: 7px;
 }
 
-.contain {
-  object-fit: fill;
+img.imgEvent.imgEvent--second {
+  margin-left: 3px;
+  width: 18.1rem;
 }
