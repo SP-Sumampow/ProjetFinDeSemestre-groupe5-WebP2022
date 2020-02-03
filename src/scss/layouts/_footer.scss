@@ -9,7 +9,7 @@
         }
 
        
-        .footer--firstPart{
+        .footer--advantage{
             @include flexbox(column, space-around);
             text-align: center;
             height: 50vh;
@@ -20,9 +20,11 @@
                 height: 20vh;
                 @include flexbox(row, space-around);
             }
+
+            
         }
     
-        .footer--secondPart{
+        .footer__backToTop{
             @include flexbox(column, space-around);
             height: 6vh;
             background-color: $footerBackgroundTitle;
@@ -48,7 +50,7 @@
             }
 
 
-            .footer__thirdPart--menuHide{
+            &__menuHide{
                 display: none;
             }
 
