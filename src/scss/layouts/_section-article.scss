@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+}
+
+.section-article {
+  font-family: $fontMonserrat;
+  @include flexbox(column, center);
+  line-height: 1.5;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  color: $white;
+  @include format;
+
+
+
+  @include tablet-up {
+    height: rem(1024px);
+    width: rem(768px);
+  }
+
+
+  &__text {
+    background-color: black;
+    width: rem(300px);
+    height: rem(300px);
+
+    @include tablet-up {
+      width: rem(500px);
+      height: rem(500px);
+    }
+  }
+
+  &__visual {
+    width: rem(300px);
+    height: rem(300px);
+
+    @include tablet-up {
+      width: rem(500px);
+      height: rem(500px);
+    }
+  }
+
+  @include desktop-up {
+    @include flexbox(row, space-between);
+
+    &__visual:nth-child(1) {
+      order: 2;
+      flex-grow: 1;
+      flex-shrink: 1;
+      margin: rem(0 100px 0 50px);
+      position: relative;
+    }
+
+    &__text:nth-child(2) {
+      order: 1;
+      flex-grow: 1;
+      flex-shrink: 1;
+      margin-right: rem(130px);
+    }
+  }
+
+
+  &__img {
+    width: rem(300px);
+    height: rem(300px);
+
+    @supports (object-fit: cover) {
+      width: 100%;
+      height: rem(300px);
+      object-fit: cover;
+    }
+
+    @include tablet-up {
+      width: rem(325px);
+      height: rem(440px);
+      top: rem(110px);
+      left: rem(130px);
+
+      @supports (object-fit: cover) {
+        width: 100%;
+        height: rem(500px);
+        object-fit: cover;
+      }
+    }
+
+    @include desktop-up {
+      width: rem(325px);
+      height: rem(440px);
+      position: relative;
+      top: rem(80px);
+      left: rem(-125px);
+    }
+  }
+
+  &__title {
+    font-family: $fontMonserrat;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: rem(18px);
+    line-height: 1.5;
+    text-align: left;
+    margin: 20px 20px;
+
+    @include tablet-up {
+      font-size: rem(25px);
+      margin: 30px 30px;
+    }
+
+    @include desktop-up {
+      font-size: rem(30px);
+      width: rem(700px);
+    }
+  }
+
+  &__paragraph {
+    font-family: $fontMonserrat;
+    font-size: rem(16px);
+    line-height: 1.5;
+    color: $white;
+    margin: 15px 20px;
+
+    @include tablet-up {
+      font-size: rem(25px);
+      line-height: 1.5;
+      margin: 15px 30px;
+
+    }
+
+    @include desktop-up {
+      font-size: rem(18px);
+      line-height: 1.5;
+      width: rem(700px);
+    }
+  }
+
+  &__button {
+    margin: 20px 100px 20px 20px;
+    background-color: $white;
+    font-size: $fontSizeBtn;
+    text-transform: uppercase;
+    border: 1px solid rgba(0, 0, 0, 0.65);
+    padding: 12px 24px;
+    width: 172px;
+    height: 36px;
+    border: $btnBorder;
+    box-shadow: $btnShadow;
+    cursor: pointer;
+  }
+
+  @include tablet-up {
+    font-size: rem(35px);
+    line-height: 1.5;
+    margin: 15px 30px;
+    width: 202px;
+    height: 66px;
+  }
+
+  @include desktop-up {
+    font-size: rem(18px);
+    line-height: 1.5;
+    width: rem(700px);
+  }
+}
