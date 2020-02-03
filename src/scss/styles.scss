@@ -31,9 +31,10 @@
 
 body {
   background-color: $white;
+
+  main {
+    margin-right: 10%;
+    margin-left: 10%;
+  }
 }
 
-main {
-  margin-right: 10%;
-  margin-left: 10%;
-}
