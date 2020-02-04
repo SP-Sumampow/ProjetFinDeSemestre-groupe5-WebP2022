@@ -19,7 +19,7 @@ window.addEventListener("scroll", (e) => {
     var offsetWindow = window.pageYOffset;
     var scrolled = document.body.scrollTop;
     var position = header.offsetTop;
-    const dumbPosition = 2373;
+    const dumbPosition = 500;
     console.log(offsetWindow);
     if (offsetWindow > dumbPosition) {
         console.log("add class");

@@ -112,16 +112,16 @@
 }
 
 .header-on-scroll {
+    padding: rem(4px);
     @include tablet-up {
-        @include flexbox;
+        @include flexbox(space-around);
     }
 
     .header__icons {
-        :nth-child(2){
             order: 3;
         }
-    }
 }
+
 
 .container {
     display: inline-block;
