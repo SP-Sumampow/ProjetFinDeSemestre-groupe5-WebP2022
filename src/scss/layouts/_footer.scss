@@ -60,6 +60,20 @@
             flex-shrink: 1;
             flex-basis: auto;
             border-bottom: 0.5px solid $footerBackgroudAndLine;
+
+            @include tablet-up {
+                border-bottom: none;
+            }
+
+
+            &__plus{
+                background-color: Transparent;
+                border: none;
+                cursor:pointer;
+                overflow: hidden;
+            }
+
+
             }
         }
     }
