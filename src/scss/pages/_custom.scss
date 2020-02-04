@@ -1,40 +1,36 @@
-main {
-	height: 120vh;
-	margin-top: 20vh;
-	.personalisation {
+.personalisation {
+	width: 100%;
+	.styling {
+		@include flexbox(row, space-around, center);
 		width: 100%;
-		.styling {
+
+		button {
+			width: 60px;
+			height: 50px;
+		}
+	}
+	.custom {
+		width: 100%;
+		&__color {
 			@include flexbox(row, space-around, center);
 			width: 100%;
-
 			button {
-				width: 60px;
+				width: 50px;
 				height: 50px;
-			}
-		}
-		.custom {
-			width: 100%;
-			&__color {
-				@include flexbox(row, space-around, center);
-				width: 100%;
-				button {
-					width: 50px;
-					height: 50px;
-					border-radius: 50%;
-					border: 2px solid black;
+				border-radius: 50%;
+				border: 2px solid black;
 
-					&:nth-child(1) {
-						background-color: #681d1d;
-					}
-					&:nth-child(2) {
-						background-color: #f7e6db;
-					}
-					&:nth-child(3) {
-						background-color: #fee0fd;
-					}
-					&:nth-child(4) {
-						background-color: #79c6fe;
-					}
+				&:nth-child(1) {
+					background-color: #681d1d;
+				}
+				&:nth-child(2) {
+					background-color: #f7e6db;
+				}
+				&:nth-child(3) {
+					background-color: #fee0fd;
+				}
+				&:nth-child(4) {
+					background-color: #79c6fe;
 				}
 			}
 		}
