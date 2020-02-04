@@ -9,8 +9,9 @@
             @include flexbox(column, center, center);
     }
     @include desktop-up {
+            margin-top:15vh;
             height:100vh;
-            @include flexbox(row-reverse, flex-end, center);
+            @include flexbox(row-reverse, flex-end, flex-start);
             width: 100%;
             padding:0;
             
@@ -25,7 +26,7 @@
             left: 400px;
             top:rem(50px);
             width:60vw;
-            height: auto;
+            height: 60vh;
             position: absolute;
             z-index: -1;
             box-shadow: 5px 5px 5px 0px black;
@@ -69,7 +70,7 @@
             z-index:-2;
             background-color: $black;
             width: rem(1300px);
-            height: rem(700px);
+            height:80vh;
             left:0;
             box-shadow: 5px 5px 5px 0px black;
         }
@@ -100,7 +101,8 @@
 /*--------------------------------------------------------------*/
 
 .collaboration {
-
+    height:200vh;
+    margin-bottom:25vh;
     .collaborationFirstPart {
         @include flexbox( column, space-around, center);
         @include desktop-up {
@@ -215,40 +217,57 @@
         @include flexbox( column, space-around, center);
         
                 
-        @include desktop-up{
+        @include desktop-up {
+            
             height:100vh;
             width:100%;
-            padding: 0;
+            
             display:grid;
-            margin-bottom:10%;
-            grid-template-rows:repeat(2, 1fr);
+            margin-bottom:100px;
+            grid-template-rows:1fr 5fr;
             grid-template-columns:repeat(2, 1fr);
             grid-template-areas:
             "texts photo"
             "logo photo";
+            grid-gap: 10%;
+        }
+
+        
+        img, .collaborationSecondPart__text {
+           
+            width: 80vw;
+            max-width: rem(500px);
+            height: auto;
+            
         }
         img:first-child {
             @include desktop-up{
                 
                 grid-area:photo;
-                align-self:end;
-                justify-self:end;
-
-            }
-
-        }
-        img, .collaborationSecondPart__text {
-           
-            width: 80vw;
-            max-width: 500px;
-            height: auto;
-
-            @include desktop-up {
                 width: 100%;
-                max-width: rem(625px);
+                
+            
                 height: auto;
+                align-self:stretch;
+                justify-self:stretch;
+            }
+
+        }
+        img:nth-child(2) {
+            @include desktop-up {
+                
+                    width: 100%;
+                   
+                    
+
+                    height: auto;
+                    align-self:stretch;
+                    justify-self:stretch;
+                
             }
         }
+
+        
 
         .collaborationSecondPart__text {
             margin: rem(50px) 0;
