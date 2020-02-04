@@ -16,6 +16,15 @@
         box-sizing: border-box;
     }
 
+    .header__icons {
+        @include flexbox(row, space-around, center);
+        width: 15vh;
+        top: 10px;
+        left: 10px;
+        margin: 0 6px;
+
+    }
+
     .menu {
         display: none;
         list-style-type: none;
