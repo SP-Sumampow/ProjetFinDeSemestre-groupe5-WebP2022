@@ -28,9 +28,21 @@ window.addEventListener("scroll", (e) => {
         console.log("remove class");
         header.classList.remove('header-on-scroll');
     }
-  });
+});
+  
+/************ FOOTER ON MOBILE VERSION ************/
+/*
+var btnHelp = document.querySelector('.button--help');
+var footerThird = document.querySelector('.footer--thirdPart');
+var menuHide = document.querySelector('.menu--hide--help')
 
-/************ FOOTER ON TABLET VERSION ************/
+btnHelp.addEventListener('click', function () {
+    footerThird.toggle(menuHide)
+});
+/*
+
+
+/************ FOOTER ON TABLET & DESKTOP VERSION ************/
 
 var buttonPlus = document.querySelector(".footer--thirdPart__button__plus");
 var hidenInformation = document.querySelector(".footer__thirdPart--menuHide");

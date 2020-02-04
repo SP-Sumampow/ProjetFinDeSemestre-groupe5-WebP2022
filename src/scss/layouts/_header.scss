@@ -11,9 +11,9 @@
     @include tablet-up {
         display: grid;
         grid-template-columns: 80vw 20vw;
-        grid-template-rows: 10vh 5vh;
+        grid-template-rows: 8vh 4vh;
         grid-template-areas: "a b" "c c";
-        height: 15vh;
+        height: 12vh;
         
         .header__icons{
             grid-area: b;

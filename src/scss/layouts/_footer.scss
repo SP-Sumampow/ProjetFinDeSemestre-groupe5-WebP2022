@@ -2,10 +2,13 @@
     .footer{
 
         font-family: $fontMonserrat;
+        font-size: rem(14px);
         @include format;
+        text-align: 1.5;
 
         @include tablet-up {
-            height: 80vh;
+            height: 70vh;
+            margin: 10px;
         }
 
        
@@ -46,22 +49,87 @@
             margin: 0 5vh;
 
             @include tablet-up{
-                @include flexbox(row, space-around, center);
-            }
+                height: 60vh;
+                display: grid;
+                grid-template-columns: 15vw 15vw 15vw 35vw;
+                grid-template-rows: 20vh 10vh 20vh;
+                grid-template-areas: "a b c d" "a b c e" "a b c f";
+                grid-gap: 5px;
+                margin-top: 5vh;
+                padding-bottom: 5px;
 
+
+                .footer__help {
+                    grid-area: a;
+                    align-self: start;
+                }
+
+                .footer__information {
+                    grid-area: b;
+                    align-self: start;
+                }
+
+                .footer__socialMedia {
+                    grid-area: c;
+                    align-self: start;
+                }
+
+                .footer__invitation {
+                    grid-area: d;
+                    align-self: start;
+                }
+
+                .footer__contact {
+                    grid-area: f;
+                    align-self: start;
+                }
+            }
 
             &__menuHide{
                 display: none;
+                font-size: rem(12px);
+
+                @include tablet-up{
+                    @include flexbox(column, space-around, stretch);
+                    margin-top: 16px;
+                }
+
+                &__text{
+                    text-align: 1.5;
+                }
+
+            }
+
+            .menuHide--help, .menuHide--information {
+                height: 200px;
+            }
+
+            &__socialMedia {
+                display: none;
+
+                @include tablet-up{
+                    @include flexbox(column, space-around, stretch);
+                }
+
+                .socialMedia {
+                    @include flexbox(column, space-around, stretch);
+                    font-family: $fontMonserrat;
+                    font-size: 12px;
+                    margin-top: 16px;
+                    height: 100px;
+                }
             }
 
             &__button{
-            @include flexbox(row,space-between);
+            @include flexbox(row,space-between, center);
+            flex-wrap: wrap;
             flex-grow: 1;
             flex-shrink: 1;
             flex-basis: auto;
             border-bottom: 0.5px solid $footerBackgroudAndLine;
 
             @include tablet-up {
+                @include flexbox(column, space-around, flex-start);
                 border-bottom: none;
             }
 
@@ -71,7 +139,14 @@
                 border: none;
                 cursor:pointer;
                 overflow: hidden;
+                color: $footerText;
+
+                @include tablet-up {
+                    display: none;
+                }
             }
+
+
 
 
             }
