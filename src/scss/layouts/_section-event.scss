@@ -1,11 +1,18 @@
 .sectionEvent {
   margin-top: rem(90px);
   line-height: rem(19px);
-  @include flexbox(column, center, center);
 
   &__event {
-    @include flexbox(column, center, center);
+    @include flexbox(column, center);
     margin-top: rem(20px);
+
+    @include tablet-up {
+      @include flexbox(column, center);
+    }
+
+    @include desktop-up {
+      @include flexbox(row, space-between);
+    }
   }
 
   h2 {
@@ -14,12 +21,10 @@
     font-family: $fontMonserrat;
     font-size: $fontSizeTitleSections;
     text-align: left;
-
   }
 }
 
 .imgEvent {
-  @include flexbox(column, center, center);
   width: 295px;
   height: 438px;
   margin-bottom: 7px;
