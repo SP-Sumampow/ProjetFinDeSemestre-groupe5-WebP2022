@@ -1,30 +1,89 @@
-.main {
-    background-color: pink;
+.hero {
+    background-image: url(/images/background-hero-mobile.svg);
+    background-attachment: fixed;
+    background-size: 100%;
+    background-repeat: no-repeat;
     height: 100vh;
-    @include flexbox(column);
+    @include flexbox(column, flex-start);
     text-align: left;
-    
 
-
-    .main__product {
-        height: 60vh;
+    @include desktop-up {
+        background-image: url(/images/background-hero-desktop.png);
+        background-size: contain;
+        background-position-x: -40%;
+        @include flexbox(row, space-between, right);
+        text-align: right;
     }
-    
-    .main__text {
-        height: 40vh;
-        color: $titleHeroAndJacquemus;
-        margin-left: 8vw;
-        
 
-        .main__text__title {
-            font-size: 24px;
-            font-family: Playfair Display;
+    .hero__product {
+        height: 60vh;
+
+        @include desktop-up {
+            height: 70vh;
+        }
+    }
+
+    .hero__text {
+        height: 40vh;
+        max-height: fit-content;
+        width: 85vw;
+        color: $titleHeroAndJacquemus;
+        margin: 7% auto;
+        text-align: left;
+        line-height: 1.5;
+
+        @include desktop-up {
+            @include flexbox(column, center, right);
+            width: 30vw;
+            margin: 5%;
         }
 
-        .main__text__description {
-            font-size: 18px;
-            font-family: robotoregular;
-            line-height: 27px;
+
+        .hero__text__title {
+            font-size: 6vw;
+            font-family: $fontPlayfair;
+            margin-bottom: rem(10px);
+
+            .bolder {
+                font-weight: bold;
+                font-size: 6.1vw;
+            }
+
+            @include desktop-up {
+                font-size: 2.7vw;
+
+                .bolder {
+                    font-size: 2.9vw;
+                }
+            }
+        }
+
+        .hero__text__description {
+            font-size: 4.7vw;
+            font-family: $fontRoboto;
+            margin: rem(10px 0);
+
+            @include desktop-up {
+                font-size: 1.3vw;
+            }
+        }
+
+
+        .hero__text__veganDiv {
+            display: none;
+
+            @include desktop-up {
+                display: block;
+                @include flexbox(row, center, center);
+
+
+                .vegan-logo {
+                    width: 50%;
+                    margin-top: 5%;
+                }
+            }
+
+
         }
     }
 }

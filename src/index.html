@@ -37,23 +37,25 @@
       </li>
     </ul>
   </header>
-  <section class="main">
-    <div class="main__product">
-    </div>
-    <div class="main__text">
-      <div class="main__text__title">
-        <div>Le nouveau cuir 100% végétal</div>
-      </div>
-      <div class="main__text__description">
-        “Retrouvez l’art de la mode et du vin français réunis dans un cuir 100% vegan et personnalisable selon vos
-        goûts”
-      </div>
-    </div>
-  </section>
 
- 
+
 
   <main class="sections">
+
+    <section class="hero">
+      <div class="hero__product">
+      </div>
+      <div class="hero__text">
+        <h2 class="hero__text__title">Le nouveau cuir</br><span class="bolder">100% végétal.</span></h2>
+        <p class="hero__text__description">
+          Retrouvez l’art de la mode et du vin français réunis dans un cuir 100% vegan et personnalisable selon vos
+          goûts.
+        </p>
+        <div class="hero__text__veganDiv">
+          <img class="vegan-logo" src="/images/PETAapprovedveganLOGO_black.png" alt="">
+        </div>
+      </div>
+    </section>
 
     <section class="section-inspirations">
       <div class="section-inspirations__visual">
@@ -77,17 +79,27 @@
     </section>
 
     <section class="collection">
-     <h2>Deux collections deux styles</h2>
-     <h3>Choisissez, Cliquez, Personnalisez</h3>
-     </section>
-      <section class="collection__collections">
+      <h2>Deux collections deux styles</h2>
+      <h3>Choisissez, Cliquez, Personnalisez</h3>
 
-        <article class="collection__wallets">
-            <div class="frameCollection"></div>
-            <div class=" "><img src="" alt="" /></div>
-          <p>Mini-portefeuille</p>
-          <button class="collection__btnWallet">Personnalisez ce produit</button>
-        </article>
+      <article class="collection__wallets collection__wallet--first ">
+
+        <div class="frameWallet frameWallet--firstWalletSections"></div>
+        <div class="collection__wallet collection__wallet--first"><img src="" alt="" /></div>
+
+        <p>Mini-portefeuille</p>
+        <button class="collection__btnWallet">Personnalisez ce produit</button>
+      </article>
+
+      <article class="collection__wallets collection__wallet--second">
+
+        <div class="frameWallet frameWallet--secondWalletSections"></div>
+        <div class="collection__wallet collection__wallet--second"><img src="" alt="" /></div>
+
+
+        <p>Format sac à main</p>
+        <button class="collection__btnWallet">Personnalisez ce produit</button>
+      </article>
 
         <article class="collection__wallets">
             <div class="frameCollection"></div>
@@ -101,72 +113,77 @@
     <section class="selection">
       <h2>Notre selection</h2>
       <h3>Nous les avons déja personnalisez pour vous ...</h3>
-      
-      <section class="selection__selections">
-        <article class="selection__wallet">
-        <div class="frameSelection"></div>
-            <div><img src="" alt="" /></div>
-            <div> <img class="likes"src="../src/images/like.png" alt=""> </div>
-          <h4>Le Vindigo Or</h4>
-          <p>
-            Lorem ipsum dolor sit amet, consect</br> Leo turpis enim neque rutrum vel,</br>
-            faucibus cursus amet nisl. Pe</br> d turpis facilisi senectus integer.
-          </p>
-          <button class="selections__btnaAddWallet">Ajouter</button>
-        </article>
 
-        <article class="selection__wallet">
-            <div class="frameSelection"></div>
-            <div><img src="" alt="" /></div>
-            <div> <img class="likes" src="../src/images/like.png" alt=""> </div>
-          <h4>Le Chardonnay</h4>
-          <p>
-            Lorem ipsum dolor sit amet, consect</br> Leo turpis enim neque rutrum vel,</br>
-            faucibus cursus amet nisl. Pe</br> d turpis facilisi senectus integer.
-          </p>
-          <button class="selections__btnaAddWallet">Ajouter</button>
-        </article>
+      <article class="selection__wallet">
 
-        <article class="selection__wallet">
-            <div class="frameSelection"></div>
-            <div><img src="" alt="" /></div>
-            <div> <img class="likes" src="../src/images/like.png" alt=""> </div>
-          <h4>Le Bordeau</h4>
-          <p>
-            Lorem ipsum dolor sit amet, consect</br> Leo turpis enim neque rutrum vel,</br>
-            faucibus cursus amet nisl. Pe</br> d turpis facilisi senectus integer.
-          </p>
-          <button class="selections__btnaAddWallet">Ajouter</button>
-        </article>
-      </section>
+        <div class="frameWallet frameWallet--firstWalletSections"></div>
+        <div><img src="" alt="" /></div>
+        <div> <img class="likes" src="../src/images/like.png" alt=""> </div>
+
+        <h4>Le Vindigo Or</h4>
+        <p>
+          Lorem ipsum dolor sit amet, consect</br> Leo turpis enim neque rutrum vel,</br>
+          faucibus cursus amet nisl. Pe</br> d turpis facilisi senectus integer.
+        </p>
+        <button class="selections__btnaAddWallet">Ajouter</button>
+      </article>
+
+      <article class="selection__wallet">
+
+        <div class="frameWallet"></div>
+        <div><img src="" alt="" /></div>
+        <div> <img class="likes" src="../src/images/like.png" alt=""> </div>
+
+        <h4>Le Chardonnay</h4>
+        <p>
+          Lorem ipsum dolor sit amet, consect</br> Leo turpis enim neque rutrum vel,</br>
+          faucibus cursus amet nisl. Pe</br> d turpis facilisi senectus integer.
+        </p>
+        <button class="selections__btnaAddWallet">Ajouter</button>
+      </article>
+
+      <article class="selection__wallet">
+
+        <div class="frameWallet"></div>
+        <div><img src="" alt="" /></div>
+        <div> <img class="likes" src="../src/images/like.png" alt=""> </div>
+
+        <h4>Le Bordelais</h4>
+        <p>
+          Lorem ipsum dolor sit amet, consect</br> Leo turpis enim neque rutrum vel,</br>
+          faucibus cursus amet nisl. Pe</br> d turpis facilisi senectus integer.
+        </p>
+        <button class="selections__btnaAddWallet">Ajouter</button>
+      </article>
     </section>
 
     <section class="sectionEvent">
       <h2>Evenement</h2>
       <article class="sectionEvent__event">
-          <img class="imgEvent" src="../src/images/Mannequin1-mobile.png" alt="mannequin event PA">
-          <img class="imgEvent imgEvent--second" src="../src/images/Mannequin2-mobile.png" alt="mannequin event PA">
-          <img class="imgEvent"src="../src/images/Mannequin3-mobile.png" alt="mannequin event PA">
+        <img class="imgEvent" src="../src/images/Mannequin1-mobile.png" alt="mannequin event PA">
+        <img class="imgEvent imgEvent--second" src="../src/images/Mannequin2-mobile.png" alt="mannequin event PA">
+        <img class="imgEvent" src="../src/images/Mannequin3-mobile.png" alt="mannequin event PA">
       </article>
-     </section>
+    </section>
 
-      <section class="section-article">
-        <div class="section-article__visual">
-            <img src="images/château-article.png" alt="Photo d'une maison de couture en noir et blanc" class="section-article__img">
-        </div>
-        <div class="section-article__text">
-            <h2 class="section-article__title">Notre histoire</h2>
-            <p class="section-article__paragraph">La Maison Nova Pellicia lève le voile sur son Histoire.
-              Redécouvrez le monde de la mode à travers 
-              des pièces uniques en harmonie avec vos convictions.
-              </p>
-              <a href="article.html">
-                <button class="section-article__button">Découvrir l'histoire</button>
-              </a>
-        </div>
-      </section>
-     </main> 
-  
+    <section class="section-article">
+      <div class="section-article__visual">
+        <img src="images/château-article.png" alt="Photo d'une maison de couture en noir et blanc"
+          class="section-article__img">
+      </div>
+      <div class="section-article__text">
+        <h2 class="section-article__title">Notre histoire</h2>
+        <p class="section-article__paragraph">La Maison Nova Pellicia lève le voile sur son Histoire.
+          Redécouvrez le monde de la mode à travers
+          des pièces uniques en harmonie avec vos convictions.
+        </p>
+        <a href="article.html">
+          <button class="section-article__button">Découvrir l'histoire</button>
+        </a>
+      </div>
+    </section>
+  </main>
+
 
 
   <footer class="footer">
@@ -202,7 +219,7 @@
           <div>Expéditions</div>
           <div>Retours</div>
           <div>Entretien des produits</div>
-        </div> 
+        </div>
       </div>
       <div class="footer--thirdPart__button">
         <div class="footer--thirdPart__button__informations">INFORMATIONS</div>
@@ -234,10 +251,10 @@
         <div class="footer--thirdPart__button__invitations">RECEVEZ NOS INVITATIONS</div>
         <button class="footer--thirdPart__button__plus">+</button>
         <div class="footer--thirdPart__menuHide footer--thirdPart__button__invitations__more">
-        <div>
-          <div>En saissant votre adresse e-mail ci-dessous, 
-            vous recevrez une invitation à une dégustation privée de vin
-            dans l’un de nos domaines partenaire</div>
+          <div>
+            <div>En saissant votre adresse e-mail ci-dessous,
+              vous recevrez une invitation à une dégustation privée de vin
+              dans l’un de nos domaines partenaire</div>
           </div>
           <div></div>
         </div>
@@ -253,6 +270,6 @@
         </div>
       </div>
   </footer>
-  </body>
+</body>
 
-  </html>
+</html>
