@@ -11,8 +11,28 @@ burger.addEventListener('click', function () {
     header.classList.toggle('header-is-open')
 });
 
+/************ HEADER ON SCROLL ************/
+
+var header = document.querySelector('.header');
+
+window.addEventListener("scroll", (e) => {
+    var offsetWindow = window.pageYOffset;
+    var scrolled = document.body.scrollTop;
+    var position = header.offsetTop;
+    const dumbPosition = 2373;
+    console.log(offsetWindow);
+    if (offsetWindow > dumbPosition) {
+        console.log("add class");
+        header.classList.add('header-on-scroll');
+    } else {
+        console.log("remove class");
+        header.classList.remove('header-on-scroll');
+    }
+  });
+
 /************ FOOTER ON TABLET VERSION ************/
 
 var buttonPlus = document.querySelector(".footer--thirdPart__button__plus");
 var hidenInformation = document.querySelector(".footer__thirdPart--menuHide");
 
+ 

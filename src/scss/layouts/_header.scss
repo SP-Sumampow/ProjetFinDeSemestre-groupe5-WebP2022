@@ -110,7 +110,18 @@
 
     }
 }
-     
+
+.header-on-scroll {
+    @include tablet-up {
+        @include flexbox;
+    }
+
+    .header__icons {
+        :nth-child(2){
+            order: 3;
+        }
+    }
+}
 
 .container {
     display: inline-block;
