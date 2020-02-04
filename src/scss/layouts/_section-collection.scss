@@ -5,52 +5,86 @@
 .collection {
   margin-top: rem(90px);
   line-height: rem(19px);
-  @include flexbox(column, flex-start, left);
+}
 
-  h2 {
-    text-transform: uppercase;
-    color: $titleSectionCollection;
-    font-family: $fontMonserrat;
-    font-size: $fontSizeTitleSections;
-    text-align: left;
+h2 {
+  text-transform: uppercase;
+  color: $titleSectionCollection;
+  font-family: $fontMonserrat;
+  font-size: $fontSizeTitleSections;
+  text-align: left;
+}
+
+h3 {
+  margin-top: rem(5px);
+  color: $subtitleCollectionAndSelection;
+  font-family: $fontNothingCould;
+  font-size: $fontSizeSubtitle;
+  text-align: left;
+}
+
+p {
+  margin-top: rem(10px);
+  font-family: $fontMonserrat;
+  font-size: rem(16px);
+  color: $text;
+}
+
+.collection__collections {
+  @include flexbox(column, center);
+
+  @include tablet-up {
+    @include flexbox(column, center, center);
   }
 
-  h3 {
-    margin-top: rem(5px);
-    color: $subtitleCollectionAndSelection;
-    font-family: $fontNothingCould;
-    font-size: $fontSizeSubtitle;
-    text-align: left;
-  }
+  @include desktop-up {
+    @include flexbox(row, space-between, center);
 
-  p {
-    margin-top: rem(10px);
-    font-family: $fontMonserrat;
-    font-size: rem(16px);
-    color: $text;
+    //&:first-child
   }
 }
 
-.frameWallet {
+.frameCollection {
   display: flex;
-  justify-content: space-around;
-  margin-top: rem(75px);
+  //justify-content: space-around;
+  margin-top: rem(40px);
   width: rem(295px);
   height: rem(261px);
   background-color: $FrameWalletBackground;
-  position: relative;
-  z-index: -2;
 
-  &--firstWalletSections {
-    margin-top: rem(20px);
+  @include tablet-up {
+    width: 500px;
+    height: 500px;
+  }
+
+  @include desktop-up {
+    min-width: 580px;
+    min-height: 512px;
+  }
+
+  @include desktop-up {
+    width: 40vw;
   }
 }
 
-.likes {
-  position: absolute;
-  transform: translateY(-270px) translateX(270px);
-  z-index: -1;
+.collection__wallets {
+  @include desktop-up {
+    &:nth-child(1) {
+      margin-right: 30px;
+    }
+  }
 }
+
+/*&:nth-child(1) { collection__wallet
+    @include tablet-up {
+      margin-right: 5px;
+    }
+
+  &:nth-child(2) {
+    @include tablet-up {
+      padding-top: 43px;
+    }
+  }*/
 
 .collection__btnWallet {
   margin-top: rem(12px);
@@ -61,8 +95,5 @@
   height: rem(35px);
   border: $btnBorder;
   box-shadow: $btnShadow;
-
-  &:hover {
-    cursor: pointer;
-  }
+  cursor: pointer;
 }
