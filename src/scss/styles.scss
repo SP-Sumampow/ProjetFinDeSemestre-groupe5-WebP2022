@@ -2,45 +2,45 @@
 
 // IMPORTATIONS DU DOSSIER GLOBAL
 
-@import "global/_reset.scss";
-@import "global/_utilities.scss";
-@import "global/_variables.scss";
-@import "global/_fonts.scss";
-@import "global/_typography.scss";
-@import "global/_icons.scss";
-@import "global/_cta.scss";
+@import 'global/_reset.scss';
+@import 'global/_utilities.scss';
+@import 'global/_variables.scss';
+@import 'global/_fonts.scss';
+@import 'global/_typography.scss';
+@import 'global/_icons.scss';
+@import 'global/_cta.scss';
 
 // COMPONENTS
 // ici importations des éléments génériques qui se répétent souvent dans le site : calltoactions, cards...
 
 // LAYOUTS
 // ici importations des pages correspondants aux éléments du site : menuburger, hero, aside, footer, header, caroussel...
-@import "layouts/_header.scss";
-@import "layouts/section-mainSection";
-@import "layouts/_section-inspirations.scss";
-@import "layouts/_footer.scss";
-@import "layouts/_section-collection.scss";
-@import "layouts/_section-selection.scss";
-@import "layouts/_section-article.scss";
-@import "layouts/_section-event.scss";
+@import 'layouts/_header.scss';
+@import 'layouts/section-mainSection';
+@import 'layouts/_section-inspirations.scss';
+@import 'layouts/_footer.scss';
+@import 'layouts/_section-collection.scss';
+@import 'layouts/_section-selection.scss';
+@import 'layouts/_section-article.scss';
+@import 'layouts/_section-event.scss';
 
 // PAGES
 // ici importations des pages du site : homepage, contact, panier, articles, FAQ...
-@import "pages/_homepage.scss";
-@import "pages/_article.scss";
+@import 'pages/_homepage.scss';
+@import 'pages/_article.scss';
+@import 'pages/_custom.scss';
 
 body {
-  background-color: $white;
+	background-color: $white;
 
-  main {
-
-    .section-inspirations,
-    .collection,
-    .section-article,
-    .sectionEvent,
-    .selection {
-      margin-right: 10%;
-      margin-left: 10%;
-    }
-  }
+	main {
+		.section-inspirations,
+		.collection,
+		.section-article,
+		.sectionEvent,
+		.selection {
+			margin-right: 10%;
+			margin-left: 10%;
+		}
+	}
 }
