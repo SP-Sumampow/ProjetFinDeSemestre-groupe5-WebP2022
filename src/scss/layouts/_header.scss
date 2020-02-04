@@ -9,7 +9,21 @@
     width: 100vw;
 
     @include tablet-up {
+        display: grid;
+        grid-template-columns: 80vw 20vw;
+        grid-template-rows: 10vh 5vh;
+        grid-template-areas: "a b" "c c";
         height: 15vh;
+        
+        .header__icons{
+            grid-area: b;
+            justify-self: center;
+        }
+
+        .menu {
+            grid-area: c;
+        }
+
     }
 
     *{
@@ -23,6 +37,9 @@
         left: 10px;
         margin: 0 6px;
 
+        @include tablet-up {
+            @include flexbox(row, space-between, center)
+        }
     }
 
     .menu {
