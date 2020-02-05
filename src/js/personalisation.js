@@ -1,7 +1,11 @@
+//colors img
 import vindigoImage from '/images/products/vindigo.jpeg';
 import bordeauxImage from '/images/products/bordeaux.jpg';
 import chardonayImage from '/images/products/chardonay.jpg';
 import petulaImage from '/images/products/petula.jpeg';
+
+import barreSymbolImage from '/images/symbols/barre.jpeg';
+import grappeSymbolImage from '/images/symbols/grappe.png';
 
 var positionInPersonalisation = 0;
 
@@ -9,8 +13,8 @@ let navigation = [{
   "title": "Couleurs",
   "selectorName": "color"
 }, {
-    "title": "Logo",
-    "selectorName": "logo"
+    "title": "Symbol",
+    "selectorName": "symbols"
 },{
     "title": "i dont know",
     "selectorName": "finishing"
@@ -49,6 +53,17 @@ let products = {
     }
 };
 
+let symbols = {
+  "bar": {
+      "image": barreSymbolImage,
+      "price": 550
+  },
+  "grappe": {
+      "image": grappeSymbolImage,
+      "price": 550
+  }
+};
+
 let selectors = {
   "navigation": {
     "rightBtn": document.querySelector('.personalisation__btn__right'),
@@ -68,20 +83,22 @@ let selectors = {
     "image": document.querySelector('.personalisation__image img'),
   },
   "totalPrice": document.querySelector('.personalisation__price p'),
-  "btns": [
+  "colorBtns": [
     { "element": document.querySelector('.btn--vindigo'), productName: "vindigo" },
     { "element": document.querySelector('.btn--bordeaux'), productName: "bordeaux" },
     { "element": document.querySelector('.btn--petula'), productName: "petula" },
     { "element": document.querySelector('.btn--chardonay'), productName: "chardonay" },
+  ],
+  "symbolBtns": [
+    { "element": document.querySelector('.btn__choices__symbols__bar'), symbolName: "bar" },
+    { "element": document.querySelector('.btn__choices__symbols__grape'), symbolName: "grappe" },
   ]
 };
 
 /************ PERSONALISATION ************/
-console.log(vindigoImage);
-var colors = document.querySelector('.personalisation__choices__colors');
 var totalPrice = {
-  colors: 0,
-  logo: 50
+  color: 0,
+  symbol: 0
 };
 
 
@@ -135,7 +152,7 @@ refreshNavigation();
 /************ COLORS PERSONALISATION ************/
 
 
-selectors.btns.forEach(function (btnInfo) {
+selectors.colorBtns.forEach(function (btnInfo) {
   btnInfo.element.addEventListener("click", function () {
     refreshProductInfo(products[btnInfo.productName])
     refreshColorPrice(products[btnInfo.productName].price);
@@ -144,20 +161,44 @@ selectors.btns.forEach(function (btnInfo) {
 
 // Product interface 
 
+// Price 
+function refreshColorPrice(amountAdded) {
+  totalPrice.color = amountAdded;
+  refreshTotalAmout();
+}
+
 function refreshProductInfo(product) {
   selectors.product.title.innerHTML = product.name;
   selectors.product.paragraph.innerHTML = product.paragraph;
   selectors.product.image.src = product.image;
 }
 
+refreshProductInfo(products[selectors.colorBtns[0].productName]);
+///////////
+
+/************ Symbol PERSONALISATION ************/
+
+selectors.symbolBtns.forEach(function (btnSymbolInfo) {
+  btnSymbolInfo.element.addEventListener("click", function () {
+    var symbol = symbols[btnSymbolInfo.symbolName];
+    refreshSymbolInfo(symbol)
+    refreshSymbolPrice(symbol.price)
+  })
+})
+
+function refreshSymbolInfo(symbol) {
+  selectors.product.image.src = symbol.image;
+}
+
 // Price 
-function refreshColorPrice(amountAdded) {
-  totalPrice.colors = amountAdded;
+function refreshSymbolPrice(amountAdded) {
+  totalPrice.symbol = amountAdded;
   refreshTotalAmout();
 }
 
+
 function refreshTotalAmout() {
-  selectors.totalPrice.innerHTML = totalPrice.colors + totalPrice.logo + "€";
+  selectors.totalPrice.innerHTML = totalPrice.color + totalPrice.symbol + "€";
 }
 
 
