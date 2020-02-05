@@ -39,10 +39,27 @@
         margin: 0 6px;
         color: #3d3d3d;
 
+        &__like, &__account, &__basket {
+            @include iconsLike;
+        }
+
+
+        &:nth-child(3) {
+
+        }
+
         @include tablet-up {
             @include flexbox(row, space-between, center)
         }
+
+
     }
+
+    .header__icons:nth-last-child(3) {
+        stroke: black;
+        border: 2px;
+        width: 100px;
+        }
 
     .menu {
         display: none;

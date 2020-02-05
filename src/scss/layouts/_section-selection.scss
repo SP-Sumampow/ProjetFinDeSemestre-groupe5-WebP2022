@@ -44,18 +44,30 @@
 }
 
 h4 {
-  margin-top: rem(14px);
-  margin-bottom: rem(13px);
+  margin-top: rem(20px);
+  margin-bottom: rem(5px);
   font-family: $fontNothingCould;
   color: $subtitleCollectionAndSelection;
   font-size: $fontSizeTitleSections;
 }
 
+h5 {
+  color: $h5;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: rem(12px);
+  font-family: $fontMonserrat;
+  margin-top: rem(5px);
+
+}
+
 p {
-  margin: 5px 5px;
+  margin-top: 15px;
   margin-bottom: 15px;
   font-family: $fontMonserrat;
   font-size: $fontSizeText;
+  line-height: 1.5;
+  text-align: left;
   color: $text;
 }
 
@@ -73,6 +85,13 @@ p {
   position: relative;
   z-index: -2;
 
+  .likes {
+    position: absolute;
+    top: rem(18px);
+    right: rem(16px);
+    @include iconsLike;
+  }
+
   @include tablet-up {
     width: 500px;
     height: 500px;
@@ -86,6 +105,14 @@ p {
   &__visual-wallet {
     @include flexbox(row, center, center);
     margin: 0 auto;
+    position: relative;
+    z-index: -2;
+  }
+
+  &__text-wallet {
+    @include flexbox(column, space-around, left);
+    text-align: left;
+    margin: 0;
   }
 }
 
