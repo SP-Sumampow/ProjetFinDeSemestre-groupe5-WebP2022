@@ -84,16 +84,17 @@ p {
         }
 
     &:hover {
-      opacity: 0;
-      display: none;
+     // opacity: 0;
+      //display: none;
 
       &--back {
         opacity: 100%;
-        display: block;
+        display: absolute;
       }
     }
+  
   }
-}
+
 
 .collection__wallets {
   @include desktop-up {
@@ -105,4 +106,5 @@ p {
 
 .collection__btnWallet {
   @include button-large;
+}
 }

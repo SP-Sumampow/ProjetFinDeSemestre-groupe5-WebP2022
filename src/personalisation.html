@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link type="text/css" rel="stylesheet" href="./scss/styles.scss" />
   <script defer src="./js/script.js"></script>
+  <script defer src="./js/personalisation.js"></script>
   <title>Nova Pellicia personalisation</title>
 </head>
 
@@ -44,24 +45,41 @@
       <div class="personalisation__text">
         <h1 class="personalisation__text__title">Le Vindigo</h1>
         <p class="personalisation__text__paragraph">
-          Le Vintigo doit son nom au célèbre vin bleu.Un Portefeuil à la couleur originale et rayonnante qui ne manquera pas de vous surprendre et de vous séduire.
+          Le Vindigo doit son nom au célèbre vin bleu.Un Portefeuil à la couleur originale et rayonnante qui ne manquera pas de vous surprendre et de vous séduire.
         </p>
       </div>
       <div class="personalisation__image">
         <img src="images/chardonay-court-simple.png">
       </div>
       <div class="personalisation__btn">
-        <button class="personalisation__btn__left"></button>
-        <h2></h2>
+        <button class="personalisation__btn__left"></button> 
+        <h2>1/5 couleurs</h2>
         <button class="personalisation__btn__right"></button>
       </div>
       <div class="personalisation__choices">
-        <div></div>
+        <div style="visibility: visible;" class="personalisation__choices__colors">
+          <button class="btn--chardonay"></button>
+          <button class="btn--bordeaux"></button>
+          <button class="btn--petula"></button>
+          <button class="btn--vindigo"></button>
+        </div>
+         <div style="visibility: hidden;" class="personalisation__choices__logo">
+          <div><img src=""></div>
+          <div><img src=""></div>
+        </div>
+        <div style="visibility: hidden;" class="personalisation__choices__finishing">
+          <span>finishing</span>
+        </div>
+        <div style="visibility: hidden;" class="personalisation__choices__symbols">
+          <span>symbol</span>
+        </div>
+        <div style="visibility: hidden;" class="personalisation__choices__gravure">
+          <span>gravure</span>
+        </div>
       </div>
-      <div class="personalisation__price"></div>
-    </div>
-  </section>
-
+      <div class="personalisation__price">
+        <p>100€</p>
+      </div>
   </section>
   <footer class="footer">
     <div class= "footer--advantage">

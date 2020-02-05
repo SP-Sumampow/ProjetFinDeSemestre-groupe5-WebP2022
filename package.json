@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"dev": "parcel src/index.html",
+		"dev": "parcel src/personalisation.html",
 		"build": "parcel build src/index.html"
 	},
 	"repository": {
@@ -23,6 +23,8 @@
 		"sass": "^1.25.0"
 	},
 	"dependencies": {
+		"images": "^3.0.2",
+		"path": "^0.12.7",
 		"rellax": "^1.12.0"
 	}
 }

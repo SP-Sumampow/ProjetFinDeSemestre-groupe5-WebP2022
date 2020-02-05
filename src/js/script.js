@@ -29,6 +29,38 @@ window.addEventListener("scroll", (e) => {
         header.classList.remove('header-on-scroll');
     }
 });
+
+/************ ANIMATION COLLECTION ************/
+
+//var image = document.querySelector('#image');
+/*
+let image = {
+    'back': {
+        src: '/images/homme-beige-face-simple-1.png'
+    },
+    'front': {
+        src: '/images/portefeuille-rose-simple-avant-1.png'
+    }
+};
+*/
+
+// image.addEventListener('mouseenter', function () {
+//     image.innerHTML.src = '/images/homme-beige-face-simple-1.png';
+// });
+
+/*
+image.addEventListener('mouseout', function () {
+    image.src = '/images/portefeuille-rose-simple-avant-1.png';
+});
+*/
+
+
+/*
+frame.addEventListener('mouseover', function () {
+    frame.src = image['back'];
+})
+
+/*
   
 /************ FOOTER ON MOBILE VERSION ************/
 /*
@@ -46,5 +78,8 @@ btnHelp.addEventListener('click', function () {
 
 var buttonPlus = document.querySelector(".footer--thirdPart__button__plus");
 var hidenInformation = document.querySelector(".footer__thirdPart--menuHide");
+
+
+
 
  
