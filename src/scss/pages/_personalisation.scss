@@ -1,0 +1,73 @@
+
+.personalisation {
+  * {
+    box-sizing: border-box;
+  }
+
+  @include format;
+  margin-top: 8vh;
+  
+
+
+  &__text {
+    @include flexbox(column, space-around, left);
+    height: 15vh;
+    background-color: paleturquoise;
+    margin: 0 2vh;
+
+    h1 {
+      font-family: $fontNothingCould;
+      font-size: rem(24px);
+      color: $titlePagePersonalisation;
+    }
+
+    p {
+      font-family: $fontMonserrat;
+      font-size: rem(16px);
+      color: #3d3d3d;
+      margin: 0;
+    }
+  }
+
+  &__image {
+    height: 40vh;
+    background-color: pink;
+    margin: 0 2vh;
+
+    img{
+      width: 100%;
+      margin: 8px 0;
+      object-fit: cover;
+      
+    }
+  }
+
+  &__btn {
+    height: 10vh;
+    background-color: thistle;
+    margin: 0 2vh;
+    @include flexbox(space-around);
+
+    &__left, &__right {
+      background-color: darkcyan;
+      margin: 0 2vh;
+      border-radius: 0;
+      height: 5vh;
+      width: 6vh;
+    }
+
+  }
+
+  &__choices {
+    height: 15vh;
+    background-color: powderblue;
+    margin: 0 2vh;
+    
+  }
+
+  &__price {
+    height: 10vh;
+    background-color: wheat;
+    margin: 0 2vh;
+  }
+}
