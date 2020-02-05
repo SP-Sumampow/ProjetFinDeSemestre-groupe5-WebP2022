@@ -14,7 +14,7 @@ h2 {
   font-size: $fontSizeTitleSections;
   text-align: left;
 
-  @media (min-width: 756px) and (max-width:1200px) {
+  @media (min-width: 756px) and (max-width: 1200px) {
     text-align: center;
   }
 
@@ -30,7 +30,7 @@ h3 {
   font-size: $fontSizeSubtitle;
   text-align: left;
 
-  @media (min-width: 756px) and (max-width:1200px) {
+  @media (min-width: 756px) and (max-width: 1200px) {
     text-align: center;
   }
 }
@@ -50,7 +50,7 @@ p {
   }
 
   @include desktop-up {
-    @include flexbox(row, center, center);
+    @include flexbox(row, space-between, center);
 
     //&:first-child
   }
@@ -74,9 +74,25 @@ p {
     min-height: 512px;
   }
 
-  //@include desktop-up {
-  //width: 40vw;
-  //}
+  &__visual-wallet {
+    @include flexbox(row, center, center);
+    margin: 0 auto;
+
+    &--back {
+      opacity: 0;
+      display: none;
+        }
+
+    &:hover {
+      opacity: 0;
+      display: none;
+
+      &--back {
+        opacity: 100%;
+        display: block;
+      }
+    }
+  }
 }
 
 .collection__wallets {
@@ -87,25 +103,6 @@ p {
   }
 }
 
-/*&:nth-child(1) { collection__wallet
-    @include tablet-up {
-      margin-right: 5px;
-    }
-
-  &:nth-child(2) {
-    @include tablet-up {
-      padding-top: 43px;
-    }
-  }*/
-
 .collection__btnWallet {
-  margin-top: rem(12px);
-  background-color: $white;
-  font-size: $fontSizeBtn;
-  text-transform: uppercase;
-  width: rem(189px);
-  height: rem(35px);
-  border: $btnBorder;
-  box-shadow: $btnShadow;
-  cursor: pointer;
+  @include button-large;
 }

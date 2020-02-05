@@ -1,9 +1,37 @@
-//PROPERTIES FOR CREATE A BUTTON
-// margin-top: 12px;
-// background-color: $white;
-// font-size: $fontSizeBtn;
-// text-transform: uppercase;
-// width: 189px;
-// height: 35px;
-// border: $btnBorder;
-// box-shadow: $btnShadow;
+//@mixins PROPERTIES FOR CREATE A BUTTON
+
+
+@mixin button-large {
+  margin-top: rem(12px);
+  background-color: $white;
+  font-size: $fontSizeBtn;
+  text-transform: uppercase;
+  width: rem(189px);
+  height: rem(35px);
+  border: $btnBorder;
+  box-shadow: $btnShadow;
+
+  &:hover {
+    background-color: $text;
+    color: $white;
+  }
+}
+
+@mixin button-medium {
+  margin-top: rem(13px);
+  margin-bottom: rem(30px);
+  background-color: $white;
+  font-size: $fontSizeBtn;
+  text-transform: uppercase;
+  border: rem(1px) solid rgba(0, 0, 0, 0.65);
+  width: rem(93px);
+  height: rem(35px);
+  border: $btnBorder;
+  box-shadow: $btnShadow;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $text;
+    color: $white;
+  }
+}

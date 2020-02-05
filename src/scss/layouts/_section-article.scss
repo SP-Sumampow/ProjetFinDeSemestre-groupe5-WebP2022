@@ -122,35 +122,27 @@
     margin: 15px 20px;
 
     @include tablet-up {
-      font-size: rem(20px);
+      font-size: rem(18px);
       margin: 30px 30px;
     }
 
     @include desktop-up {
-      font-size: rem(22px);
+      font-size: rem(20px);
     }
   }
 
   &__button {
-    margin: 20px 100px 20px 20px;
-    background-color: $white;
-    font-size: $fontSizeBtn;
-    text-transform: uppercase;
-    border: 1px solid rgba(0, 0, 0, 0.65);
-    padding: 12px 24px;
-    width: 172px;
-    height: 36px;
-    border: $btnBorder;
-    box-shadow: $btnShadow;
-    cursor: pointer;
+    @include button-large;
+    margin: 15px 20px;
 
     @include tablet-up {
-      margin: 30px 100px 30px 20px;
-      text-transform: uppercase;
-      padding: 12px 24px;
-      font-size: rem(15px);
-      width: 230px;
-      height: 50px;
+      @include button-large;
+      margin: 15px 30px;
+    }
+
+    @include desktop-up {
+      margin: 20px 30px;
+
     }
   }
 }

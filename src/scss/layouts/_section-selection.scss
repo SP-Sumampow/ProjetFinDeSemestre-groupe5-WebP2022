@@ -8,15 +8,13 @@
   text-align: left;
   @include flexbox(column, flex-start, left);
 
-
-
   h2 {
     text-transform: uppercase;
     color: $titleSectionCollection;
     font-family: $fontMonserrat;
     font-size: $fontSizeTitleSections;
 
-    @media (min-width: 756px) and (max-width:1200px) {
+    @media (min-width: 756px) and (max-width: 1200px) {
       text-align: center;
     }
   }
@@ -27,7 +25,7 @@
     font-family: $fontNothingCould;
     font-size: $fontSizeSubtitle;
 
-    @media (min-width: 756px) and (max-width:1200px) {
+    @media (min-width: 756px) and (max-width: 1200px) {
       text-align: center;
     }
   }
@@ -41,7 +39,7 @@
   }
 
   @include desktop-up {
-    @include flexbox(row, center, center);
+    @include flexbox(row, space-between, center);
   }
 }
 
@@ -62,17 +60,7 @@ p {
 }
 
 .selections__btnaAddWallet {
-  margin-top: rem(13px);
-  margin-bottom: rem(30px);
-  background-color: $white;
-  font-size: $fontSizeBtn;
-  text-transform: uppercase;
-  border: rem(1px) solid rgba(0, 0, 0, 0.65);
-  width: rem(93px);
-  height: rem(35px);
-  border: $btnBorder;
-  box-shadow: $btnShadow;
-  cursor: pointer;
+  @include button-medium;
 }
 
 .frameSelection {
@@ -93,6 +81,11 @@ p {
   @include desktop-up {
     width: 365px;
     height: 496px;
+  }
+
+  &__visual-wallet {
+    @include flexbox(row, center, center);
+    margin: 0 auto;
   }
 }
 
