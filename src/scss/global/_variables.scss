@@ -32,27 +32,31 @@ $gradient: linear-gradient(90deg, #6b75ca 0%, rgba(240, 243, 248, 0) 100%);
 /**
 * FONTS
 */
-$fontMonserrat: "Montserrat", sans-serif;
-$fontPlayfair: "Playfair Display", sans-serif;
-$fontRoboto: "robotoregular", sans-serif;
-$fontNothingCould: "Nothing You Could Do", sans-serif;
+$fontMonserrat: "Montserrat",
+sans-serif;
+$fontPlayfair: "Playfair Display",
+sans-serif;
+$fontRoboto: "robotoregular",
+sans-serif;
+$fontNothingCould: "Nothing You Could Do",
+sans-serif;
 
-$fontSizeTitleHero: 24px;
-$fontSizeTitleJaquemus: 18px;
-$fontSizeTitleSections: 18px;
+$fontSizeTitleHero: rem(24px);
+$fontSizeTitleJaquemus: rem(18px);
+$fontSizeTitleSections: rem(20px);
 
-$fontSizeSubtitle: 14px;
+$fontSizeSubtitle: rem(14px);
 
-$fontSizeText: 16px;
-$fontSizeTextHero: 18px;
-$fontSizeTextJacquemus: 13px;
+$fontSizeText: rem(16px);
+$fontSizeTextHero: rem(18px);
+$fontSizeTextJacquemus: rem(13px);
 
 
-$fontSizeBtn: 9px;
+$fontSizeBtn: rem(10px);
 /*FontSize Desktop*/
-$fontSizeTextDesktop:18px;
+$fontSizeTextDesktop:rem(18px);
 
-$fontSizeBtn: 10px;
+$fontSizeBtn: rem(10px);
 
 
 

@@ -6,7 +6,7 @@
   font-family: $fontMonserrat;
   @include flexbox(column, center);
   line-height: 1.5;
-  margin-top: 100px;
+  margin-top: rem(120px);
   margin-bottom: 100px;
   color: $white;
 

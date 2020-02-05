@@ -3,7 +3,7 @@
 }
 
 .collection {
-  margin-top: rem(90px);
+  margin-top: rem(120px);
   line-height: rem(19px);
 }
 
@@ -13,6 +13,14 @@ h2 {
   font-family: $fontMonserrat;
   font-size: $fontSizeTitleSections;
   text-align: left;
+
+  @media (min-width: 756px) and (max-width:1200px) {
+    text-align: center;
+  }
+
+  @include desktop-up {
+    text-align: left;
+  }
 }
 
 h3 {
@@ -21,6 +29,10 @@ h3 {
   font-family: $fontNothingCould;
   font-size: $fontSizeSubtitle;
   text-align: left;
+
+  @media (min-width: 756px) and (max-width:1200px) {
+    text-align: center;
+  }
 }
 
 p {
@@ -38,7 +50,7 @@ p {
   }
 
   @include desktop-up {
-    @include flexbox(row, space-between, center);
+    @include flexbox(row, center, center);
 
     //&:first-child
   }
@@ -58,13 +70,13 @@ p {
   }
 
   @include desktop-up {
-    min-width: 580px;
+    min-width: 545px;
     min-height: 512px;
   }
 
-  @include desktop-up {
-    width: 40vw;
-  }
+  //@include desktop-up {
+  //width: 40vw;
+  //}
 }
 
 .collection__wallets {

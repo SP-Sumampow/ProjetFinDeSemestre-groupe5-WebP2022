@@ -3,6 +3,7 @@
 }
 
 .section-inspirations {
+  overflow: hidden;
   font-family: $fontMonserrat;
   @include flexbox(column, center);
   line-height: rem(19px);
@@ -49,7 +50,6 @@
     @include desktop-up {
       width: rem(475px);
       height: rem(580px);
-      // margin: 50px 60px 100px 150px;
     }
   }
 
@@ -74,7 +74,7 @@
       height: rem(440px);
       position: relative;
       top: rem(80px);
-      left: rem(-125px);
+      left: rem(-175px);
     }
   }
 
@@ -108,7 +108,7 @@
 
     @include desktop-up {
       font-size: rem(30px);
-      width: rem(700px);
+      width: rem(600px);
     }
   }
 
@@ -147,7 +147,7 @@
     @include desktop-up {
       font-size: rem(18px);
       line-height: 1.5;
-      width: rem(700px);
+      width: rem(600px);
     }
   }
 }

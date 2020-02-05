@@ -71,6 +71,8 @@
         color: $titleHeroAndJacquemus;
         margin: 10% auto;
         text-align: left;
+        @include flexbox(column, flex-start, left);
+
         line-height: 1.5;
 
         @include tablet-up {
@@ -82,7 +84,7 @@
         }
 
         @include desktop-up {
-            @include flexbox(column, center, right);
+            @include flexbox(column, flex-start, left);
             width: 30vw;
             margin: 5%;
         }
@@ -91,6 +93,11 @@
             font-size: 6vw;
             font-family: $fontPlayfair;
             margin-bottom: rem(10px);
+            color: $titleHeroAndJacquemus;
+            text-align: left;
+            text-transform: none;
+            @include flexbox(column, reverse, left);
+
 
             .bolder {
                 font-weight: bold;
@@ -117,6 +124,9 @@
 
             @include desktop-up {
                 font-size: 2.7vw;
+                @include flexbox(column, flex-start, left);
+                text-align: left !important;
+
 
                 .bolder {
                     font-size: 2.9vw;
