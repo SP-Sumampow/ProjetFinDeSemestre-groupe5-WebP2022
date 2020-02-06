@@ -39,6 +39,7 @@ body {
 	background-color: $white;
 
 	main {
+
 		.section-inspirations,
 		.collection,
 		.section-article,
@@ -48,4 +49,26 @@ body {
 			margin-left: 10%;
 		}
 	}
+}
+
+
+.section-inspirations // .collection,
+
+// .section-article,
+// .sectionEvent,
+// .selection
+	{
+	opacity: 0;
+	transform: translateY(50px) scale(0.8);
+	transition: opacity 0.3s, transform 0.3s;
+}
+
+.is-reached.section-inspirations // .is-reached.collection,
+
+// .is-reached.section-article,
+// .is-reached.sectionEvent,
+// .is-reached.selection 
+	{
+	opacity: 1;
+	transform: none;
 }

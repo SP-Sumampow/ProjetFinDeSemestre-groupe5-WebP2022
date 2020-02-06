@@ -41,8 +41,8 @@
 
             @include tablet-up {
                 width: 270px;
-                height: 180px;  
-                margin-left: 24vw;       
+                height: 180px;
+                margin-left: 24vw;
             }
 
             @include desktop-up {
@@ -50,9 +50,9 @@
                 width: 320px;
                 height: 100px;
                 position: relative;
-                z-index: 1;  
-                margin-left: 21vw;       
-    
+                z-index: 1;
+                margin-left: 21vw;
+
             }
         }
     }
@@ -64,9 +64,7 @@
         margin: 0 6px;
         color: #3d3d3d;
 
-        @include tablet-up {
-            
-        }
+        @include tablet-up {}
 
         @include desktop-up {
             margin-top: 42px;
@@ -108,7 +106,7 @@
             margin-top: 20px;
             width: 100vw;
             text-align: center;
-        
+
         }
 
         @include desktop-up {
@@ -125,10 +123,11 @@
             justify-content: center;
 
             @include tablet-up {
-                margin-bottom: 15px; 
+                margin-bottom: 15px;
             }
+
             @include desktop-up {
-                margin-bottom: 15px;                 
+                margin-bottom: 15px;
             }
         }
 
@@ -136,12 +135,13 @@
         li:first-child {
             background-color: #F4EEF1;
             cursor: pointer;
-            
+
             @include tablet-up {
-                background-color: white;            
+                background-color: white;
             }
+
             @include desktop-up {
-                background-color: white;            
+                background-color: white;
             }
         }
 
@@ -150,10 +150,11 @@
             cursor: pointer;
 
             @include tablet-up {
-                background-color: white;            
+                background-color: white;
             }
+
             @include desktop-up {
-                background-color: white;            
+                background-color: white;
             }
         }
 
@@ -162,10 +163,11 @@
             cursor: pointer;
 
             @include tablet-up {
-                background-color: white;            
+                background-color: white;
             }
+
             @include desktop-up {
-                background-color: white;            
+                background-color: white;
             }
         }
 
@@ -185,10 +187,11 @@
                 margin-bottom: 10px;
 
             }
+
             @include desktop-up {
                 margin-bottom: 10px;
                 margin-top: 45px;
-    
+
             }
 
             // @include link; //ne pas réactiver sur les link du header//
@@ -205,8 +208,8 @@
         .container {
             position: absolute;
             z-index: 1;
-        
-        
+
+
             @include tablet-up {
                 display: none;
             }
@@ -237,6 +240,7 @@
         font-weight: 900;
         width: 100vw;
         height: 100vh;
+
     }
 }
 
@@ -248,18 +252,18 @@
     }
 
     .logo__novapellicia {
-        margin-left: 5vw;       
+        margin-left: 5vw;
 
         @include tablet-up {
-            margin-left: 5vw;  
+            margin-left: 5vw;
             width: 170px;
-            height: 80px;      
+            height: 80px;
         }
 
         @include desktop-up {
-            margin-left: 5vw;   
+            margin-left: 5vw;
             width: 270px;
-            height: 180px;    
+            height: 180px;
 
         }
     }
@@ -309,6 +313,7 @@
                 margin-bottom: 0;
 
             }
+
             @include desktop-up {
                 font-size: rem(16px);
                 margin-top: 35px;

@@ -1,4 +1,3 @@
-
 /************ BURGER MENU ************/
 
 var burger = document.querySelector('.container');
@@ -81,5 +80,18 @@ var hidenInformation = document.querySelector(".footer__thirdPart--menuHide");
 
 
 
+/************ WAYPOINTS ************/
 
- 
+var ids = ['inspirations', 'collection', 'selection', 'event', 'history'];
+
+ids.forEach(function (id) {
+    var element = document.getElementById(id);
+
+    var waypoint = new Waypoint({
+        element: element,
+        handler: function (direction) {
+            element.classList.add('is-reached');
+        },
+        offset: '75%'
+    });
+});

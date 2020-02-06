@@ -6,17 +6,19 @@
   margin-top: rem(100px);
   margin-bottom: rem(100px);
 
-  @include tablet-up { 
+  @include tablet-up {
     margin-top: rem(100px);
     margin-bottom: rem(50px);
   }
 
   @include desktop-up {
     margin-bottom: rem(200px);
+    margin-top: rem(200px);
+
 
   }
 
-  
+
   .section-article__title {
     @include flexbox(row, flex-start);
     text-transform: uppercase;
@@ -30,7 +32,7 @@
       text-align: center;
     }
 
-    @include tablet-up { 
+    @include tablet-up {
       text-align: center;
       @include flexbox(column, center);
       margin-top: rem(50px);
@@ -42,7 +44,7 @@
       font-size: rem(30px);
       margin-bottom: rem(60px);
       text-align: left;
-      @include flexbox(column, flex-start);
+      @include flexbox(row, flex-start);
     }
   }
 }
@@ -76,7 +78,7 @@
     &__text:nth-child(2) {
       order: 1;
       // width: rem(720px);
-  
+
       width: 100%;
       // min-width: rem(665px);
       max-height: rem(920px);
@@ -181,7 +183,7 @@
       width: 300px;
       height: 50px;
       font-size: 15px;
-  
+
       &:hover {
         background-color: #3d3d3d;
       }

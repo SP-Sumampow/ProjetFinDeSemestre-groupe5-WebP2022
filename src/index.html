@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link type="text/css" rel="stylesheet" href="./scss/styles.scss" />
+  <script src="./js/waypoints.js"></script>
   <script defer src="./js/script.js"></script>
   <title>Nova Pellicia</title>
 </head>
@@ -13,31 +14,31 @@
 <body>
   <header class="header">
     <!-- <div class="header__separate"> -->
-      <div id="container" class="container">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-      </div>
-      <div class="logo">
-        <img src="/images/nova-pellicia-logo.svg" class="logo__novapellicia">
-      </div>
-      <div class="header__icons">
-        <img src="icons/like.svg" class="header__icons__like">
-        <img src="icons/user.svg" class="header__icons__account">
-        <img src="icons/cart.svg" class="header__icons__basket">
-      </div>
+    <div id="container" class="container">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <div class="logo">
+      <a href="#linkHome"><img src="/images/nova-pellicia-logo.svg" class="logo__novapellicia"></a>
+    </div>
+    <div class="header__icons">
+      <img src="icons/like.svg" class="header__icons__like">
+      <img src="icons/user.svg" class="header__icons__account">
+      <img src="icons/cart.svg" class="header__icons__basket">
+    </div>
     <!-- </div> -->
-    
+
 
     <ul id="menu" class="menu">
       <li class="portefeuille">
-        <a href="nos-portefeuille.html">NOS PORTEFEUILLES</a>
+        <a href="#linkCollection">NOS PORTEFEUILLES</a>
       </li>
       <li class="valeurs">
-        <a>ÉVÈNEMENTS</a>
+        <a href="#linkEvent">ÉVÈNEMENTS</a>
       </li>
       <li class="histoire">
-        <a>NOTRE HISTOIRE</a>
+        <a href="#linkHistory">NOTRE HISTOIRE</a>
       </li>
     </ul>
   </header>
@@ -46,7 +47,7 @@
 
   <main class="sections">
 
-    <section class="hero">
+    <section class="hero" id="linkHome" id="hero">
       <div class="hero__product">
         <img src="/images/patula-hero.png" alt="photo du portefeuille rose grappe or" class="hero__product__photo">
       </div>
@@ -62,7 +63,7 @@
       </div>
     </section>
 
-    <section class="section-inspirations">
+    <section class="section-inspirations" id="inspirations">
       <div class="section-inspirations__visual">
         <div class="section-inspirations__backsquare">
           <img class="section-inspirations__productImage" src="images/portefeuille-bordeaux-section-jacquemus.png"
@@ -83,40 +84,40 @@
       </div>
     </section>
 
-    <section class="collection">
+    <section class="collection" id="linkCollection" id="collection">
       <h2>Deux collections deux styles</h2>
       <h3>Choisissez, Cliquez, Personnalisez</h3>
-       <section class="collection__collections">
- 
-         <article class="collection__wallets">
+      <section class="collection__collections">
+
+        <article class="collection__wallets">
           <div class="frameCollection frameCollection--img1collection">
             <div class="frameCollection__visual-wallet">
             </div>
           </div>
-             
-           <p>Mini-portefeuille</p>
-           <button class="collection__btnWallet">Personnalisez ce produit</button>
-         </article>
- 
-         <article class="collection__wallets">
-             <div class="frameCollection frameCollection--img2collection">
-              <div class="frameCollection__visual-wallet">
-              </div>
-             </div>
-           <p>Format sac à main</p>
-           <button class="collection__btnWallet">Personnalisez ce produit</button>
-         </article>
-       </section>
-     </section>
- 
-     <section class="selection">
-       <h2>Notre sélection</h2>
-       <h3>Nous les avons déja personnalisés pour vous ...</h3>
-       
-       <section class="selection__selections">
-         <article class="selection__wallet">
+
+          <p>Mini-portefeuille</p>
+          <a href="personalisation.html"><button class="collection__btnWallet">Personnalisez ce produit</button></a>
+        </article>
+
+        <article class="collection__wallets">
+          <div class="frameCollection frameCollection--img2collection">
+            <div class="frameCollection__visual-wallet">
+            </div>
+          </div>
+          <p>Format sac à main</p>
+          <a href="personalisation.html"><button class="collection__btnWallet">Personnalisez ce produit</button></a>
+        </article>
+      </section>
+    </section>
+
+    <section class="selection" id="selection">
+      <h2>Notre sélection</h2>
+      <h3>Nous les avons déja personnalisés pour vous ...</h3>
+
+      <section class="selection__selections">
+        <article class="selection__wallet">
           <div class="frameSelection frameSelection--img1selection">
-            <img class="likes"src="../src/icons/like.svg" alt="">
+            <img class="likes" src="../src/icons/like.svg" alt="">
             <div class="frameSelection__visual-wallet">
             </div>
           </div>
@@ -127,108 +128,110 @@
             <p>
               Inspiré des plus grands vins de bordeaux.</br>
               Sucombez à l’élégance de ce modèle</br> qui saura
-              vous séduire et vous accompagner</br> pour toutes les 
+              vous séduire et vous accompagner</br> pour toutes les
               occasions.
-              
+
             </p>
             <button class="selections__btnaAddWallet">Ajouter</button>
           </div>
-         </article>
- 
-         <article class="selection__wallet">
-             <div class="frameSelection frameSelection--img2selection">
-               <img class="likes"src="../src/icons/like.svg" alt="">
-              <div class="frameSelection__visual-wallet">
-              </div>
-             </div>
-           <div class="frameSelection__text-wallet">
+        </article>
+
+        <article class="selection__wallet">
+          <div class="frameSelection frameSelection--img2selection">
+            <img class="likes" src="../src/icons/like.svg" alt="">
+            <div class="frameSelection__visual-wallet">
+            </div>
+          </div>
+          <div class="frameSelection__text-wallet">
             <h4>Le Petula</h4>
             <h5>Plaque Argent</h5>
             <p>
-             Inspiré d’un vin paré d’une belle robe rose</br> 
-             sur une teinte légèrement violine.</br>
-             Laissez vous séduire par ce modèle plein de</br> 
-             charme et de fraîcheur.
+              Inspiré d’un vin paré d’une belle robe rose</br>
+              sur une teinte légèrement violine.</br>
+              Laissez vous séduire par ce modèle plein de</br>
+              charme et de fraîcheur.
             </p>
             <button class="selections__btnaAddWallet">Ajouter</button>
           </div>
-         </article>
- 
-         <article class="selection__wallet">
-             <div class="frameSelection frameSelection--img3selection">
-               <img class="likes"src="../src/icons/like.svg" alt="">
-              <div class="frameSelection__visual-wallet ">
-              </div>
-             </div>
-             <div class="frameSelection__text-wallet"><h4>Le Vindigo</h4>
-              <h5>Grappe de raisin or</h5>
-              <p>
-                Inspiré du célèbre vin bleu.</br>
-                Un Portefeuille à la couleur originale et</br> rayonnante qui ne manquera pas de vous</br> surprendre et de vous séduire
-              </p>
-              <button class="selections__btnaAddWallet">Ajouter</button>
+        </article>
+
+        <article class="selection__wallet">
+          <div class="frameSelection frameSelection--img3selection">
+            <img class="likes" src="../src/icons/like.svg" alt="">
+            <div class="frameSelection__visual-wallet ">
+            </div>
           </div>
-         </article>
-       </section>
-     </section>
- 
-     <section class="sectionEvent">
-       <h2>Évènement</h2>
-       <h3>Défilé collection Automne-Hiver 2019-2020</h3>
-       <article class="sectionEvent__event">
-           <img class="imgEvent" src="../src/images/Mannequin1-desktop.png" alt="mannequin event PA">
-           <img class="imgEvent" src="../src/images/Mannequin2-desktop.png" alt="mannequin event PA">
-           <img class="imgEvent imgEvent--display"src="../src/images/Mannequin3-desktop.png" alt="mannequin event PA">
-       </article>
-       <p>Jennifer Lawrence, Cara Delevingne, Karlie Kloss, Olivia Palermo, Angela Baby, Natalia Vodianova 
+          <div class="frameSelection__text-wallet">
+            <h4>Le Vindigo</h4>
+            <h5>Grappe de raisin or</h5>
+            <p>
+              Inspiré du célèbre vin bleu.</br>
+              Un Portefeuille à la couleur originale et</br> rayonnante qui ne manquera pas de vous</br> surprendre et
+              de vous séduire
+            </p>
+            <button class="selections__btnaAddWallet">Ajouter</button>
+          </div>
+        </article>
+      </section>
+    </section>
+
+    <section class="sectionEvent" id="linkEvent" id="event">
+      <h2>Évènement</h2>
+      <h3>Défilé collection Automne-Hiver 2019-2020</h3>
+      <article class="sectionEvent__event">
+        <img class="imgEvent" src="../src/images/Mannequin1-desktop.png" alt="mannequin event PA">
+        <img class="imgEvent" src="../src/images/Mannequin2-desktop.png" alt="mannequin event PA">
+        <img class="imgEvent imgEvent--display" src="../src/images/Mannequin3-desktop.png" alt="mannequin event PA">
+      </article>
+      <p>Jennifer Lawrence, Cara Delevingne, Karlie Kloss, Olivia Palermo, Angela Baby, Natalia Vodianova
         et bien d’autres personnalitées sont venues découvrir la collection de la Maison Nova Pellicia.</p>
 
-      </section>
+    </section>
 
-      
-  <section class="section-article ">
-    <h2 class="section-article__title">Notre histoire</h2>
-    <div class="div-article">
-      <div class="div-article__visual">
-        <img src="images/château-article.png" alt="Photo d'une maison de couture en noir et blanc"
-          class="div-article__img">
+
+    <section class="section-article" id="linkHistory" id="history">
+      <h2 class="section-article__title">Notre histoire</h2>
+      <div class="div-article">
+        <div class="div-article__visual">
+          <img src="images/château-article.png" alt="Photo d'une maison de couture en noir et blanc"
+            class="div-article__img">
+        </div>
+        <div class="div-article__text">
+          <p class="div-article__paragraph">La Maison Nova Pellicia a changé
+            les codes de l'élégance dès sa première collection de 2010, en apportant une nouvelle vision
+            de la mode et du luxe.</br>
+            Nous tirons parti de l'utilisation
+            des ressources renouvelables comme alternative aux matiéres chimiques et synthétiques dérivées du pétrole,
+            et à la mort de milliers d’animaux chaque année.</br>
+            Nos processus de production sont basés sur l'exploitation de la biomasse et des matières
+            premières.</br>
+            Cette vision se transmet
+            aujourd'hui avec audace
+            et inventivité.
+
+
+
+
+
+
+          </p>
+          <a href="article.html">
+            <button class="div-article__button">Découvrir l'histoire</button>
+          </a>
+        </div>
       </div>
-      <div class="div-article__text">
-        <p class="div-article__paragraph">La Maison Nova Pellicia a changé 
-          les codes de l'élégance dès sa première collection de 2010, en apportant une nouvelle vision 
-          de la mode et du luxe.</br>
-          Nous tirons parti de l'utilisation 
-          des ressources renouvelables comme alternative aux matiéres chimiques et synthétiques dérivées du pétrole, 
-          et à la mort de milliers d’animaux chaque année.</br>
-          Nos processus de production sont basés sur l'exploitation de la biomasse et des matières 
-          premières.</br>
-          Cette vision se transmet 
-          aujourd'hui avec audace 
-          et inventivité. 
-          
-          
-          
-          
-          
-          
-        </p>
-        <a href="article.html">
-          <button class="div-article__button">Découvrir l'histoire</button>
-        </a>
-      </div>
-    </div>
-  </section>
+    </section>
   </main>
 
 
 
   <footer class="footer">
-    <div class= "footer--advantage">
+    <div class="footer--advantage">
       <div class="footer--advantage__payment">
         <div>
           <img src="/icons/lock.svg" class="icon__footer--style"></div>
-          <div class="advantageStyle">Paiement 100% sécurisé</div>
-        </div>
+        <div class="advantageStyle">Paiement 100% sécurisé</div>
+      </div>
       <div class="footer--advantage__handmade">
         <img src="icons/fabrication-main.svg" class="icon__footer--style sizeScissors">
         <div class="advantageStyle">Fait main</div>
@@ -238,10 +241,10 @@
         <div class="advantageStyle">Produits Français</div>
       </div>
       <div class="footer--advantage__advantage">
-        <img src="icons/like.svg" class="icon__footer--style">        
+        <img src="icons/like.svg" class="icon__footer--style">
         <div class="advantageStyle advantageStyle--margin">Avantages client</div>
+      </div>
     </div>
-    </div>  
     <div class="footer__backToTop"><a href="index.html">Haut de la page</a></div>
     <div class="footer--thirdPart">
       <div class="footer--thirdPart__button footer__help">
@@ -300,7 +303,7 @@
       </div>
       <div class="footer--thirdPart__button footer__contact">
         <div class="footer--thirdPart__button__contact">
-        CONTACT
+          CONTACT
         </div>
         <button class="footer--thirdPart__button__plus">+</button>
         <div class="footer--thirdPart__menuHide menuHide--contact">
