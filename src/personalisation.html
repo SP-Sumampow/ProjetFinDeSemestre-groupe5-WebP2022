@@ -14,31 +14,36 @@
 
 <body>
   <header class="header">
-    <div id="container" class="container">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </div>
-    <div class="logo">
-      <img src="" class="">
-    </div>
-    <div class="header__icons">
-      <img src="icons/header__icons--like.png" class="header__icons__like">
-      <img src="icons/header__icons--account.png" class="header__icons__account">
-      <img src="icons/header__icons--basket.png" class="header__icons__basket">
-    </div>
+    <!-- <div class="header__separate"> -->
+      <div id="container" class="container">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <div class="logo">
+        <img src="/images/nova-pellicia-logo.svg" class="logo__novapellicia">
+      </div>
+      <div class="header__icons">
+        <img src="icons/like.svg" class="header__icons__like">
+        <img src="icons/user.svg" class="header__icons__account">
+        <img src="icons/cart.svg" class="header__icons__basket">
+      </div>
+    <!-- </div> -->
+    
+
     <ul id="menu" class="menu">
       <li class="portefeuille">
         <a href="nos-portefeuille.html">NOS PORTEFEUILLES</a>
       </li>
       <li class="valeurs">
-        <a>NOS VALEURS</a>
+        <a>ÉVÈNEMENTS</a>
       </li>
       <li class="histoire">
         <a>NOTRE HISTOIRE</a>
       </li>
     </ul>
   </header>
+
 
 <body>
 
@@ -66,8 +71,8 @@
           <button class="btn--vindigo"></button>
         </div>
         <div class="personalisation__choices__symbols">
-          <div><img class="btn__choices__symbols__bar" src="/images/symbols/btn-barre.png"></div>
-          <div><img class="btn__choices__symbols__grape" src="/images/symbols/btn-grappe.png"></div>
+          <div class="btn__choices__symbols__bar"></div>
+          <div class="btn__choices__symbols__grape"></div>
         </div>
         <div class="personalisation__choices__finishing">
           <button class="personalisation__choices__finishing__pearl">Pearl</button>
@@ -81,17 +86,18 @@
         <p>100€</p>
       </div>
     </div>  
+
     <div class="personalisation-desktop">
       <div class="personalisation-desktop__product">
+        <div class="personalisation-desktop__product__image">
+          <img src="images/products/vintigo-court-simple.svg">
+        </div>
         <div class="personalisation-desktop__product__text">
           <h1 class="personalisation-desktop__product__text__title">Le Vindigo</h1>
           <h2 class="personalisation-desktop__product__text__subtitle">Grappe de raisin OR</h2>
           <p class="personalisation-desktop__product__text__paragraph">
             Le Vindigo doit son nom au célèbre vin bleu.Un Portefeuil à la couleur originale et rayonnante qui ne manquera pas de vous surprendre et de vous séduire.
           </p>
-        </div>
-        <div class="personalisation-desktop__product__image">
-          <img src="images/products/vintigo-court-simple.svg">
         </div>  
       </div>     
       <div class="personalisation-desktop__input">
@@ -108,8 +114,8 @@
         <div class="input-category personalisation-desktop__input__symbol">
           <h3 class="symbolTitle"> SYMBOL</h3>
           <div class="symbolImage">
-            <div></div>
-            <div></div>
+            <div class="symbolImage-grape"></div>
+            <div class="symbolImage-bar"></div>
           </div>
         </div>
         <div class="input-category personalisation-desktop__input__finishing">
@@ -124,6 +130,7 @@
       </div> 
     </div>
   </section>
+  
   <footer class="footer">
     <div class= "footer--advantage">
       <div class="footer--advantage__payment">

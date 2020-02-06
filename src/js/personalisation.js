@@ -5,17 +5,17 @@ import chardonayImage from '/images/products/chardonay-court-simple.svg';
 import petulaImage from '/images/products/petula-court-simple.svg';
 
 // symbol 
-import vindigoBarreSymbolImage from '/images/symbols/barre.jpeg';
-import vindigoGrappeSymbolImage from '/images/symbols/grappe.png';
+import vindigoBarreSymbolImage from '/images/products/vintigo-court-barre-or.svg';
+import vindigoGrappeSymbolImage from '/images/products/vintigo-court-grappe-or.svg';
 
-import bordeauxBarreSymbolImage from '/images/symbols/barre.jpeg';
-import bordeauxGrappeSymbolImage from '/images/symbols/grappe.png';
+import bordeauxBarreSymbolImage from '/images/products/bordeaux-court-barre-or.svg';
+import bordeauxGrappeSymbolImage from '/images/products/bordeaux-court-grappe-or.svg';
 
-import chardonayBarreSymbolImage from '/images/symbols/barre.jpeg';
-import chardonayGrappeSymbolImage from '/images/symbols/grappe.png';
+import chardonayBarreSymbolImage from '/images/products/chardonay-court-barre-or.svg';
+import chardonayGrappeSymbolImage from '/images/products/chardonay-court--grappe-or.svg';
 
-import barreSymbolImage from '/images/symbols/barre.jpeg';
-import grappeSymbolImage from '/images/symbols/grappe.png';
+import petulabarreSymbolImage from '/images/products/petula-court-barre-or.svg';
+import petulagrappeSymbolImage from '/images/products/petula-court-grappe-or.svg';
 
 // finishing 
 import vindigopearlFinishingImage from '/images/symbols/barre.jpeg';
@@ -83,7 +83,7 @@ let symbols = {
       "vindigo": vindigoBarreSymbolImage,
       "bordeaux": bordeauxBarreSymbolImage,
       "chardonay": chardonayBarreSymbolImage,
-      "petula": barreSymbolImage,
+      "petula": petulabarreSymbolImage,
       },
       "price": 550
   },
@@ -92,7 +92,7 @@ let symbols = {
       "vindigo": vindigoGrappeSymbolImage,
       "bordeaux": bordeauxGrappeSymbolImage,
       "chardonay": chardonayGrappeSymbolImage,
-      "petula": grappeSymbolImage,
+      "petula": petulagrappeSymbolImage,
       },
       "price": 550
   }
