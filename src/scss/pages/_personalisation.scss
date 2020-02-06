@@ -33,9 +33,18 @@
   }
 
   &__image {
+    position: relative;
     height: 40vh;
     background-color: pink;
     
+    span {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      text-align: center;
+      width: 100%;
+    }
 
     img{
       width: 100%;

@@ -32,6 +32,43 @@ import petulametalFinishingImage from '/images/products/petula-court-grappe-or.s
 
 var positionInPersonalisation = 0;
 
+
+let selectors = {
+  "navigation": {
+    "rightBtn": document.querySelector('.personalisation__btn__right'),
+    "leftBtn": document.querySelector('.personalisation__btn__left'),
+    "title": document.querySelector('.personalisation__btn h2'),
+    "personalisationStep": {
+      "color": document.querySelector('.personalisation__choices__colors'),
+      "finishing": document.querySelector('.personalisation__choices__finishing'),
+      "symbols": document.querySelector('.personalisation__choices__symbols'),
+      "gravure": document.querySelector('.personalisation__choices__gravure')
+    }
+  },
+  "product": {
+    "title": document.querySelector('.personalisation__text h1'),
+    "paragraph": document.querySelector('p.personalisation__text__paragraph'),
+    "image": document.querySelector('.personalisation__image img'),
+    "gravure": document.querySelector('.personalisation__gravure__text')
+  },
+  "gravureInput": document.querySelector('.personalisation__choices__gravure input'),
+  "totalPrice": document.querySelector('.personalisation__price p'),
+  "colorBtns": [
+    { "element": document.querySelector('.btn--vindigo'), productName: "vindigo" },
+    { "element": document.querySelector('.btn--bordeaux'), productName: "bordeaux" },
+    { "element": document.querySelector('.btn--petula'), productName: "petula" },
+    { "element": document.querySelector('.btn--chardonay'), productName: "chardonay" },
+  ],
+  "symbolBtns": [
+    { "element": document.querySelector('.symbolImage-grape'), symbolName: "grappe" },
+    { "element": document.querySelector('.symbolImage-bar'), symbolName: "bar" },
+  ],
+  "finishingBtns": [
+    { "element": document.querySelector('.personalisation__choices__finishing__pearl'), finishingName: "pearl" },
+    { "element": document.querySelector('.personalisation__choices__finishing__metal'), finishingName: "metal" },
+  ],
+};
+
 let navigation = [{
   "title": "COULEURS",
   "selectorName": "color"
@@ -79,87 +116,89 @@ let products = {
 
 let symbols = {
   "bar": {
+    "key": "bar",
     "image": {
       "vindigo": vindigoBarreSymbolImage,
       "bordeaux": bordeauxBarreSymbolImage,
       "chardonay": chardonayBarreSymbolImage,
       "petula": petulabarreSymbolImage,
       },
-      "price": 550
+      "price": 23
   },
   "grappe": {
+    "key": "grappe",
     "image": {
       "vindigo": vindigoGrappeSymbolImage,
       "bordeaux": bordeauxGrappeSymbolImage,
       "chardonay": chardonayGrappeSymbolImage,
       "petula": petulagrappeSymbolImage,
       },
-      "price": 550
+      "price": 99
   }
 };
 
-let finishing = {
+let finishies = {
   "pearl": {
+    "key": "pearl",
     "image": {
-      "vindigo": vindigopearlFinishingImage,
-      "bordeaux": bordeauxpearlFinishingImage,
-      "chardonay": chardonaypearlFinishingImage,
-      "petula": petulapearlFinishingImage,
+      "vindigo": {
+        "bar": vindigopearlFinishingImage,
+        "grappe": vindigopearlFinishingImage
       },
-      "price": 550
+      "bordeaux": {
+        "bar": vindigopearlFinishingImage,
+        "grappe": vindigopearlFinishingImage
+      },
+      "chardonay": {
+        "bar": vindigopearlFinishingImage,
+        "grappe": vindigopearlFinishingImage
+      },
+      "petula": {
+        "bar": vindigopearlFinishingImage,
+        "grappe": vindigopearlFinishingImage
+      },
+    },
+    "price": 1000
   },
   "metal": {
+    "key": "metal",
     "image": {
-      "vindigo": vindigometalFinishingImage,
-      "bordeaux": bordeauxmetalFinishingImage,
-      "chardonay": chardonaymetalFinishingImage,
-      "petula": petulametalFinishingImage,
+      "vindigo": {
+        "bar": vindigopearlFinishingImage,
+        "grappe": vindigopearlFinishingImage
       },
-      "price": 550
+      "bordeaux": {
+        "bar": vindigopearlFinishingImage,
+        "grappe": vindigopearlFinishingImage
+      },
+      "chardonay": {
+        "bar": vindigopearlFinishingImage,
+        "grappe": vindigopearlFinishingImage
+      },
+      "petula": {
+        "bar": vindigopearlFinishingImage,
+        "grappe": vindigopearlFinishingImage
+      },
+    },
+    "price": 2000
   }
 };
 
-let selectors = {
-  "navigation": {
-    "rightBtn": document.querySelector('.personalisation__btn__right'),
-    "leftBtn": document.querySelector('.personalisation__btn__left'),
-    "title": document.querySelector('.personalisation__btn h2'),
-    "personalisationStep": {
-      "color": document.querySelector('.personalisation__choices__colors'),
-      "finishing": document.querySelector('.personalisation__choices__finishing'),
-      "symbols": document.querySelector('.personalisation__choices__symbols'),
-      "gravure": document.querySelector('.personalisation__choices__gravure')
-    }
-  },
-  "product": {
-    "title": document.querySelector('.personalisation__text h1'),
-    "paragraph": document.querySelector('p.personalisation__text__paragraph'),
-    "image": document.querySelector('.personalisation__image img'),
-  },
-  "totalPrice": document.querySelector('.personalisation__price p'),
-  "colorBtns": [
-    { "element": document.querySelector('.btn--vindigo'), productName: "vindigo" },
-    { "element": document.querySelector('.btn--bordeaux'), productName: "bordeaux" },
-    { "element": document.querySelector('.btn--petula'), productName: "petula" },
-    { "element": document.querySelector('.btn--chardonay'), productName: "chardonay" },
-  ],
-  "symbolBtns": [
-    { "element": document.querySelector('.btn__choices__symbols__bar'), symbolName: "bar" },
-    { "element": document.querySelector('.btn__choices__symbols__grape'), symbolName: "grappe" },
-  ],
-  "finishingBtns": [
-    { "element": document.querySelector('.personalisation__choices__finishing__pearl'), finishingName: "pearl" },
-    { "element": document.querySelector('.personalisation__choices__finishing__metal'), finishingName: "metal" },
-  ],
-  
+var gravure = {
+  "price": 13
 };
 
 /************ PERSONALISATION ************/
 var myPersonalisation = {
-  colorKey: "",
+  colorKey: null,
+  symbolKey: null,
+  finishingKey: null,
+  gravureKey: null,
   totalPrice: {
     color: 0,
-    symbol: 0
+    symbol: 0,
+    finishing: 0,
+    gravure: 0
   }
 }
 
@@ -179,6 +218,9 @@ selectors.navigation.leftBtn.addEventListener("click", function () {
 selectors.navigation.rightBtn.addEventListener("click", function () {
   let currentStepNameSelector = navigation[positionInPersonalisation].selectorName;
   let currentStepSelector = selectors.navigation.personalisationStep[currentStepNameSelector];
+  if (isStepPersonaliseFiled() == false) {
+    return
+  }
   positionInPersonalisation++;
   let afterStepName = navigation[positionInPersonalisation].selectorName;
   let afterStepNameSelector = selectors.navigation.personalisationStep[afterStepName];
@@ -187,12 +229,25 @@ selectors.navigation.rightBtn.addEventListener("click", function () {
 })
 
 function initMobileNavigation() {
-  console.log("lolol");
   console.log(selectors.navigation.personalisationStep);
-  selectors.navigation.personalisationStep.logo.style.visibility = "hidden";
-  selectors.navigation.personalisationStep.finishing.style.visibility = "hidden";
-  selectors.navigation.personalisationStep.symbols.style.visibility = "hidden";
-  selectors.navigation.personalisationStep.gravure.style.visibility = "hidden";
+  selectors.navigation.personalisationStep.finishing.style.display = "none";
+  selectors.navigation.personalisationStep.symbols.style.display = "none";
+  selectors.navigation.personalisationStep.gravure.style.display = "none";
+}
+
+function isStepPersonaliseFiled() {
+  if (positionInPersonalisation == 0 && myPersonalisation.colorKey == null) {
+    alert("Choisissez une couleur")
+    return false
+  } else if (positionInPersonalisation == 1 && myPersonalisation.symbolKey == null) {
+    alert("Choisissez un symbole")
+    return false
+  } else if (positionInPersonalisation == 2 && myPersonalisation.finishingKey == null) {
+    return false
+  } else if (positionInPersonalisation == 3 && myPersonalisation.gravureKey == null) { 
+    return false
+  }
+  return true
 }
 
 function refreshNavigation() {
@@ -254,8 +309,10 @@ refreshProductInfo(products[selectors.colorBtns[0].productName]);
 selectors.symbolBtns.forEach(function (btnSymbolInfo) {
   btnSymbolInfo.element.addEventListener("click", function () {
     var symbol = symbols[btnSymbolInfo.symbolName];
-    refreshSymbolInfo(symbol)
-    refreshSymbolPrice(symbol.price)
+    myPersonalisation.symbolKey = symbol.key 
+    console.log(symbol)
+    refreshSymbolInfo(symbol);
+    refreshSymbolPrice(symbol.price);
   })
 })
 
@@ -270,16 +327,7 @@ function refreshSymbolPrice(amountAdded) {
 }
 
 
-function refreshTotalAmout() {
-  selectors.totalPrice.innerHTML = myPersonalisation.totalPrice.color + myPersonalisation.totalPrice.symbol + "€";
-}
-
-
-
 //f"zreyhgtfr  or (i = 0;i < colors.length; i++)
-
-refreshTotalAmout();
-
     
         
 /************ finishing PERSONALISATION ************/
@@ -287,32 +335,53 @@ refreshTotalAmout();
 
 selectors.finishingBtns.forEach(function (btnFinisingInfo) {
   btnFinisingInfo.element.addEventListener("click", function () {
-    var finishing = finishing[btnFinisingInfo.finishingName];
+    var finishing = finishies[btnFinisingInfo.finishingName];
+    myPersonalisation.finishingKey = finishing.key;
+    console.log(btnFinisingInfo.finishingName);
     refreshFinishingInfo(finishing)
     refreshFinishingPrice(finishing.price)
   })
 })
 
 function refreshFinishingInfo(finishing) {
-  selectors.product.image.src = finishing.image[myPersonalisation.colorKey];
+  console.log(finishies[finishing.key].image[myPersonalisation.colorKey][myPersonalisation.symbolKey]);
+  selectors.product.image.src = finishies[finishing.key].image[myPersonalisation.colorKey][myPersonalisation.symbolKey];
 }
 
 // Price 
-function refreshSymbolPrice(amountAdded) {
+function refreshFinishingPrice(amountAdded) {
   myPersonalisation.totalPrice.finishing = amountAdded;
   refreshTotalAmout();
 }
-
-
-function refreshTotalAmout() {
-  selectors.totalPrice.innerHTML = myPersonalisation.totalPrice.color + myPersonalisation.totalPrice.symbol + "€";
-}
-
 //
 
 refreshTotalAmout();
 
 /************ gravure PERSONALISATION ************/
 
+selectors.gravureInput.addEventListener('input', function(){
+  selectors.product.gravure.innerHTML = this.value;
+  if (this.value == "") {
+    refreshFinishingGravurePrice(0)
+  } else {
+    refreshFinishingGravurePrice(gravure.price)
+  }
+});
 
-  
+// Price 
+function refreshFinishingGravurePrice(gravurePrice) {
+  myPersonalisation.totalPrice.gravure = gravurePrice;
+  refreshTotalAmout();
+}
+
+/************ First code init ************/
+
+function refreshTotalAmout() {
+  selectors.totalPrice.innerHTML = myPersonalisation.totalPrice.color +
+    myPersonalisation.totalPrice.symbol +
+    myPersonalisation.totalPrice.finishing + 
+    myPersonalisation.totalPrice.gravure + "€";
+}
+
+
+refreshTotalAmout();

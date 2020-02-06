@@ -59,28 +59,28 @@ let products = {
         "key": "vindigo",
         "name": "Le Vindigo",
         "paragraph": "Le Vindigo doit son nom au célèbre vin bleu.Un Portefeuil à la couleur originale et rayonnante qui ne manquera pas de vous surprendre et de vous séduire.",
-        "image": vindigoImage,
+        "image": vindigoImg,
         "price": 550
     },
   "bordeaux": {
         "key": "bordeaux",
         "name": "Le Bordeaux",
         "paragraph": "Inspiré des plus grands vins de bordeaux. Sucombez à l’élégance de ce modèle qui saura vous séduire et vous accompagner pour toutes les occasions.",
-        "image": bordeauxImage,
+        "image": bordeauxImg,
         "price": 550
     },
   "chardonay": {
         "key": "chardonay",
         "name": "Le Chardonay",
         "paragraph": "Le Vindigo doit son nom au célèbre vin bleu.Un Portefeuil à la couleur originale et rayonnante qui ne manquera pas de vous surprendre et de vous séduire.",
-        "image": chardonayImage,
+        "image": chardonayImg,
         "price": 550
     },
   "petula": {
         "key": "petula",
         "name": "Le Petula",
         "paragraph": "Inspiré d’un vin paré d’une belle robe rose sur une teinte légèrement violine. Laissez vous séduire par ce modèle plein de charme et de fraîcheur.",
-        "image": petulaImage,
+        "image": petulaImg,
         "price": 1000
     }
 };
