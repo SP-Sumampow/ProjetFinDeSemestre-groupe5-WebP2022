@@ -4,6 +4,16 @@ import bordeauxImage from '/images/products/bordeaux.jpg';
 import chardonayImage from '/images/products/chardonay.jpg';
 import petulaImage from '/images/products/petula.jpeg';
 
+// symbol 
+import vindigoBarreSymbolImage from '/images/symbols/barre.jpeg';
+import vindigoGrappeSymbolImage from '/images/symbols/grappe.png';
+
+import bordeauxBarreSymbolImage from '/images/symbols/barre.jpeg';
+import bordeauxGrappeSymbolImage from '/images/symbols/grappe.png';
+
+import chardonayBarreSymbolImage from '/images/symbols/barre.jpeg';
+import chardonayGrappeSymbolImage from '/images/symbols/grappe.png';
+
 import barreSymbolImage from '/images/symbols/barre.jpeg';
 import grappeSymbolImage from '/images/symbols/grappe.png';
 
@@ -27,25 +37,29 @@ let navigation = [{
 }];
 
 let products = {
-    "vindigo": {
+  "vindigo": {
+        "key": "vindigo",
         "name": "Le Vindigo",
         "paragraph": "Le Vindigo doit son nom au célèbre vin bleu.Un Portefeuil à la couleur originale et rayonnante qui ne manquera pas de vous surprendre et de vous séduire.",
         "image": vindigoImage,
         "price": 550
     },
-    "bordeaux": {
+  "bordeaux": {
+        "key": "bordeaux",
         "name": "Le Bordeaux",
         "paragraph": "Inspiré des plus grands vins de bordeaux. Sucombez à l’élégance de ce modèle qui saura vous séduire et vous accompagner pour toutes les occasions.",
         "image": bordeauxImage,
         "price": 550
     },
-    "chardonay": {
+  "chardonay": {
+        "key": "chardonay",
         "name": "Le Chardonay",
         "paragraph": "Le Vindigo doit son nom au célèbre vin bleu.Un Portefeuil à la couleur originale et rayonnante qui ne manquera pas de vous surprendre et de vous séduire.",
         "image": chardonayImage,
         "price": 550
     },
-    "petula": {
+  "petula": {
+        "key": "petula",
         "name": "Le Petula",
         "paragraph": "Inspiré d’un vin paré d’une belle robe rose sur une teinte légèrement violine. Laissez vous séduire par ce modèle plein de charme et de fraîcheur.",
         "image": petulaImage,
@@ -55,11 +69,21 @@ let products = {
 
 let symbols = {
   "bar": {
-      "image": barreSymbolImage,
+    "image": {
+      "vindigo": vindigoBarreSymbolImage,
+      "bordeaux": bordeauxBarreSymbolImage,
+      "chardonay": chardonayBarreSymbolImage,
+      "petula": barreSymbolImage,
+      },
       "price": 550
   },
   "grappe": {
-      "image": grappeSymbolImage,
+    "image": {
+      "vindigo": vindigoGrappeSymbolImage,
+      "bordeaux": bordeauxGrappeSymbolImage,
+      "chardonay": chardonayGrappeSymbolImage,
+      "petula": grappeSymbolImage,
+      },
       "price": 550
   }
 };
@@ -96,10 +120,13 @@ let selectors = {
 };
 
 /************ PERSONALISATION ************/
-var totalPrice = {
-  color: 0,
-  symbol: 0
-};
+var myPersonalisation = {
+  colorKey: "",
+  totalPrice: {
+    color: 0,
+    symbol: 0
+  }
+}
 
 
 /************ NAVIGATION ************/
@@ -127,15 +154,15 @@ selectors.navigation.rightBtn.addEventListener("click", function () {
 function refreshNavigation() {
   console.log("current position " + positionInPersonalisation)
   if (positionInPersonalisation == 0) {
-    selectors.navigation.leftBtn.style.visibility = "hidden";
+    selectors.navigation.leftBtn.style.display = "none";
   } else {
-    selectors.navigation.leftBtn.style.visibility = "visible";
+    selectors.navigation.leftBtn.style.display = "flex";
   }
 
   if (positionInPersonalisation == 4) {
-    selectors.navigation.rightBtn.style.visibility = "hidden";
+    selectors.navigation.rightBtn.style.display = "none";
   } else {
-    selectors.navigation.rightBtn.style.visibility = "visible";
+    selectors.navigation.rightBtn.style.display = "flex";
   }
 
   let titleNavigation = navigation[positionInPersonalisation].title;
@@ -143,8 +170,8 @@ function refreshNavigation() {
 }
 
 function transitionPersonalisationStep(beforeStep, afterStep) {
-  beforeStep.style.visibility = "hidden";
-  afterStep.style.visibility = "visible";
+  beforeStep.style.display = "none";
+  afterStep.style.display = "flex";
 }
 
 refreshNavigation();
@@ -154,8 +181,10 @@ refreshNavigation();
 
 selectors.colorBtns.forEach(function (btnInfo) {
   btnInfo.element.addEventListener("click", function () {
+    myPersonalisation.colorKey = products[btnInfo.productName].key
     refreshProductInfo(products[btnInfo.productName])
     refreshColorPrice(products[btnInfo.productName].price);
+    console.log(myPersonalisation);
   })
 })
 
@@ -163,7 +192,7 @@ selectors.colorBtns.forEach(function (btnInfo) {
 
 // Price 
 function refreshColorPrice(amountAdded) {
-  totalPrice.color = amountAdded;
+  myPersonalisation.totalPrice.color = amountAdded;
   refreshTotalAmout();
 }
 
@@ -187,18 +216,18 @@ selectors.symbolBtns.forEach(function (btnSymbolInfo) {
 })
 
 function refreshSymbolInfo(symbol) {
-  selectors.product.image.src = symbol.image;
+  selectors.product.image.src = symbol.image[myPersonalisation.colorKey];
 }
 
 // Price 
 function refreshSymbolPrice(amountAdded) {
-  totalPrice.symbol = amountAdded;
+  myPersonalisation.totalPrice.symbol = amountAdded;
   refreshTotalAmout();
 }
 
 
 function refreshTotalAmout() {
-  selectors.totalPrice.innerHTML = totalPrice.color + totalPrice.symbol + "€";
+  selectors.totalPrice.innerHTML = myPersonalisation.totalPrice.color + myPersonalisation.totalPrice.symbol + "€";
 }
 
 
