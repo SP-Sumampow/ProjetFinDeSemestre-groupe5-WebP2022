@@ -202,6 +202,7 @@ var myPersonalisation = {
     gravure: 0
   }
 }
+
 //********** PERSONALISATION - COLOR **********//
 
 selectors.colorBtns.forEach(function (btnInfo) {
@@ -215,7 +216,7 @@ selectors.colorBtns.forEach(function (btnInfo) {
 
 // Price 
 function refreshColorPrice(amountAdded) {
-  myPersonalisation.totalPrice.color = amountAdded;
+  refreshProductPicture();
   refreshTotalAmout();
 }
 
@@ -240,15 +241,11 @@ selectors.symbolBtns.forEach(function (btnSymbolInfo) {
     var symbol = personalisationDetail.symbols[btnSymbolInfo.symbolName];
     myPersonalisation.symbolKey = symbol.key 
     console.log(symbol)
-    refreshSymbolInfo(symbol);
+    refreshProductPicture();
     refreshSymbolPrice(symbol.price);
   })
 })
 
-function refreshSymbolInfo(symbol) {
-  console.log(symbol.image[myPersonalisation.colorKey]);
-  selectors.product.image.src = symbol.image[myPersonalisation.colorKey];
-}
 
 // Price 
 function refreshSymbolPrice(amountAdded) {
@@ -314,13 +311,13 @@ function refreshFinishingGravurePrice(gravurePrice) {
 
 function refreshProductPicture() {
   if (myPersonalisation.colorKey != null && myPersonalisation.finishingKey != null && myPersonalisation.symbolKey) {
+    console.log(personalisationDetail.symbol);
     selectors.product.image.src = personalisationDetail.finishies[myPersonalisation.finishingKey].image[myPersonalisation.colorKey][myPersonalisation.symbolKey];
-  } else if (myPersonalisation.colorKey != null && myPersonalisation.finishingKey != null && myPersonalisation.symbolKey) {
-    selectors.product.image.src = myPersonalisation.symbol.image[myPersonalisation.colorKey]
-  } else if (myPersonalisation.colorKey) {
-    selectors.product.image.src = myPersonalisation.product
+  } else if (myPersonalisation.colorKey != null) {
+    selectors.product.image.src = personalisationDetail.symbols[myPersonalisation.symbolKey].image[myPersonalisation.colorKey]
   } else {
-
+    console.log(personalisationDetail.product);
+    selectors.product.image.src = personalisationDetail.products.bordeaux.image
   }
 }
 
@@ -332,5 +329,5 @@ function refreshTotalAmout() {
     myPersonalisation.totalPrice.gravure + "€";
 }
 
-
+refreshProductPicture();
 refreshTotalAmout();
