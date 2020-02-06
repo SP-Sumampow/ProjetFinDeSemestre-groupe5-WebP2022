@@ -3,33 +3,75 @@
 }
 
 .section-article {
+  margin-top: rem(100px);
+  margin-bottom: rem(100px);
+
+  @include tablet-up { 
+    margin-top: rem(100px);
+    margin-bottom: rem(50px);
+  }
+
+  
+  .section-article__title {
+    @include flexbox(row, flex-start);
+    text-transform: uppercase;
+    color: $titleSectionCollection;
+    font-family: $fontMonserrat;
+    font-size: $fontSizeTitleSections;
+    text-align: left;
+    margin-bottom: rem(20px);
+
+    @media (min-width: 756px) and (max-width: 1200px) {
+      text-align: center;
+    }
+
+    @include tablet-up { 
+      text-align: center;
+      @include flexbox(column, center);
+      margin-top: rem(50px);
+      margin-bottom: rem(50px);
+
+    }
+
+    @include desktop-up {
+      font-size: rem(30px);
+      margin-bottom: rem(60px);
+      text-align: left;
+      @include flexbox(column, flex-start);
+    }
+  }
+}
+
+
+.div-article {
   font-family: $fontMonserrat;
   @include flexbox(column, center);
   line-height: 1.5;
-  margin-top: rem(120px);
-  margin-bottom: 100px;
+  margin: auto;
   color: $white;
 
   @include tablet-up {
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
 
   @include desktop-up {
     @include flexbox(row, center, center);
-    margin: 100px 0;
+    margin: 10px 0;
+    // width: 1152px;
 
 
     &__visual:nth-child(1) {
       order: 2;
-      width: rem(665px);
-      height: rem(420px);
+      max-width: rem(665px);
+      max-height: rem(920px);
     }
 
     &__text:nth-child(2) {
       order: 1;
-      width: rem(520px);
-      height: rem(420px);
+      // width: rem(720px);
+      min-width: rem(665px);
+      max-height: rem(920px);
     }
   }
 
@@ -37,16 +79,16 @@
   &__text {
     background-color: black;
     width: rem(300px);
-    height: rem(300px);
+    height: rem(580px);
 
     @include tablet-up {
       width: rem(500px);
-      height: rem(400px);
+      height: rem(550px);
     }
 
     @include desktop-up {
-      width: rem(520px);
-      height: rem(420px);
+      width: rem(720px);
+      height: rem(570px);
     }
   }
 
@@ -60,8 +102,8 @@
     }
 
     @include desktop-up {
-      width: rem(665px);
-      height: rem(420px);
+      width: rem(720px);
+      height: rem(570px);
     }
   }
 
@@ -83,34 +125,14 @@
 
       @supports (object-fit: cover) {
         width: 100%;
-        height: rem(500px);
+        height: rem(570px);
         object-fit: cover;
       }
     }
 
     @include desktop-up {
       width: rem(665px);
-      height: rem(420px);
-    }
-  }
-
-  &__title {
-    font-family: $fontMonserrat;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: rem(18px);
-    line-height: 1.5;
-    text-align: left;
-    margin: 20px 20px;
-
-    @include tablet-up {
-      font-size: rem(25px);
-      margin: 25px 25px;
-    }
-
-    @include desktop-up {
-      font-size: rem(28px);
-      margin: 30px 30px;
+      min-height: rem(420px);
     }
   }
 
@@ -119,30 +141,34 @@
     font-size: rem(16px);
     line-height: 1.5;
     color: $white;
-    margin: 15px 20px;
+    margin: 25px 20px;
 
     @include tablet-up {
       font-size: rem(18px);
-      margin: 30px 30px;
+      margin: 25px 30px;
     }
 
     @include desktop-up {
       font-size: rem(20px);
+      margin: 45px 30px;
+
     }
   }
 
   &__button {
     @include button-large;
-    margin: 15px 20px;
+    margin: 12px 30px;
 
-    @include tablet-up {
-      @include button-large;
-      margin: 15px 30px;
-    }
 
     @include desktop-up {
-      margin: 20px 30px;
-
+      margin: rem(35px 30px);
+      width: 300px;
+      height: 50px;
+      font-size: 15px;
+  
+      &:hover {
+        background-color: #3d3d3d;
+      }
     }
   }
 }

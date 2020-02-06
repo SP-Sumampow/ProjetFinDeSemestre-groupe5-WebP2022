@@ -28,6 +28,12 @@
     @media (min-width: 756px) and (max-width: 1200px) {
       text-align: center;
     }
+
+    @include desktop-up {
+      font-size: 30px;
+      text-align: left;
+      margin-bottom: 60px;
+    }
   }
 }
 
@@ -39,16 +45,10 @@
 
   @include desktop-up {
     margin-right: 15px;
+    margin-bottom: 100px;
   }
-
-  // margin-bottom: 7px;
 }
 
 .imgEvent:nth-child(3) {
   margin-right: 0px;
 }
-
-// img.imgEvent.imgEvent--second {
-//   margin-left: 3px;
-//   width: 18.1rem;
-// }

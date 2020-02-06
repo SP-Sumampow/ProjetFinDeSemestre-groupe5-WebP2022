@@ -19,12 +19,16 @@
             color: $footerText;
             background-color: $footerBackgroudAndLine;
 
+
+
             @include tablet-up {
                 height: 20vh;
                 @include flexbox(row, space-around);
             }
 
-            
+            .advantage-style {
+                margin-top: 15px;
+            }
         }
     
         .footer__backToTop{
@@ -47,6 +51,18 @@
             height: 44vh;
             color: $footerText;
             margin: 0 5vh;
+            text-align: 1.5;
+
+            .footer--thirdPart__menuHide__text-style {
+                input[type='email']
+                {
+                   font-size:1.3em;
+                   padding:3px;
+                   color: #771616;
+                   outline: none;
+                }            
+            }
+
 
             @include tablet-up{
                 height: 60vh;
@@ -80,8 +96,15 @@
                 }
 
                 .footer__contact {
-                    grid-area: f;
+                    grid-area: e;
                     align-self: start;
+
+                    .footer--thirdPart__menuHide-style {
+                        margin-top: rem(5px);
+                    }
+                    
+
+
                 }
             }
 
@@ -146,10 +169,18 @@
                 }
             }
 
-
-
-
-            }
         }
     }
-        
+}       
+
+
+.icon__footer--style {
+    width: rem(45px);
+    height: rem(45px);
+}
+
+.sizeScissors {
+    width: rem(55px);
+    height: rem(55px);
+
+}

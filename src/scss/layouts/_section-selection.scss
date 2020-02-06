@@ -17,6 +17,11 @@
     @media (min-width: 756px) and (max-width: 1200px) {
       text-align: center;
     }
+
+    @include desktop-up {
+      text-align: left;
+      font-size: rem(30px);
+    }
   }
 
   h3 {
@@ -27,6 +32,12 @@
 
     @media (min-width: 756px) and (max-width: 1200px) {
       text-align: center;
+    }
+
+    @include desktop-up {
+      font-size: 22px;
+      margin-top: 34px;
+      margin-bottom: 25px;
     }
   }
 }
@@ -49,6 +60,11 @@ h4 {
   font-family: $fontNothingCould;
   color: $subtitleCollectionAndSelection;
   font-size: $fontSizeTitleSections;
+
+  @include desktop-up {
+    margin-top: 45px;
+    font-size: 28px;
+  }
 }
 
 h5 {
@@ -58,6 +74,11 @@ h5 {
   font-size: rem(12px);
   font-family: $fontMonserrat;
   margin-top: rem(5px);
+
+  @include desktop-up {
+    font-size: 18px;
+    margin-top: 13px;
+  }
 
 }
 
@@ -73,6 +94,17 @@ p {
 
 .selections__btnaAddWallet {
   @include button-medium;
+
+  @include desktop-up {
+    margin-bottom: 0;
+    width: 100px;
+    height: 50px;
+    font-size: 15px;
+
+    &:hover {
+      background-color: #3d3d3d;
+    }
+  }
 }
 
 .frameSelection {
@@ -115,6 +147,30 @@ p {
     margin: 0;
   }
 }
+
+
+.frameSelection {
+  background-attachment: contain;
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--img1selection {
+    background-image: url(/images/bordeaux-long-grappe-or-face-selection.png);
+    background-size: 70%;
+  }
+
+  &--img2selection {
+    background-image: url(/images/petula-court-barre-argent-face-selection.png);
+  }
+
+  &--img3selection {
+    background-image: url(/images/vintigo-long-grappe-or-face-selection.png);
+    background-size: 70%;
+  }
+
+}
+
 
 .selection__wallet {
   @include desktop-up {
