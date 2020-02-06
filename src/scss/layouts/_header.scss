@@ -14,6 +14,10 @@
         grid-template-areas: "a b""c c";
         height: 12vh;
 
+        @include desktop-up {
+            height: 16vh;
+        }
+
         .header__icons {
             grid-area: b;
             justify-self: center;
@@ -36,32 +40,37 @@
             height: 30px;
 
             @include tablet-up {
-                width: 220px;
-                height: 130px;          
+                width: 270px;
+                height: 180px;  
+                margin-left: 24vw;       
             }
 
             @include desktop-up {
+                margin-top: 25px;
                 width: 320px;
-                height: 230px;          
+                height: 100px;
+                position: relative;
+                z-index: 1;  
+                margin-left: 21vw;       
+    
             }
         }
     }
 
     .header__icons {
-        position: absolute;
         @include flexbox(row, space-around, center);
         width: 13vh;
-        top: 20px;
-        right: 10px;
+
         margin: 0 6px;
         color: #3d3d3d;
 
         @include tablet-up {
-            right: 20px;
+            
         }
 
         @include desktop-up {
-            right: 30px;
+            margin-top: 42px;
+
         }
 
 
@@ -69,6 +78,10 @@
         &__account,
         &__basket {
             @include iconsLike;
+
+            @include tablet-up {
+                margin: 2px auto;
+            }
         }
 
         @include tablet-up {
@@ -85,15 +98,22 @@
     .menu {
         display: none;
         list-style-type: none;
-        padding-top: 65px;
+        // padding-top: 65px;
         font-family: $fontRoboto;
         font-size: rem(16px);
 
         @include tablet-up {
             @include flexbox(space-around);
             padding: 4px 15vw;
+            margin-top: 20px;
             width: 100vw;
             text-align: center;
+        
+        }
+
+        @include desktop-up {
+            margin-top: 20px;
+
         }
 
         li {
@@ -153,6 +173,7 @@
             text-decoration: none;
             color: #3D3D3D;
             font-size: rem(18px);
+            // margin-bottom: 10px;
 
             &:hover {
                 font-weight: 900;
@@ -161,7 +182,13 @@
 
             @include tablet-up {
                 font-size: rem(16px);
+                margin-bottom: 10px;
 
+            }
+            @include desktop-up {
+                margin-bottom: 10px;
+                margin-top: 45px;
+    
             }
 
             // @include link; //ne pas réactiver sur les link du header//
@@ -172,8 +199,18 @@
 
     &.header-is-open {
         height: 100vh;
-        display: flex(column);
-        flex-direction: columns;
+        display: flex;
+        flex-direction: column;
+
+        .container {
+            position: absolute;
+            z-index: 1;
+        
+        
+            @include tablet-up {
+                display: none;
+            }
+        }
 
         .container {
             align-self: flex-start;
@@ -181,10 +218,11 @@
 
         .logo {
             display: none;
+
         }
 
         .header__icons {
-            align-self: flex-end;
+            display: none;
         }
 
     }
@@ -209,18 +247,86 @@
         @include flexbox(space-around);
     }
 
+    .logo__novapellicia {
+        margin-left: 5vw;       
+
+        @include tablet-up {
+            margin-left: 5vw;  
+            width: 170px;
+            height: 80px;      
+        }
+
+        @include desktop-up {
+            margin-left: 5vw;   
+            width: 270px;
+            height: 180px;    
+
+        }
+    }
+
     .header__icons {
         order: 3;
+        margin-top: -5px;
+        margin-right: 25px;
+
+        &__like,
+        &__account,
+        &__basket {
+            @include iconsLike;
+
+            @include tablet-up {
+                margin: 5px 5px;
+            }
+        }
+
+        // @include tablet-up {
+        //     @include flexbox(row, space-between, center)
+        // }
+
+        @include tablet-up {
+            margin-top: 0;
+        }
+
+        @include desktop-up {
+            margin-top: 35px;
+
+        }
+    }
+
+    .menu {
+        @include tablet-up {
+            padding: 4px 5vw;
+        }
+
+        @include desktop-up {
+            padding: 4px 10vw;
+
+        }
+
+        a {
+            @include tablet-up {
+                font-size: rem(12px);
+                margin-bottom: 0;
+
+            }
+            @include desktop-up {
+                font-size: rem(16px);
+                margin-top: 35px;
+
+
+            }
+        }
     }
 }
 
-
 .container {
+    @include flexbox(row, space-around, center);
     display: inline-block;
-    position: absolute;
+    width: 65px;
     cursor: pointer;
-    top: 10px;
-    left: 10px;
+    // position: absolute;
+    // z-index: 1;
+
 
     @include tablet-up {
         display: none;
@@ -232,8 +338,14 @@
     height: 3px;
     background-color: $text;
     margin: 6px 0;
+    margin-left: 10px;
     transition: 0.4s;
 }
+
+.is-click {
+    margin-top: 20px;
+}
+
 
 .is-click .bar:nth-child(1) {
     -webkit-transform: rotate(-45deg) translate(-6.5px, 6.5px);

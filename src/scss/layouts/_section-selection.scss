@@ -43,10 +43,10 @@
 }
 
 .selection__selections {
-  @include flexbox(column, center);
+  @include flexbox(column, center, normal);
 
   @include tablet-up {
-    @include flexbox(column, center, center);
+    @include flexbox(column, center, normal);
   }
 
   @include desktop-up {
@@ -111,7 +111,7 @@ p {
   display: flex;
   justify-content: space-around;
   margin-top: rem(40px);
-  width: rem(295px);
+  // width: rem(295px);
   height: rem(261px);
   background-color: $FrameWalletBackground;
   position: relative;
@@ -125,7 +125,7 @@ p {
   }
 
   @include tablet-up {
-    width: 500px;
+    // width: 500px;
     height: 500px;
   }
 
@@ -183,13 +183,3 @@ p {
     }
   }
 }
-
-//&--firstWalletSections {
-// margin-top: rem(20px);
-//
-
-//.likes {
-//position: absolute;
-//transform: translateY(-270px) translateX(270px);
-//z-index: -1;
-//}

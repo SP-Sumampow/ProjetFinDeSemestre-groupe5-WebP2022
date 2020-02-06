@@ -126,4 +126,6 @@ $headerHeight: 40px;
 @mixin iconsLike {
   width: rem(24px);
   height: rem(25.938px);
+  margin: 5px auto;
+  padding: 0 3px;
 }

@@ -31,6 +31,10 @@
 @import 'pages/_custom.scss';
 @import 'pages/_personalisation.scss';
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	background-color: $white;
 

@@ -6,6 +6,8 @@
   margin-top: rem(120px);
   line-height: rem(19px);
 
+  
+
   p {
     margin-top: rem(10px);
     font-family: $fontMonserrat;
@@ -58,10 +60,10 @@ h3 {
 
 
 .collection__collections {
-  @include flexbox(column, center);
+  @include flexbox(column, center, normal);
 
   @include tablet-up {
-    @include flexbox(column, center, center);
+    @include flexbox(column, center, normal);
   }
 
   @include desktop-up {
@@ -75,12 +77,12 @@ h3 {
   display: flex;
   justify-content: space-around;
   margin-top: rem(40px);
-  width: rem(295px);
+  // width: rem(295px);
   height: rem(261px);
   background-color: $FrameWalletBackground;
 
   @include tablet-up {
-    width: 500px;
+    //width: 500px;
     height: 500px;
   }
 
@@ -88,7 +90,6 @@ h3 {
     min-width: 545px;
     min-height: 512px;
   }
-<<<<<<< Updated upstream
 
   &__visual-wallet {
     @include flexbox(row, center, center);
@@ -110,10 +111,8 @@ h3 {
     }
   
   }
-
-=======
 }
->>>>>>> Stashed changes
+
 
 .collection__wallets {
   @include desktop-up {
@@ -125,9 +124,6 @@ h3 {
 
 .collection__btnWallet {
   @include button-large;
-<<<<<<< Updated upstream
-}
-=======
 
   @include desktop-up {
     margin-top: rem(30px);
@@ -139,8 +135,8 @@ h3 {
       background-color: #3d3d3d;
     }
   }
-
 }
+
 
 .frameCollection {
   background-attachment: contain;
@@ -157,5 +153,5 @@ h3 {
     background-size: 70%;
 
   }
->>>>>>> Stashed changes
+
 }

@@ -8,14 +8,14 @@
 
         @include tablet-up {
             height: 70vh;
-            margin: 10px;
+            // padding: 10px;
         }
 
        
         .footer--advantage{
             @include flexbox(column, space-around);
             text-align: center;
-            height: 50vh;
+            height: 70vh;
             color: $footerText;
             background-color: $footerBackgroudAndLine;
 
@@ -26,11 +26,23 @@
                 @include flexbox(row, space-around);
             }
 
-            .advantage-style {
-                margin-top: 15px;
+            .advantageStyle {
+                margin-top: 10px;
+            }
+            
+            .advantageStyle--margin {
+                margin-bottom: 20px;
+
+                @include tablet-up {
+                    margin-bottom: 0;
+
+                }
+
+
             }
         }
-    
+        
+        
         .footer__backToTop{
             @include flexbox(column, space-around);
             height: 6vh;
@@ -60,6 +72,7 @@
                    padding:3px;
                    color: #771616;
                    outline: none;
+                   border: 1px solid #771616;
                 }            
             }
 
@@ -177,10 +190,11 @@
 .icon__footer--style {
     width: rem(45px);
     height: rem(45px);
+    margin-top: rem(20px);
 }
 
 .sizeScissors {
     width: rem(55px);
     height: rem(55px);
-
+    margin-top: rem(10px);
 }
