@@ -1,8 +1,8 @@
 //colors img
-import vindigoImage from '/images/products/vindigo.jpeg';
-import bordeauxImage from '/images/products/bordeaux.jpg';
-import chardonayImage from '/images/products/chardonay.jpg';
-import petulaImage from '/images/products/petula.jpeg';
+import vindigoImage from '/images/products/vintigo-court-simple.svg';
+import bordeauxImage from '/images/products/bordeaux-court-simple.svg';
+import chardonayImage from '/images/products/chardonay-court-simple.svg';
+import petulaImage from '/images/products/petula-court-simple.svg';
 
 // symbol 
 import vindigoBarreSymbolImage from '/images/symbols/barre.jpeg';
@@ -17,22 +17,32 @@ import chardonayGrappeSymbolImage from '/images/symbols/grappe.png';
 import barreSymbolImage from '/images/symbols/barre.jpeg';
 import grappeSymbolImage from '/images/symbols/grappe.png';
 
+// finishing 
+import vindigopearlFinishingImage from '/images/symbols/barre.jpeg';
+import vindigometalFinishingImage from '/images/symbols/grappe.png';
+
+import bordeauxpearlFinishingImage from '/images/symbols/barre.jpeg';
+import bordeauxmetalFinishingImage from '/images/symbols/grappe.png';
+
+import chardonaypearlFinishingImage from '/images/symbols/barre.jpeg';
+import chardonaymetalFinishingImage from '/images/symbols/grappe.png';
+
+import petulapearlFinishingImage from '/images/symbols/barre.jpeg';
+import petulametalFinishingImage from '/images/symbols/grappe.png';
+
 var positionInPersonalisation = 0;
 
 let navigation = [{
-  "title": "Couleurs",
+  "title": "COULEURS",
   "selectorName": "color"
 }, {
-    "title": "Symbol",
+    "title": "SYMBOLES",
     "selectorName": "symbols"
 },{
-    "title": "i dont know",
+    "title": "FINITION",
     "selectorName": "finishing"
 }, {
-    "title": "loool",
-    "selectorName": "symbols"
-}, {
-    "title": "I REALLY REALY DONT KNOW",
+    "title": "GRAVURE",
     "selectorName": "gravure"
 }];
 
@@ -88,6 +98,27 @@ let symbols = {
   }
 };
 
+let finishing = {
+  "pearl": {
+    "image": {
+      "vindigo": vindigopearlFinishingImage,
+      "bordeaux": bordeauxpearlFinishingImage,
+      "chardonay": chardonaypearlFinishingImage,
+      "petula": petulapearlFinishingImage,
+      },
+      "price": 550
+  },
+  "metal": {
+    "image": {
+      "vindigo": vindigometalFinishingImage,
+      "bordeaux": bordeauxmetalFinishingImage,
+      "chardonay": chardonaymetalFinishingImage,
+      "petula": petulametalFinishingImage,
+      },
+      "price": 550
+  }
+};
+
 let selectors = {
   "navigation": {
     "rightBtn": document.querySelector('.personalisation__btn__right'),
@@ -116,7 +147,12 @@ let selectors = {
   "symbolBtns": [
     { "element": document.querySelector('.btn__choices__symbols__bar'), symbolName: "bar" },
     { "element": document.querySelector('.btn__choices__symbols__grape'), symbolName: "grappe" },
-  ]
+  ],
+  "finishingBtns": [
+    { "element": document.querySelector('.personalisation__choices__finishing__pearl'), finishingName: "pearl" },
+    { "element": document.querySelector('.personalisation__choices__finishing__metal'), finishingName: "metal" },
+  ],
+  
 };
 
 /************ PERSONALISATION ************/
@@ -154,19 +190,19 @@ selectors.navigation.rightBtn.addEventListener("click", function () {
 function refreshNavigation() {
   console.log("current position " + positionInPersonalisation)
   if (positionInPersonalisation == 0) {
-    selectors.navigation.leftBtn.style.display = "none";
+    selectors.navigation.leftBtn.style.visibility = "hidden";
   } else {
-    selectors.navigation.leftBtn.style.display = "flex";
+    selectors.navigation.leftBtn.style.visibility = "visible";
   }
 
-  if (positionInPersonalisation == 4) {
-    selectors.navigation.rightBtn.style.display = "none";
+  if (positionInPersonalisation == 3) {
+    selectors.navigation.rightBtn.style.visibility = "hidden";
   } else {
-    selectors.navigation.rightBtn.style.display = "flex";
+    selectors.navigation.rightBtn.style.visibility = "visible";
   }
 
   let titleNavigation = navigation[positionInPersonalisation].title;
-  selectors.navigation.title.innerHTML = titleNavigation + " " + (positionInPersonalisation + 1) + "/5" 
+  selectors.navigation.title.innerHTML = titleNavigation + " " + (positionInPersonalisation + 1) + "/4" 
 }
 
 function transitionPersonalisationStep(beforeStep, afterStep) {
@@ -238,4 +274,37 @@ refreshTotalAmout();
 
     
         
-    
+/************ finishing PERSONALISATION ************/
+
+
+selectors.finishingBtns.forEach(function (btnFinisingInfo) {
+  btnFinisingInfo.element.addEventListener("click", function () {
+    var finishing = finishing[btnFinisingInfo.finishingName];
+    refreshFinishingInfo(finishing)
+    refreshFinishingPrice(finishing.price)
+  })
+})
+
+function refreshFinishingInfo(finishing) {
+  selectors.product.image.src = finishing.image[myPersonalisation.colorKey];
+}
+
+// Price 
+function refreshSymbolPrice(amountAdded) {
+  myPersonalisation.totalPrice.finishing = amountAdded;
+  refreshTotalAmout();
+}
+
+
+function refreshTotalAmout() {
+  selectors.totalPrice.innerHTML = myPersonalisation.totalPrice.color + myPersonalisation.totalPrice.symbol + "€";
+}
+
+//
+
+refreshTotalAmout();
+
+/************ gravure PERSONALISATION ************/
+
+
+  

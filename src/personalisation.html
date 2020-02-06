@@ -8,6 +8,7 @@
   <link type="text/css" rel="stylesheet" href="./scss/styles.scss" />
   <script defer src="./js/script.js"></script>
   <script defer src="./js/personalisation.js"></script>
+  <script defer src="./js/personalisation-desktop.js"></script>
   <title>Nova Pellicia personalisation</title>
 </head>
 
@@ -41,7 +42,8 @@
 
 <body>
 
-  <section class="personalisation">
+  <section>
+    <div class="personalisation">
       <div class="personalisation__text">
         <h1 class="personalisation__text__title">Le Vindigo</h1>
         <p class="personalisation__text__paragraph">
@@ -57,30 +59,70 @@
         <button class="personalisation__btn__right"></button>
       </div>
       <div class="personalisation__choices">
-        <div style="display: flex;" class="personalisation__choices__colors">
+        <div class="personalisation__choices__colors">
           <button class="btn--chardonay"></button>
           <button class="btn--bordeaux"></button>
           <button class="btn--petula"></button>
           <button class="btn--vindigo"></button>
         </div>
-         <div style="display: none;" class="personalisation__choices__logo">
-          <div><img src=""></div>
-          <div><img src=""></div>
-        </div>
-        <div style="display: none;" class="personalisation__choices__finishing">
-          <span>finishing</span>
-        </div>
-        <div style="display: none;" class="personalisation__choices__symbols">
+        <div class="personalisation__choices__symbols">
           <div><img class="btn__choices__symbols__bar" src="/images/symbols/btn-barre.png"></div>
           <div><img class="btn__choices__symbols__grape" src="/images/symbols/btn-grappe.png"></div>
         </div>
-        <div style="display: none;" class="personalisation__choices__gravure">
+        <div class="personalisation__choices__finishing">
+          <button class="personalisation__choices__finishing__pearl">Pearl</button>
+          <button class="personalisation__choices__finishing__metal">Clou</button>
+        </div>
+        <div class="personalisation__choices__gravure">
           <span>gravure</span>
         </div>
       </div>
       <div class="personalisation__price">
         <p>100€</p>
       </div>
+    </div>  
+    <div class="personalisation-desktop">
+      <div class="personalisation-desktop__product">
+        <div class="personalisation-desktop__product__text">
+          <h1 class="personalisation-desktop__product__text__title">Le Vindigo</h1>
+          <h2 class="personalisation-desktop__product__text__subtitle">Grappe de raisin OR</h2>
+          <p class="personalisation-desktop__product__text__paragraph">
+            Le Vindigo doit son nom au célèbre vin bleu.Un Portefeuil à la couleur originale et rayonnante qui ne manquera pas de vous surprendre et de vous séduire.
+          </p>
+        </div>
+        <div class="personalisation-desktop__product__image">
+          <img src="images/products/vintigo-court-simple.svg">
+        </div>  
+      </div>     
+      <div class="personalisation-desktop__input">
+        <h2>PERSONALISATION</h2>
+        <div class="input-category personalisation-desktop__input__color">
+          <h3>COULEURS</h3>
+          <div class="colorBtn">
+            <button class="colorBtn--chardonay"></button>
+            <button class="colorBtn--bordeaux"></button>
+            <button class="colorBtn--petula"></button>
+            <button class="colorBtn--vindigo"></button>
+          </div>
+        </div>
+        <div class="input-category personalisation-desktop__input__symbol">
+          <h3 class="symbolTitle"> SYMBOL</h3>
+          <div class="symbolImage">
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <div class="input-category personalisation-desktop__input__finishing">
+          <h3>FINITION</h3>
+          <button class="finishing--pearl">Perles</button>
+          <button class="finishing--metal">Clous</button>
+        </div>
+        <div class="input-category personalisation-desktop__input__text"></div>
+        <div class="personalisation-desktop__price">
+          <p>100€</p>
+        </div>
+      </div> 
+    </div>
   </section>
   <footer class="footer">
     <div class= "footer--advantage">
