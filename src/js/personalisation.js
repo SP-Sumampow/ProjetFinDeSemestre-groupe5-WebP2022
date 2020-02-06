@@ -1,34 +1,55 @@
-//colors img
-import vindigoImage from '/images/products/vintigo-court-simple.svg';
-import bordeauxImage from '/images/products/bordeaux-court-simple.svg';
-import chardonayImage from '/images/products/chardonay-court-simple.svg';
-import petulaImage from '/images/products/petula-court-simple.svg';
+/************ assets ************/
 
-// symbol 
-import vindigoBarreSymbolImage from '/images/products/vintigo-court-barre-or.svg';
-import vindigoGrappeSymbolImage from '/images/products/vintigo-court-grappe-or.svg';
+//***** IMAGE SIMPLE*****//
 
-import bordeauxBarreSymbolImage from '/images/products/bordeaux-court-barre-or.svg';
-import bordeauxGrappeSymbolImage from '/images/products/bordeaux-court-grappe-or.svg';
+import vindigoImg from '/images/products/vintigo-court-simple.svg';
+import bordeauxImg from '/images/products/bordeaux-court-simple.svg';
+import petulaImg from '/images/products/petula-court-simple.svg';
+import chardonayImg from '/images/products/chardonay-court-simple.svg';
 
-import chardonayBarreSymbolImage from '/images/products/chardonay-court-barre-or.svg';
-import chardonayGrappeSymbolImage from '/images/products/chardonay-court-grappe-or.svg';
+//***** IMAGE WITH GRAPE GOLD *****/
 
-import petulabarreSymbolImage from '/images/products/petula-court-barre-or.svg';
-import petulagrappeSymbolImage from '/images/products/petula-court-grappe-or.svg';
+import vindigoGoldImg from '/images/products/vintigo-court-grappe-or.svg';
+import bordeauxGoldImg from '/images/products/bordeaux-court-grappe-or.svg';
+import petulaGoldImg from '/images/products/petula-court-grappe-or.svg';
+import chardonayGoldImg from '/images/products/chardonay-court-grappe-or.svg';
 
-// finishing 
-import vindigopearlFinishingImage from '/images/products/petula-court-grappe-or.svg';
-import vindigometalFinishingImage from '/images/products/petula-court-grappe-or.svg';
+//***** IMAGE WITH GRAPE AND PEARL*****/
 
-import bordeauxpearlFinishingImage from '/images/products/petula-court-grappe-or.svg';
-import bordeauxmetalFinishingImage from '/images/products/petula-court-grappe-or.svg';
 
-import chardonaypearlFinishingImage from '/images/products/petula-court-grappe-or.svg';
-import chardonaymetalFinishingImage from '/images/products/petula-court-grappe-or.svg';
+import vindigoGrappePearlImg from '/images/products/vintigo-court-grappe-or-perles.svg';
+import bordeauxGrappePearlImg from '/images/products/bordeaux-court-grappe-or-perles.svg';
+import petulaGrappePearlImg from '/images/products/petula-court-grappe-or-perles.svg';
+import chardonayGrappePearlImg from '/images/products/chardonay-court-grappe-or-perles.svg';
 
-import petulapearlFinishingImage from '/images/products/petula-court-grappe-or.svg';
-import petulametalFinishingImage from '/images/products/petula-court-grappe-or.svg';
+//***** IMAGE WITH GRAPE AND METAL*****/
+
+
+import vindigoGrappeMetalImg from '/images/products/vintigo-court-grappe-or-clou-or.svg';
+import bordeauxGrappeMetalImg from '/images/products/bordeaux-court-grappe-or-clou-or.svg';
+import petulaGrappeMetalImg from '/images/products/petula-court-grappe-or-clou-or.svg';
+import chardonayGrappeMetalImg from '/images/products/chardonay-court-grappe-or-clou-or.svg';
+
+//***** IMAGE WITH BAR GOLD *****/
+
+import vindigoBarImg from '/images/products/vintigo-court-barre-or.svg';
+import bordeauxBarImg from '/images/products/bordeaux-court-barre-or.svg';
+import petulaBarImg from '/images/products/petula-court-barre-or.svg';
+import chardonayBarImg from '/images/products/chardonay-court-barre-or.svg';
+
+//***** IMAGE WITH BAR AND PEARL *****/
+
+import vindigoBarPearlImg from '/images/products/vintigo-court-barre-or-perles.svg';
+import bordeauxBarPearlImg from '/images/products/bordeaux-court-barre-or-perles.svg';
+import petulaBarPearlImg from '/images/products/petula-court-barre-or-perles.svg';
+import chardonayBarPearlImg from '/images/products/chardonay-court-barre-or-perles.svg';
+
+//***** IMAGE WITH BAR AND METAL *****/
+
+import vindigoBarMetalImg from '/images/products/vintigo-court-barre-or-clou-or.svg';
+import bordeauxBarMetalImg from '/images/products/bordeaux-court-barre-or-clou-or.svg';
+import petulaBarMetalImg from '/images/products/petula-court-barre-or-clou-or.svg';
+import chardonayBarMetalImg from '/images/products/chardonay-court-barre-or-clou-or.svg';
 
 var positionInPersonalisation = 0;
 
@@ -85,55 +106,55 @@ let navigation = [{
 
 let products = {
   "vindigo": {
-        "key": "vindigo",
-        "name": "Le Vindigo",
-        "paragraph": "Le Vindigo doit son nom au célèbre vin bleu.Un Portefeuil à la couleur originale et rayonnante qui ne manquera pas de vous surprendre et de vous séduire.",
-        "image": vindigoImage,
-        "price": 550
-    },
+    "key": "vindigo",
+    "name": "Le Vindigo",
+    "paragraph": "Le Vindigo doit son nom au célèbre vin bleu.Un Portefeuil à la couleur originale et rayonnante qui ne manquera pas de vous surprendre et de vous séduire.",
+    "image": vindigoImg,
+    "price": 550
+  },
   "bordeaux": {
-        "key": "bordeaux",
-        "name": "Le Bordeaux",
-        "paragraph": "Inspiré des plus grands vins de bordeaux. Sucombez à l’élégance de ce modèle qui saura vous séduire et vous accompagner pour toutes les occasions.",
-        "image": bordeauxImage,
-        "price": 550
-    },
+    "key": "bordeaux",
+    "name": "Le Bordeaux",
+    "paragraph": "Inspiré des plus grands vins de bordeaux. Sucombez à l’élégance de ce modèle qui saura vous séduire et vous accompagner pour toutes les occasions.",
+    "image": bordeauxImg,
+    "price": 550
+  },
   "chardonay": {
-        "key": "chardonay",
-        "name": "Le Chardonay",
-        "paragraph": "Le Vindigo doit son nom au célèbre vin bleu.Un Portefeuil à la couleur originale et rayonnante qui ne manquera pas de vous surprendre et de vous séduire.",
-        "image": chardonayImage,
-        "price": 550
-    },
+    "key": "chardonay",
+    "name": "Le Chardonay",
+    "paragraph": "Le Vindigo doit son nom au célèbre vin bleu.Un Portefeuil à la couleur originale et rayonnante qui ne manquera pas de vous surprendre et de vous séduire.",
+    "image": chardonayImg,
+    "price": 550
+  },
   "petula": {
-        "key": "petula",
-        "name": "Le Petula",
-        "paragraph": "Inspiré d’un vin paré d’une belle robe rose sur une teinte légèrement violine. Laissez vous séduire par ce modèle plein de charme et de fraîcheur.",
-        "image": petulaImage,
-        "price": 1000
-    }
+    "key": "petula",
+    "name": "Le Petula",
+    "paragraph": "Inspiré d’un vin paré d’une belle robe rose sur une teinte légèrement violine. Laissez vous séduire par ce modèle plein de charme et de fraîcheur.",
+    "image": petulaImg,
+    "price": 1000
+  }
 };
 
 let symbols = {
   "bar": {
     "key": "bar",
     "image": {
-      "vindigo": vindigoBarreSymbolImage,
-      "bordeaux": bordeauxBarreSymbolImage,
-      "chardonay": chardonayBarreSymbolImage,
-      "petula": petulabarreSymbolImage,
-      },
-      "price": 23
+      "vindigo": vindigoBarImg,
+      "bordeaux": bordeauxBarImg,
+      "chardonay": chardonayBarImg,
+      "petula": petulaBarImg,
+    },
+    "price": 23
   },
   "grappe": {
     "key": "grappe",
     "image": {
-      "vindigo": vindigoGrappeSymbolImage,
-      "bordeaux": bordeauxGrappeSymbolImage,
-      "chardonay": chardonayGrappeSymbolImage,
-      "petula": petulagrappeSymbolImage,
-      },
-      "price": 99
+      "vindigo": vindigoGoldImg,
+      "bordeaux": bordeauxGoldImg,
+      "chardonay": chardonayBarImg,
+      "petula": petulaGoldImg,
+    },
+    "price": 99
   }
 };
 
@@ -142,20 +163,20 @@ let finishies = {
     "key": "pearl",
     "image": {
       "vindigo": {
-        "bar": vindigopearlFinishingImage,
-        "grappe": vindigopearlFinishingImage
+        "bar": vindigoBarPearlImg,
+        "grappe": vindigoGrappePearlImg
       },
       "bordeaux": {
-        "bar": vindigopearlFinishingImage,
-        "grappe": vindigopearlFinishingImage
+        "bar": bordeauxBarPearlImg,
+        "grappe": bordeauxGrappePearlImg
       },
       "chardonay": {
-        "bar": vindigopearlFinishingImage,
-        "grappe": vindigopearlFinishingImage
+        "bar": chardonayBarPearlImg,
+        "grappe": chardonayGrappePearlImg
       },
       "petula": {
-        "bar": vindigopearlFinishingImage,
-        "grappe": vindigopearlFinishingImage
+        "bar": petulaBarPearlImg,
+        "grappe": petulaGrappePearlImg
       },
     },
     "price": 1000
@@ -164,20 +185,20 @@ let finishies = {
     "key": "metal",
     "image": {
       "vindigo": {
-        "bar": vindigopearlFinishingImage,
-        "grappe": vindigopearlFinishingImage
+        "bar": vindigoBarMetalImg,
+        "grappe": vindigoGrappeMetalImg  
       },
       "bordeaux": {
-        "bar": vindigopearlFinishingImage,
-        "grappe": vindigopearlFinishingImage
+        "bar": bordeauxBarMetalImg,
+        "grappe": bordeauxGrappeMetalImg
       },
       "chardonay": {
-        "bar": vindigopearlFinishingImage,
-        "grappe": vindigopearlFinishingImage
+        "bar": chardonayBarMetalImg,
+        "grappe": chardonayGrappeMetalImg 
       },
       "petula": {
-        "bar": vindigopearlFinishingImage,
-        "grappe": vindigopearlFinishingImage
+        "bar": petulaBarMetalImg,
+        "grappe": petulaGrappeMetalImg
       },
     },
     "price": 2000

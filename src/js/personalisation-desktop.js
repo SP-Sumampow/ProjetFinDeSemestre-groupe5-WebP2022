@@ -17,18 +17,18 @@ import chardonayGoldImg from '/images/products/chardonay-court-grappe-or.svg';
 //***** IMAGE WITH GRAPE AND PEARL*****/
 
 
-import vindigoGoldPearlImg from '/images/products/vintigo-court-grappe-or-perles.svg';
-import bordeauxGoldPearlImg from '/images/products/bordeaux-court-grappe-or-perles.svg';
-import petulaGoldPearlImg from '/images/products/petula-court-grappe-or-perles.svg';
-import chardonayGoldPearlImg from '/images/products/chardonay-court-grappe-or-perles.svg';
+import vindigoGrappePearlImg from '/images/products/vintigo-court-grappe-or-perles.svg';
+import bordeauxGrappePearlImg from '/images/products/bordeaux-court-grappe-or-perles.svg';
+import petulaGrappePearlImg from '/images/products/petula-court-grappe-or-perles.svg';
+import chardonayGrappePearlImg from '/images/products/chardonay-court-grappe-or-perles.svg';
 
 //***** IMAGE WITH GRAPE AND METAL*****/
 
 
-import vindigoGoldMetalImg from '/images/products/vintigo-court-grappe-or-clou-or.svg';
-import bordeauxGoldMetalImg from '/images/products/bordeaux-court-grappe-or-clou-or.svg';
-import petulaGoldMetalImg from '/images/products/petula-court-grappe-or-clou-or.svg';
-import chardonayGoldMetalImg from '/images/products/chardonay-court-grappe-or-clou-or.svg';
+import vindigoGrappeMetalImg from '/images/products/vintigo-court-grappe-or-clou-or.svg';
+import bordeauxGrappeMetalImg from '/images/products/bordeaux-court-grappe-or-clou-or.svg';
+import petulaGrappeMetalImg from '/images/products/petula-court-grappe-or-clou-or.svg';
+import chardonayGrappeMetalImg from '/images/products/chardonay-court-grappe-or-clou-or.svg';
 
 //***** IMAGE WITH BAR GOLD *****/
 
@@ -52,46 +52,17 @@ import petulaBarMetalImg from '/images/products/petula-court-barre-or-clou-or.sv
 import chardonayBarMetalImg from '/images/products/chardonay-court-barre-or-clou-or.svg';
 
 
-// PRODUCTS
-
-let products = {
-  "vindigo": {
-        "key": "vindigo",
-        "name": "Le Vindigo",
-        "paragraph": "Le Vindigo doit son nom au célèbre vin bleu.Un Portefeuil à la couleur originale et rayonnante qui ne manquera pas de vous surprendre et de vous séduire.",
-        "image": vindigoImg,
-        "price": 550
-    },
-  "bordeaux": {
-        "key": "bordeaux",
-        "name": "Le Bordeaux",
-        "paragraph": "Inspiré des plus grands vins de bordeaux. Sucombez à l’élégance de ce modèle qui saura vous séduire et vous accompagner pour toutes les occasions.",
-        "image": bordeauxImg,
-        "price": 550
-    },
-  "chardonay": {
-        "key": "chardonay",
-        "name": "Le Chardonay",
-        "paragraph": "Le Vindigo doit son nom au célèbre vin bleu.Un Portefeuil à la couleur originale et rayonnante qui ne manquera pas de vous surprendre et de vous séduire.",
-        "image": chardonayImg,
-        "price": 550
-    },
-  "petula": {
-        "key": "petula",
-        "name": "Le Petula",
-        "paragraph": "Inspiré d’un vin paré d’une belle robe rose sur une teinte légèrement violine. Laissez vous séduire par ce modèle plein de charme et de fraîcheur.",
-        "image": petulaImg,
-        "price": 1000
-    }
-};
+// Selectors
 
 let selectors = {
   "product": {
-    "title": document.querySelector('h1.personalisation-desktop__product__text__title'),
-    "paragraph": document.querySelector('p.personalisation-desktop__product__text__paragraph'),
+    "title": document.querySelector('.personalisation-desktop__product__text__title'),
+    "paragraph": document.querySelector('.personalisation-desktop__product__text__paragraph'),
     "image": document.querySelector('.personalisation-desktop__product__image img'),
+    "gravure": document.querySelector('.personalisation-desktop__product__image span') //todo
   },
-  "totalPrice": document.querySelector('.personalisation__price p'),
+  "gravureInput": document.querySelector('.personalisation-desktop__input__text input'),
+  "totalPrice": document.querySelector('.personalisation-desktop__price p'),
   "colorBtns": [
     { "element": document.querySelector('.colorBtn--vindigo'), productName: "vindigo" },
     { "element": document.querySelector('.colorBtn--bordeaux'), productName: "bordeaux" },
@@ -99,38 +70,267 @@ let selectors = {
     { "element": document.querySelector('.colorBtn--chardonay'), productName: "chardonay" },
   ],
   "symbolBtns": [
-    { "element": document.querySelector('.symbolImage-grape'), symbolName: "grape" },
-    { "element": document.querySelector('.symbolImage-bar'), symbolName: "bar" },
+    { "element": document.querySelector('.personalisation-desktop__input__symbol .symbolImage .symbolImage-grape'), symbolName: "grappe" },
+    { "element": document.querySelector('.personalisation-desktop__input__symbol .symbolImage .symbolImage-bar'), symbolName: "bar" },
   ],
   "finishingBtns": [
     { "element": document.querySelector('.finishing--pearl'), finishingName: "pearl" },
     { "element": document.querySelector('.finishing--metal'), finishingName: "metal" },
   ],
-  
 };
 
+console.log(selectors);
+
+
+// PRODUCTS
+
+let personalisationDetail = {
+  products: {
+    "vindigo": {
+      "key": "vindigo",
+      "name": "Le Vindigo",
+      "paragraph": "Le Vindigo doit son nom au célèbre vin bleu.Un Portefeuil à la couleur originale et rayonnante qui ne manquera pas de vous surprendre et de vous séduire.",
+      "image": vindigoImg,
+      "price": 550
+    },
+    "bordeaux": {
+      "key": "bordeaux",
+      "name": "Le Bordeaux",
+      "paragraph": "Inspiré des plus grands vins de bordeaux. Sucombez à l’élégance de ce modèle qui saura vous séduire et vous accompagner pour toutes les occasions.",
+      "image": bordeauxImg,
+      "price": 550
+    },
+    "chardonay": {
+      "key": "chardonay",
+      "name": "Le Chardonay",
+      "paragraph": "Le Vindigo doit son nom au célèbre vin bleu.Un Portefeuil à la couleur originale et rayonnante qui ne manquera pas de vous surprendre et de vous séduire.",
+      "image": chardonayImg,
+      "price": 550
+    },
+    "petula": {
+      "key": "petula",
+      "name": "Le Petula",
+      "paragraph": "Inspiré d’un vin paré d’une belle robe rose sur une teinte légèrement violine. Laissez vous séduire par ce modèle plein de charme et de fraîcheur.",
+      "image": petulaImg,
+      "price": 1000
+    }
+  },
+  symbols: {
+    "bar": {
+      "key": "bar",
+      "image": {
+        "vindigo": vindigoBarImg,
+        "bordeaux": bordeauxBarImg,
+        "chardonay": chardonayBarImg,
+        "petula": petulaBarImg,
+      },
+      "price": 23
+    },
+    "grappe": {
+      "key": "grappe",
+      "image": {
+        "vindigo": vindigoGoldImg,
+        "bordeaux": bordeauxGoldImg,
+        "chardonay": chardonayGoldImg,
+        "petula": petulaGoldImg,
+      },
+      "price": 99
+    }
+  },
+  finishies: {
+    "pearl": {
+      "key": "pearl",
+      "image": {
+        "vindigo": {
+          "bar": vindigoBarPearlImg,
+          "grappe": vindigoGrappePearlImg
+        },
+        "bordeaux": {
+          "bar": bordeauxBarPearlImg,
+          "grappe": bordeauxGrappePearlImg
+        },
+        "chardonay": {
+          "bar": chardonayBarPearlImg,
+          "grappe": chardonayGrappePearlImg
+        },
+        "petula": {
+          "bar": petulaBarPearlImg,
+          "grappe": petulaGrappePearlImg
+        },
+      },
+      "price": 1000
+    },
+    "metal": {
+      "key": "metal",
+      "image": {
+        "vindigo": {
+          "bar": vindigoBarMetalImg,
+          "grappe": vindigoGrappeMetalImg  
+        },
+        "bordeaux": {
+          "bar": bordeauxBarMetalImg,
+          "grappe": bordeauxGrappeMetalImg
+        },
+        "chardonay": {
+          "bar": chardonayBarMetalImg,
+          "grappe": chardonayGrappeMetalImg 
+        },
+        "petula": {
+          "bar": petulaBarMetalImg,
+          "grappe": petulaGrappeMetalImg
+        },
+      },
+      "price": 2000
+    }
+  }, gravure: {
+    "price": 13
+  }
+};
 
 
 
 /********** PERSONALISATION **********/
 var myPersonalisation = {
-  colorKey: "",
+  colorKey: null,
+  symbolKey: null,
+  finishingKey: null,
+  gravureKey: null,
   totalPrice: {
     color: 0,
-    symbol: 0
+    symbol: 0,
+    finishing: 0,
+    gravure: 0
   }
 }
-
 //********** PERSONALISATION - COLOR **********//
 
 selectors.colorBtns.forEach(function (btnInfo) {
   btnInfo.element.addEventListener("click", function () {
-    myPersonalisation.colorKey = products[btnInfo.productName].key
-    refreshProductInfo(products[btnInfo.productName])
-    refreshColorPrice(products[btnInfo.productName].price);
-    console.log(myPersonalisation);
+    let product = personalisationDetail.products[btnInfo.productName];
+    myPersonalisation.colorKey = product.key
+    refreshProductInfo(product)
+    refreshColorPrice(product.price);
   })
 })
 
+// Price 
+function refreshColorPrice(amountAdded) {
+  myPersonalisation.totalPrice.color = amountAdded;
+  refreshTotalAmout();
+}
+
+function refreshProductInfo(product) {
+  selectors.product.title.innerHTML = product.name;
+  selectors.product.paragraph.innerHTML = product.paragraph;
+  selectors.product.image.src = product.image;
+}
+
+/************ Symbol PERSONALISATION ************/
+
+selectors.symbolBtns.forEach(function (btnSymbolInfo) {
+  console.log(btnSymbolInfo.element)
+  btnSymbolInfo.element.addEventListener("click", function () {
+
+    if (myPersonalisation.colorKey == null) {
+      alert("Choisissez une couleur")
+      return
+    }
+    
+
+    var symbol = personalisationDetail.symbols[btnSymbolInfo.symbolName];
+    myPersonalisation.symbolKey = symbol.key 
+    console.log(symbol)
+    refreshSymbolInfo(symbol);
+    refreshSymbolPrice(symbol.price);
+  })
+})
+
+function refreshSymbolInfo(symbol) {
+  console.log(symbol.image[myPersonalisation.colorKey]);
+  selectors.product.image.src = symbol.image[myPersonalisation.colorKey];
+}
+
+// Price 
+function refreshSymbolPrice(amountAdded) {
+  myPersonalisation.totalPrice.symbol = amountAdded;
+  refreshTotalAmout();
+}
 
 
+/************ Symbol FINITION ************/
+
+selectors.finishingBtns.forEach(function (btnFinisingInfo) {
+  btnFinisingInfo.element.addEventListener("click", function () {
+
+    if (myPersonalisation.symbolKey == null) {
+      alert("Choisissez un symbole")
+      return
+    }
+
+    var finishing = personalisationDetail.finishies[btnFinisingInfo.finishingName];
+    myPersonalisation.finishingKey = finishing.key;
+    console.log(btnFinisingInfo.finishingName);
+    refreshFinishingInfo(finishing)
+    refreshFinishingPrice(finishing.price)
+  })
+})
+
+function refreshFinishingInfo(finishing) {
+  console.log(personalisationDetail.finishies[finishing.key].image[myPersonalisation.colorKey][myPersonalisation.symbolKey]);
+  selectors.product.image.src = personalisationDetail.finishies[finishing.key].image[myPersonalisation.colorKey][myPersonalisation.symbolKey];
+}
+
+// Price 
+function refreshFinishingPrice(amountAdded) {
+  myPersonalisation.totalPrice.finishing = amountAdded;
+  refreshTotalAmout();
+}
+//
+
+/************ gravure PERSONALISATION ************/
+
+selectors.gravureInput.addEventListener('input', function () {
+  
+  if (myPersonalisation.finishingKey == null) {
+    alert("Choisissez une finition")
+    return
+  }
+
+  selectors.product.gravure.innerHTML = this.value;
+  if (this.value == "") {
+    refreshFinishingGravurePrice(0)
+  } else {
+    refreshFinishingGravurePrice(personalisationDetail.gravure.price)
+  }
+});
+
+// Price 
+function refreshFinishingGravurePrice(gravurePrice) {
+  myPersonalisation.totalPrice.gravure = gravurePrice;
+  refreshTotalAmout();
+}
+
+/************ First code init ************/
+
+function refreshProductPicture() {
+  if (myPersonalisation.colorKey != null && myPersonalisation.finishingKey != null && myPersonalisation.symbolKey) {
+    selectors.product.image.src = personalisationDetail.finishies[myPersonalisation.finishingKey].image[myPersonalisation.colorKey][myPersonalisation.symbolKey];
+  } else if (myPersonalisation.colorKey != null && myPersonalisation.finishingKey != null && myPersonalisation.symbolKey) {
+    selectors.product.image.src = myPersonalisation.symbol.image[myPersonalisation.colorKey]
+  } else if (myPersonalisation.colorKey) {
+    selectors.product.image.src = myPersonalisation.product
+  } else {
+
+  }
+}
+
+
+function refreshTotalAmout() {
+  selectors.totalPrice.innerHTML = myPersonalisation.totalPrice.color +
+    myPersonalisation.totalPrice.symbol +
+    myPersonalisation.totalPrice.finishing + 
+    myPersonalisation.totalPrice.gravure + "€";
+}
+
+
+refreshTotalAmout();

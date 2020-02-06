@@ -197,6 +197,17 @@
 
       &__image {
         height: 60%;
+        position: relative;
+        z-index: -2;
+
+        span {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          text-align: center;
+          width: 100%;
+        }
       }
     }  
 
@@ -231,11 +242,11 @@
       .colorBtn{
         
         :nth-child(1){
-          background-color: #681D1D;
+          background-color:  #B4A686;
         }
 
         :nth-child(2){
-          background-color: #B4A686;
+          background-color:#681D1D;
         }
 
         :nth-child(3){
