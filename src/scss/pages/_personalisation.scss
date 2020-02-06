@@ -157,7 +157,7 @@
     margin-bottom: 10vh;
 
     &__product {
-      @include flexbox(column, flex-start, center);
+      //@include flexbox(column, flex-start, center);
       flex-wrap: wrap;
       background-color: blue($color: #000000);
       width: 50%;
@@ -258,13 +258,15 @@
           &-grape {
             width: 120px;
             height: 48px;
-            background-image: no-repeat url('/src/images/symbol/grappe-gold.svg');
+            background-image: url('/images/symbol/grappe-gold.svg');
+            background-repeat: no-repeat;
           }
 
           &-bar {
             height: 48px;
             width: 120px;
-            background-image: url('/src/images/symbol/Plaque-gold-novapellicia.svg');
+            background-image: url('/images/symbol/Plaque-gold-novapellicia.svg');
+            background-repeat: no-repeat;
           }
          
         }

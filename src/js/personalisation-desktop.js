@@ -12,7 +12,7 @@ import chardonayImg from '/images/products/chardonay-court-simple.svg';
 import vindigoGoldImg from '/images/products/vintigo-court-grappe-or.svg';
 import bordeauxGoldImg from '/images/products/bordeaux-court-grappe-or.svg';
 import petulaGoldImg from '/images/products/petula-court-grappe-or.svg';
-import chardonayGoldImg from '/images/products/chardonay-court--grappe-or.svg';
+import chardonayGoldImg from '/images/products/chardonay-court-grappe-or.svg';
 
 //***** IMAGE WITH GRAPE AND PEARL*****/
 

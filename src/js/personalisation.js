@@ -12,23 +12,23 @@ import bordeauxBarreSymbolImage from '/images/products/bordeaux-court-barre-or.s
 import bordeauxGrappeSymbolImage from '/images/products/bordeaux-court-grappe-or.svg';
 
 import chardonayBarreSymbolImage from '/images/products/chardonay-court-barre-or.svg';
-import chardonayGrappeSymbolImage from '/images/products/chardonay-court--grappe-or.svg';
+import chardonayGrappeSymbolImage from '/images/products/chardonay-court-grappe-or.svg';
 
 import petulabarreSymbolImage from '/images/products/petula-court-barre-or.svg';
 import petulagrappeSymbolImage from '/images/products/petula-court-grappe-or.svg';
 
 // finishing 
-import vindigopearlFinishingImage from '/images/symbols/barre.jpeg';
-import vindigometalFinishingImage from '/images/symbols/grappe.png';
+import vindigopearlFinishingImage from '/images/products/petula-court-grappe-or.svg';
+import vindigometalFinishingImage from '/images/products/petula-court-grappe-or.svg';
 
-import bordeauxpearlFinishingImage from '/images/symbols/barre.jpeg';
-import bordeauxmetalFinishingImage from '/images/symbols/grappe.png';
+import bordeauxpearlFinishingImage from '/images/products/petula-court-grappe-or.svg';
+import bordeauxmetalFinishingImage from '/images/products/petula-court-grappe-or.svg';
 
-import chardonaypearlFinishingImage from '/images/symbols/barre.jpeg';
-import chardonaymetalFinishingImage from '/images/symbols/grappe.png';
+import chardonaypearlFinishingImage from '/images/products/petula-court-grappe-or.svg';
+import chardonaymetalFinishingImage from '/images/products/petula-court-grappe-or.svg';
 
-import petulapearlFinishingImage from '/images/symbols/barre.jpeg';
-import petulametalFinishingImage from '/images/symbols/grappe.png';
+import petulapearlFinishingImage from '/images/products/petula-court-grappe-or.svg';
+import petulametalFinishingImage from '/images/products/petula-court-grappe-or.svg';
 
 var positionInPersonalisation = 0;
 
@@ -126,7 +126,6 @@ let selectors = {
     "title": document.querySelector('.personalisation__btn h2'),
     "personalisationStep": {
       "color": document.querySelector('.personalisation__choices__colors'),
-      "logo": document.querySelector('.personalisation__choices__logo'),
       "finishing": document.querySelector('.personalisation__choices__finishing'),
       "symbols": document.querySelector('.personalisation__choices__symbols'),
       "gravure": document.querySelector('.personalisation__choices__gravure')
@@ -187,6 +186,15 @@ selectors.navigation.rightBtn.addEventListener("click", function () {
   refreshNavigation();
 })
 
+function initMobileNavigation() {
+  console.log("lolol");
+  console.log(selectors.navigation.personalisationStep);
+  selectors.navigation.personalisationStep.logo.style.visibility = "hidden";
+  selectors.navigation.personalisationStep.finishing.style.visibility = "hidden";
+  selectors.navigation.personalisationStep.symbols.style.visibility = "hidden";
+  selectors.navigation.personalisationStep.gravure.style.visibility = "hidden";
+}
+
 function refreshNavigation() {
   console.log("current position " + positionInPersonalisation)
   if (positionInPersonalisation == 0) {
@@ -210,7 +218,7 @@ function transitionPersonalisationStep(beforeStep, afterStep) {
   afterStep.style.display = "flex";
 }
 
-refreshNavigation();
+initMobileNavigation();
 
 /************ COLORS PERSONALISATION ************/
 
