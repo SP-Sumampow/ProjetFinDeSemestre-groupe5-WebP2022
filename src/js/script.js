@@ -29,49 +29,6 @@ window.addEventListener("scroll", (e) => {
     }
 });
 
-/************ ANIMATION COLLECTION ************/
-
-//var image = document.querySelector('#image');
-/*
-let image = {
-    'back': {
-        src: '/images/homme-beige-face-simple-1.png'
-    },
-    'front': {
-        src: '/images/portefeuille-rose-simple-avant-1.png'
-    }
-};
-*/
-
-// image.addEventListener('mouseenter', function () {
-//     image.innerHTML.src = '/images/homme-beige-face-simple-1.png';
-// });
-
-/*
-image.addEventListener('mouseout', function () {
-    image.src = '/images/portefeuille-rose-simple-avant-1.png';
-});
-*/
-
-
-/*
-frame.addEventListener('mouseover', function () {
-    frame.src = image['back'];
-})
-
-/*
-  
-/************ FOOTER ON MOBILE VERSION ************/
-/*
-var btnHelp = document.querySelector('.button--help');
-var footerThird = document.querySelector('.footer--thirdPart');
-var menuHide = document.querySelector('.menu--hide--help')
-
-btnHelp.addEventListener('click', function () {
-    footerThird.toggle(menuHide)
-});
-/*
-
 
 /************ FOOTER ON TABLET & DESKTOP VERSION ************/
 
