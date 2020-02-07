@@ -3,9 +3,9 @@
   box-sizing: border-box;
 }
 .personalisation {
-
+  height: 80vh;
   @include format;
-  margin-top: 12vh;
+  margin-top: 10vh;
 
   @include tablet-up {
     display: none;
@@ -33,7 +33,7 @@
 
   &__image {
     position: relative;
-    height: 40vh;
+    //height: 40vh;
     
     
     span {
@@ -165,21 +165,34 @@
   
 
   @include tablet-up {
-    @include flexbox(row, space-between, center);
+    @include flexbox(row, space-between, flex-start);
     width: 100%;
     margin-top: 20vh;
     margin-bottom: 10vh;
 
     &__product {
-      //@include flexbox(column, flex-start, center);
+      //@include flexbox(row, space-ad, center);
       flex-wrap: wrap;
       background-color: blue($color: #000000);
       width: 50%;
       margin-left: 5vw;
       padding-right: 40px;
-      height: 70vh;
-      width: 50%;
       left: 0;
+
+      h1 {
+        font-family: $fontNothingCould;
+        font-size: rem(16px);
+        color: $titlePagePersonalisation;
+      }
+
+      p {
+        font-size: rem(14px);
+        text-align: 1.5;
+        font-family: $fontMonserrat;
+        color: $text;
+      }
+
+
       
       h3 {
         font-family: $fontMonserrat;
@@ -218,7 +231,6 @@
 
     &__input {
       @include flexbox(column, space-around, stretch);
-      height: 44vh;
       color: $footerText;
       font-family: $fontMonserrat;
       background-color: #B4EFFF;
