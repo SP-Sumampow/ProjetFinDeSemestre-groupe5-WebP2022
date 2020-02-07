@@ -215,14 +215,15 @@ selectors.colorBtns.forEach(function (btnInfo) {
 
 // Price 
 function refreshColorPrice(amountAdded) {
-  refreshProductPicture();
+  myPersonalisation.totalPrice.color = amountAdded;
   refreshTotalAmout();
 }
 
 function refreshProductInfo(product) {
   selectors.product.title.innerHTML = product.name;
   selectors.product.paragraph.innerHTML = product.paragraph;
-  selectors.product.image.src = product.image;
+  refreshProductPicture();
+  //selectors.product.image.src = product.image;
 }
 
 /************ Symbol PERSONALISATION ************/
@@ -312,8 +313,10 @@ function refreshProductPicture() {
   if (myPersonalisation.colorKey != null && myPersonalisation.finishingKey != null && myPersonalisation.symbolKey) {
     console.log(personalisationDetail.symbol);
     selectors.product.image.src = personalisationDetail.finishies[myPersonalisation.finishingKey].image[myPersonalisation.colorKey][myPersonalisation.symbolKey];
-  } else if (myPersonalisation.colorKey != null) {
+  } else if (myPersonalisation.colorKey != null && myPersonalisation.symbolKey != null) {
     selectors.product.image.src = personalisationDetail.symbols[myPersonalisation.symbolKey].image[myPersonalisation.colorKey]
+  } else if (myPersonalisation.colorKey != null) {
+    selectors.product.image.src = personalisationDetail.products[myPersonalisation.colorKey].image
   } else {
     console.log(personalisationDetail.product);
     selectors.product.image.src = personalisationDetail.products.bordeaux.image

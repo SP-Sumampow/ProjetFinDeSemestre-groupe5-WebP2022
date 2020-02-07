@@ -43,6 +43,7 @@
       left: 0;
       text-align: center;
       width: 100%;
+      background-color: yellowgreen;
     }
 
     img{
@@ -147,10 +148,18 @@
 
   &__price {
     height: 10vh;
-    margin: 0 2vh;
+    padding-left: 24px;
+    margin-top: 20px;
+    
+    
 
-    p {
-      margin: 0;
+    h4 {
+      font-family: $fontMonserrat;
+      text-align: center;
+      font-weight: bold;
+      font-size: 24px;
+      color: $text;
+
     }
 
     /*
@@ -225,6 +234,7 @@
           left: 0;
           text-align: center;
           width: 100%;
+          background-color: yellowgreen;
         }
       }
     }  
