@@ -15,12 +15,11 @@
     @include desktop-up {
       @include flexbox(row, space-between, center);
       flex-shrink: 1;
-
+      margin-top: 60px;
     }
   }
 
   h2 {
-
     text-transform: uppercase;
     color: $titleSectionCollection;
     font-family: $fontMonserrat;
@@ -36,7 +35,6 @@
       text-align: left;
       margin-bottom: 35px;
       margin-top: rem(200px);
-
     }
   }
 
@@ -74,7 +72,6 @@
   flex-shrink: 1;
   margin-bottom: 15px;
 
-
   &--display {
     display: none;
   }
@@ -87,7 +84,7 @@
   @include desktop-up {
     margin-right: 15px;
     margin-bottom: 30px;
-    margin-top: 2.5rem;
+    //margin-top: 2.5rem;
 
     &--display {
       display: block;

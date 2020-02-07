@@ -8,6 +8,10 @@
   text-align: left;
   @include flexbox(column, flex-start, left);
 
+  @include desktop-up {
+    margin-top: rem(40px);
+  }
+
   h2 {
     text-transform: uppercase;
     color: $titleSectionCollection;
@@ -21,8 +25,7 @@
     @include desktop-up {
       text-align: left;
       font-size: rem(30px);
-      margin-top: rem(100px);
-
+      margin-top: rem(150px);
     }
   }
 
@@ -81,7 +84,6 @@ h5 {
     font-size: 18px;
     margin-top: 13px;
   }
-
 }
 
 p {
@@ -150,7 +152,6 @@ p {
   }
 }
 
-
 .frameSelection {
   background-attachment: contain;
   background-size: 40%;
@@ -170,9 +171,7 @@ p {
     background-image: url(/images/vintigo-long-grappe-or-face-selection.png);
     background-size: 70%;
   }
-
 }
-
 
 .selection__wallet {
   @include desktop-up {
