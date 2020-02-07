@@ -5,7 +5,7 @@
 .personalisation {
 
   @include format;
-  margin-top: 10vh;
+  margin-top: 12vh;
 
   @include tablet-up {
     display: none;
@@ -16,7 +16,6 @@
   &__text {
     @include flexbox(column, space-around, left);
     height: 15vh;
-    background-color: paleturquoise;
 
     h1 {
       font-family: $fontNothingCould;
@@ -35,7 +34,7 @@
   &__image {
     position: relative;
     height: 40vh;
-    background-color: pink;
+    
     
     span {
       position: absolute;
@@ -56,7 +55,6 @@
 
   &__btn {
     height: 10vh;
-    background-color: thistle;
     @include flexbox(row, space-around, center);
 
     &__left {
@@ -119,11 +117,19 @@
       }
     }
 
-    &__symbols {
-      @include flexbox(row, space-around, center);
-      width: 100%;
-      border: 1px solid rgba(0, 0, 0, 0.76);
-    }
+      &__symbols {
+        @include flexbox(row, space-around, center);
+        height:100%;
+
+        .symbolImage-bar, .symbolImage-grape {
+          height: 40px;
+          width: 100px;
+          border: 1px solid #F3DCE4;
+          background-color: #F5EFF1;
+          text-align: center;
+        }
+      }
+  
 
     &__finishing {
       @include flexbox(row, space-around, center);
@@ -141,7 +147,6 @@
 
   &__price {
     height: 10vh;
-    background-color: wheat;
     margin: 0 2vh;
 
     p {
@@ -274,12 +279,15 @@
 
         .symbolImage {
           width: 50%;
+          @include flexbox(row, space-around, center);
 
           &-grape {
-            width: 120px;
-            height: 48px;
+            width: 50px;
+            height: 50px;
             background-image: url('/images/symbol/grappe-gold.svg');
             background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
           }
 
           &-bar {

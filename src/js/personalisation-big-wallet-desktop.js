@@ -2,54 +2,54 @@
 
 //***** IMAGE SIMPLE*****//
 
-import vindigoImg from '/images/products/vintigo-court-simple.svg';
-import bordeauxImg from '/images/products/bordeaux-court-simple.svg';
-import petulaImg from '/images/products/petula-court-simple.svg';
-import chardonayImg from '/images/products/chardonay-court-simple.svg';
+import vindigoImg from '/images/product-long/vindigo-long-simple.svg';
+import bordeauxImg from '/images/product-long/bordeaux-long-simple.svg';
+import petulaImg from '/images/product-long/petula-long-simple.svg';
+import chardonayImg from '/images/product-long/chardonay-long-simple.svg';
 
 //***** IMAGE WITH GRAPE GOLD *****/
 
-import vindigoGoldImg from '/images/products/vintigo-court-grappe-or.svg';
-import bordeauxGoldImg from '/images/products/bordeaux-court-grappe-or.svg';
-import petulaGoldImg from '/images/products/petula-court-grappe-or.svg';
-import chardonayGoldImg from '/images/products/chardonay-court-grappe-or.svg';
+import vindigoGoldImg from '/images/product-long/vindigo-long-grappe-or.svg';
+import bordeauxGoldImg from '/images/product-long/bordeaux-court-grappe-or.svg';
+import petulaGoldImg from '/images/product-long/petula-long-simple-grappe-or.svg';
+import chardonayGoldImg from '/images/product-long/chardonay-long-grappe-or.svg';
 
 //***** IMAGE WITH GRAPE AND PEARL*****/
 
 
-import vindigoGrappePearlImg from '/images/products/vintigo-court-grappe-or-perles.svg';
-import bordeauxGrappePearlImg from '/images/products/bordeaux-court-grappe-or-perles.svg';
-import petulaGrappePearlImg from '/images/products/petula-court-grappe-or-perles.svg';
-import chardonayGrappePearlImg from '/images/products/chardonay-court-grappe-or-perles.svg';
+import vindigoGrappePearlImg from '/images/product-long/vindigo-long-grappe-or-perles.svg';
+import bordeauxGrappePearlImg from '/images/product-long/bordeaux-court-grappe-or-perles.svg';
+import petulaGrappePearlImg from '/images/product-long/petula-long-simple-grappe-or (1).svg';
+import chardonayGrappePearlImg from '/images/product-long/chardonay-long-perles.svg';
 
 //***** IMAGE WITH GRAPE AND METAL*****/
 
 
-import vindigoGrappeMetalImg from '/images/products/vintigo-court-grappe-or-clou-or.svg';
-import bordeauxGrappeMetalImg from '/images/products/bordeaux-court-grappe-or-clou-or.svg';
-import petulaGrappeMetalImg from '/images/products/petula-court-grappe-or-clou-or.svg';
-import chardonayGrappeMetalImg from '/images/products/chardonay-court-grappe-or-clou-or.svg';
+import vindigoGrappeMetalImg from '/images/product-long/vindigo-long-grappe-or-clou-or.svg';
+import bordeauxGrappeMetalImg from '/images/product-long/bordeaux-court-grappe-or-clou-or.svg';
+import petulaGrappeMetalImg from '/images/product-long/petula-long-simple (1)';
+import chardonayGrappeMetalImg from '/images/product-long/chardonay-long-grappe-or-clou-or.svg';
 
 //***** IMAGE WITH BAR GOLD *****/
 
-import vindigoBarImg from '/images/products/vintigo-court-barre-or.svg';
-import bordeauxBarImg from '/images/products/bordeaux-court-barre-or.svg';
-import petulaBarImg from '/images/products/petula-court-barre-or.svg';
-import chardonayBarImg from '/images/products/chardonay-court-barre-or.svg';
+import vindigoBarImg from '/images/product-long/vindigo-long-barre-or.svg';
+import bordeauxBarImg from '/images/product-long/bordeaux-court-barre-or.svg';
+import petulaBarImg from '/images/product-long/petula-court-barre-or.svg';
+import chardonayBarImg from '/images/product-long/chardonay-long-barre-or.svg';
 
 //***** IMAGE WITH BAR AND PEARL *****/
 
-import vindigoBarPearlImg from '/images/products/vintigo-court-barre-or-perles.svg';
-import bordeauxBarPearlImg from '/images/products/bordeaux-court-barre-or-perles.svg';
-import petulaBarPearlImg from '/images/products/petula-court-barre-or-perles.svg';
-import chardonayBarPearlImg from '/images/products/chardonay-court-barre-or-perles.svg';
+import vindigoBarPearlImg from '/images/product-long/vindigo-long-barre-or (1).svg';
+import bordeauxBarPearlImg from '/images/product-long/bordeaux-court-barre-or-perles.svg';
+import petulaBarPearlImg from '/images/product-long/petula-long-barre-or (1).svg';
+import chardonayBarPearlImg from '/images/product-long/chardonay-long-barre-or-perles.svg';
 
 //***** IMAGE WITH BAR AND METAL *****/
 
-import vindigoBarMetalImg from '/images/products/vintigo-court-barre-or-clou-or.svg';
-import bordeauxBarMetalImg from '/images/products/bordeaux-court-barre-or-clou-or.svg';
-import petulaBarMetalImg from '/images/products/petula-court-barre-or-clou-or.svg';
-import chardonayBarMetalImg from '/images/products/chardonay-court-barre-or-clou-or.svg';
+import vindigoBarMetalImg from '/images/product-long/vindigo-long-barre-or (2).svg';
+import bordeauxBarMetalImg from '/images/product-long/bordeaux-court-barre-or-clou-or.svg';
+import petulaBarMetalImg from '/images/product-long/petula-long-barre-or-clou-or.svg';
+import chardonayBarMetalImg from '/images/product-long/chardonay-long-barre-or-clou-or.svg';
 
 
 // Selectors
@@ -202,6 +202,7 @@ var myPersonalisation = {
     gravure: 0
   }
 }
+
 //********** PERSONALISATION - COLOR **********//
 
 selectors.colorBtns.forEach(function (btnInfo) {
