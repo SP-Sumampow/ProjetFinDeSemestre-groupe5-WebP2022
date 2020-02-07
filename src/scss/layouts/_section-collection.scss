@@ -6,8 +6,6 @@
   margin-top: rem(120px);
   line-height: rem(19px);
 
-  
-
   p {
     margin-top: rem(10px);
     font-family: $fontMonserrat;
@@ -15,7 +13,7 @@
     color: $text;
 
     @include desktop-up {
-      margin-top: rem(24px);
+      //margin-top: rem(10px);
       font-size: rem(21px);
     }
   }
@@ -57,8 +55,6 @@ h3 {
   }
 }
 
-
-
 .collection__collections {
   @include flexbox(column, center, normal);
 
@@ -98,10 +94,10 @@ h3 {
     &--back {
       opacity: 0;
       display: none;
-        }
+    }
 
     &:hover {
-     // opacity: 0;
+      // opacity: 0;
       //display: none;
 
       &--back {
@@ -109,10 +105,8 @@ h3 {
         display: absolute;
       }
     }
-  
   }
 }
-
 
 .collection__wallets {
   @include desktop-up {
@@ -126,7 +120,7 @@ h3 {
   @include button-large;
 
   @include desktop-up {
-    margin-top: rem(30px);
+    margin-top: rem(15px);
     width: 300px;
     height: 50px;
     font-size: 15px;
@@ -136,7 +130,6 @@ h3 {
     }
   }
 }
-
 
 .frameCollection {
   background-attachment: contain;
@@ -151,7 +144,5 @@ h3 {
   &--img2collection {
     background-image: url(/images/portefeuille-rose-simplcollectionn.png);
     background-size: 70%;
-
   }
-
 }

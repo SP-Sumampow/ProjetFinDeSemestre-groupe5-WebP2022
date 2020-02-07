@@ -14,10 +14,7 @@
   @include desktop-up {
     margin-bottom: rem(200px);
     margin-top: rem(200px);
-
-
   }
-
 
   .section-article__title {
     @include flexbox(row, flex-start);
@@ -37,7 +34,6 @@
       @include flexbox(column, center);
       margin-top: rem(50px);
       margin-bottom: rem(50px);
-
     }
 
     @include desktop-up {
@@ -48,7 +44,6 @@
     }
   }
 }
-
 
 .div-article {
   font-family: $fontMonserrat;
@@ -67,7 +62,6 @@
     margin: 10px 0;
     // width: 1152px;
 
-
     &__visual:nth-child(1) {
       order: 2;
       // max-width: rem(665px);
@@ -84,7 +78,6 @@
       max-height: rem(920px);
     }
   }
-
 
   &__text {
     background-color: black;
@@ -110,7 +103,6 @@
     // width: rem(300px);
     // height: rem(300px);
     width: 100%;
-
 
     @include tablet-up {
       width: 100%;
@@ -169,14 +161,12 @@
     @include desktop-up {
       font-size: 1.2vw;
       margin: 45px 30px;
-
     }
   }
 
   &__button {
     @include button-large;
     margin: 12px 30px;
-
 
     @include desktop-up {
       margin: rem(35px 30px);
